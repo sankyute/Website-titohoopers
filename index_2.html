@@ -87,16 +87,27 @@
             color: var(--white) !important;
         }
 
+        /* --- UPDATED HERO FOR MARQUEE LAYOUT --- */
         .hero {
+            position: relative;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542652694-40abf526446e?auto=format&fit=crop&q=80') no-repeat center center/cover;
-            height: 400px;
+            height: 480px; /* Increased height to fit text and marquee */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: var(--white);
             text-align: center;
+        }
+
+        .hero-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 0 1rem;
+            margin-bottom: 2rem;
         }
 
         .hero h1 {
@@ -107,9 +118,38 @@
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
             color: var(--primary);
             font-weight: bold;
+        }
+
+        /* --- LOGO MARQUEE CSS --- */
+        .logo-marquee {
+            width: 100%;
+            background-color: transparent; 
+            padding: 1.5rem 0 1rem;
+            overflow: hidden;
+            border-top: 4px solid var(--primary);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scrollLeftToRight 30s linear infinite;
+        }
+
+        .marquee-track img {
+            height: 80px; /* Scaled slightly for hub page */
+            margin: 0 3rem; 
+            object-fit: contain;
+        }
+
+        @keyframes scrollLeftToRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
         }
 
         .container {
@@ -354,7 +394,7 @@
             border: 1px solid #cbd5e1;
         }
 
-        /* Team Logos - Increased Sizes */
+        /* Team Logos */
         .team-logo-img {
             width: 50px;
             height: 50px;
@@ -464,6 +504,7 @@
             <span class="logo-sub">Season 3 Hub</span>
         </div>
         <nav>
+            <!-- Adjusted navigation back to the main index file based on previous interactions -->
             <a href="index.html" class="btn-back">← Back to Main Page</a>
             <a href="#games">Games</a>
             <a href="#standings">Standings</a>
@@ -473,8 +514,34 @@
     </header>
 
     <section class="hero">
-        <h1>Season 3 is Here</h1>
-        <p>Singapore Haig 5 Court • 5 Haig Road</p>
+        <div class="hero-text">
+            <h1>Season 3 is Here</h1>
+            <p>Singapore Haig 5 Court • 5 Haig Road</p>
+        </div>
+
+        <!-- NEW: Added Logo Marquee -->
+        <div class="logo-marquee">
+           <div class="marquee-track">
+                <img src="images/Haig_united.jpeg" alt="Haig United">
+                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                <img src="images/Saints.jpeg" alt="Saints">
+                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                <img src="images/Supremo.jpeg" alt="Supremo">
+                
+                <!-- Repeated Set for Seamless Loop -->
+                <img src="images/Haig_united.jpeg" alt="Haig United">
+                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                <img src="images/Saints.jpeg" alt="Saints">
+                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                <img src="images/Supremo.jpeg" alt="Supremo">
+            </div>
+        </div>
     </section>
 
     <div class="container">
@@ -821,7 +888,6 @@
             renderSchedule();
         }
 
-        // --- UPDATED renderSchedule FUNCTION WITH MODAL TRIGGER ---
         function renderSchedule() {
             const container = document.getElementById('schedule-container');
             container.innerHTML = '';
@@ -856,8 +922,8 @@
                     const awayJ = game.awayColor === 'Black' ? 'jersey-black' : 'jersey-orange';
 
                     const card = document.createElement('div');
-                    card.className = "card schedule-card"; // Added schedule-card class
-                    card.onclick = () => showMatchupRosters(game.home, game.away); // Added onclick handler
+                    card.className = "card schedule-card";
+                    card.onclick = () => showMatchupRosters(game.home, game.away);
                     
                     card.innerHTML = `
                         <span class="card-badge ${badgeClass}">${game.group}</span>
@@ -888,16 +954,12 @@
             });
         }
 
-        // --- NEW MODAL FUNCTIONS ---
         function showMatchupRosters(homeKey, awayKey) {
             const homeTeam = teams[homeKey] || { name: homeKey };
             const awayTeam = teams[awayKey] || { name: awayKey };
             
-            // Helper function to build a team's roster list
             const createRosterHTML = (teamKey, teamData) => {
                 const players = (rosterData[teamKey] || []).map(parsePlayer);
-                
-                // Sort numerically by jersey number by default
                 players.sort((a, b) => parseInt(a.num) - parseInt(b.num));
 
                 if(players.length === 0) return `<p>No roster data available.</p>`;
@@ -926,7 +988,6 @@
                 `;
             };
 
-            // Inject content into the modal container
             const container = document.getElementById('matchupContent');
             container.innerHTML = `
                 <div class="team-roster-side">${createRosterHTML(homeKey, homeTeam)}</div>
@@ -934,19 +995,15 @@
                 <div class="team-roster-side">${createRosterHTML(awayKey, awayTeam)}</div>
             `;
             
-            // Display the modal
             document.getElementById('matchupModal').style.display = 'block';
-            
-            // Prevent background scrolling while modal is open
             document.body.style.overflow = 'hidden'; 
         }
 
         function closeModal() {
             document.getElementById('matchupModal').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore background scrolling
+            document.body.style.overflow = 'auto'; 
         }
 
-        // Close modal if user clicks outside the modal content area
         window.onclick = function(event) {
             const modal = document.getElementById('matchupModal');
             if (event.target === modal) {
