@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGTiToHoopers | Leagues & Weekly Pick-Up Basketball</title>
+    <style>
+        :root {
+            --primary: #ff6600;
+            --secondary: #1a1a1a;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --gray: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e05500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 0.5rem auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-badge {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            align-self: flex-start;
+            margin: 1rem 1rem 0;
+            border-radius: 4px;
+        }
+
+        .card-badge.league {
+            background-color: #d946ef;
+        }
+
+        .card-badge.weekly {
+            background-color: #0ea5e9;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .card-meta div {
+            margin-bottom: 0.25rem;
+        }
+
+        .card-action {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+            background-color: #fafafa;
+        }
+
+        .card-action .btn {
+            display: block;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🏀 SGTiToHoopers</div>
+        <nav>
+            <a href="#all" class="active">All Events</a>
+            <a href="#leagues">Leagues</a>
+            <a href="#weekly">Weekly Games</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hit The Court. Own The Game.</h1>
+        <p>Join competitive seasonal leagues or drop in for casual weekly games.</p>
+        <a href="#events" class="btn">Browse Events</a>
+    </section>
+
+    <div class="container" id="events">
+        
+        <!-- League Tournaments Section -->
+        <h2 class="section-title" id="leagues">Competitive Leagues</h2>
+        <div class="grid">
+            
+            <!-- NEW: Haig Streetball League Merged Card -->
+            <div class="card">
+                <span class="card-badge league">League</span>
+                <div class="card-content">
+                    <h3 class="card-title">Haig Streetball League - Season 3</h3>
+                    <div class="card-meta">
+                        <div><strong>📅 Duration:</strong> Oct 11 - Dec 13</div>
+                        <div><strong>📍 Location:</strong> Singapore Haig 5 Court (5 Haig Road Singapore 430005)</div>
+                        <div><strong>🏆 Division:</strong> Competitive Streetball (8 Teams)</div>
+                    </div>
+                    <p>Features 8 teams battling in Group A and Group B, ending with a high-stakes championship round. Playoff brackets and full team rosters are actively tracked.</p>
+                </div>
+                <div class="card-action">
+                    <!-- Updated href to target index_2.html -->
+                    <a href="index_2.html" class="btn">View Official Hub</a>
+                </div>
+            </div>
+
+            <!-- League Card 1 -->
+            <div class="card">
+                <span class="card-badge league">League</span>
+                <div class="card-content">
+                    <h3 class="card-title">3 point shot competition</h3>
+                    <div class="card-meta">
+                        <div><strong>📅 Duration:</strong> Dec 6 </div>
+                        <div><strong>📍 Location:</strong> TBD</div>
+                        <div><strong>🏆 Division:</strong> TBD</div>
+                    </div>
+                    <p>Open to any players interested to join</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="btn">Register 🚧⚒️ </a>
+                </div>
+            </div>
+
+            <!-- League Card 2 -->
+            <div class="card">
+                <span class="card-badge league">League</span>
+                <div class="card-content">
+                    <h3 class="card-title">3x3 Saturday Showdown</h3>
+                    <div class="card-meta">
+                        <div><strong>📅 Duration:</strong> TBD </div>
+                        <div><strong>📍 Location:</strong> TBD </div>
+                        <div><strong>🏆 Division:</strong> TBD </div>
+                    </div>
+                    <p>Fast-paced half-court action. Ideal for teams of 8 looking for high-energy weekend competition.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="btn">Register Team 🚧⚒️ </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Weekly Ordinary Games Section -->
+        <h2 class="section-title" id="weekly">Weekly Drop-In Games</h2>
+        <div class="grid">
+            
+            <!-- Weekly Card 1 -->
+            <div class="card">
+                <span class="card-badge weekly">Weekly Pick-up</span>
+                <div class="card-content">
+                    <h3 class="card-title">Saturday Papawis</h3>
+                    <div class="card-meta">
+                        <div><strong>📅 Schedule:</strong> Every Saturday (8:00 AM - 9:30 AM) & Sunday (7:00 AM - 9:30 AM) </div>
+                        <div><strong>📍 Location:</strong> Haig Road Court 5</div>
+                        <div><strong>💵 Fee:</strong> Free </div>
+                    </div>
+                    <p>Just show up, lace up, and play. Teams are randomized on the spot. Perfect for conditioning your body.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="btn">Reserve a Spot (TBD 🚧⚒️)</a>
+                </div>
+            </div>
+
+            <!-- Weekly Card 2 -->
+            <div class="card">
+                <span class="card-badge weekly">Weekly Pick-up</span>
+                <div class="card-content">
+                    <h3 class="card-title">Indoor Papawis </h3>
+                    <div class="card-meta">
+                        <div><strong>📅 Schedule:</strong> Depends on Kallang's court availablity </div>
+                        <div><strong>📍 Location:</strong> The Kallang </div>
+                        <div><strong>💵 Fee:</strong> $6 </div>
+                    </div>
+                    <p>Start your Weekend right with full-court runs before work. Moderate to high intensity. Limit 20 players.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="btn">Reserve a Spot 🚧⚒️ </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SGTiToHoopers Association. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
