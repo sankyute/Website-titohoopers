@@ -56,25 +56,103 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 400px;
+            position: relative;
+            min-height: 550px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            background-color: var(--white); 
+        }
+
+        /* Middle Text Container with Players Background */
+        .hero-content {
+            margin: auto; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Aligns content to the top */
             align-items: center;
-            color: var(--white);
             text-align: center;
-            padding: 0 1rem;
+            color: var(--white); 
+            padding: 2rem; /* Even padding around the box */
+            z-index: 2;
+            
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('images/players.jpeg'); 
+            
+            background-size: cover;
+            background-position: top center; 
+            border-radius: 16px;
+            width: 90%;
+            max-width: 1000px; 
+            min-height: 500px; /* Increased height to create a large gap in the middle */
+            border: none;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-top: 0; /* Pushed to the very top */
+            margin-bottom: 0.5rem; /* Kept close to the paragraph text */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: auto; /* This acts as a spring, pushing the button to the bottom */
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .hero .btn {
+            margin-bottom: 1rem; /* Keeps the button slightly off the bottom edge */
+        }
+
+        .logo-marquee {
+            width: 100%;
+            background-color: transparent; 
+            padding: 1.5rem 0 1rem;
+            overflow: hidden;
+            border-top: 4px solid var(--primary);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-container {
+            background-color: var(--white);
+            color: var(--secondary);
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--primary);
+            z-index: 3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .countdown-container span {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 0 0.2rem;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scrollLeftToRight 30s linear infinite;
+        }
+
+        .marquee-track img {
+            height: 100px; 
+            margin: 0 3rem; 
+            object-fit: contain;
+        }
+
+        @keyframes scrollLeftToRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
         }
 
         .btn {
@@ -131,6 +209,14 @@
             flex-direction: column;
         }
 
+        .card-image {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            object-position: top;
+            border-bottom: 1px solid #eee;
+        }
+
         .card-badge {
             background-color: var(--secondary);
             color: var(--white);
@@ -144,13 +230,8 @@
             border-radius: 4px;
         }
 
-        .card-badge.league {
-            background-color: #d946ef;
-        }
-
-        .card-badge.weekly {
-            background-color: #0ea5e9;
-        }
+        .card-badge.league { background-color: #d946ef; }
+        .card-badge.weekly { background-color: #0ea5e9; }
 
         .card-content {
             padding: 1.5rem;
@@ -168,9 +249,7 @@
             margin-bottom: 1rem;
         }
 
-        .card-meta div {
-            margin-bottom: 0.25rem;
-        }
+        .card-meta div { margin-bottom: 0.25rem; }
 
         .card-action {
             padding: 1.5rem;
@@ -206,19 +285,46 @@
     </header>
 
     <section class="hero">
-        <h1>Hit The Court. Own The Game.</h1>
-        <p>Join competitive seasonal leagues or drop in for casual weekly games.</p>
-        <a href="#events" class="btn">Browse Events</a>
+        <div class="hero-content">
+            <h1>Hit The Court. Own The Game.</h1>
+            <p>Join competitive seasonal leagues or drop in for casual weekly games.</p>
+            <a href="#events" class="btn">Browse Events</a>
+        </div>
+
+        <div class="logo-marquee">
+            <div class="countdown-container" id="league-countdown">
+                League Tip-Off in: <span id="days">00</span>d <span id="hours">00</span>h <span id="mins">00</span>m <span id="secs">00</span>s
+            </div>
+
+           <div class="marquee-track">
+                <img src="images/Haig_united.jpeg" alt="Haig United">
+                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                <img src="images/Saints.jpeg" alt="Saints">
+                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                <img src="images/Supremo.jpeg" alt="Supremo">
+                
+                <img src="images/Haig_united.jpeg" alt="Haig United">
+                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                <img src="images/Saints.jpeg" alt="Saints">
+                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                <img src="images/Supremo.jpeg" alt="Supremo">
+            </div>
+        </div>
     </section>
 
     <div class="container" id="events">
         
-        <!-- League Tournaments Section -->
         <h2 class="section-title" id="leagues">Competitive Leagues</h2>
         <div class="grid">
             
-            <!-- NEW: Haig Streetball League Merged Card -->
             <div class="card">
+                <img src="image/League_Poster.jpeg" alt="Haig Streetball League Season 3 Poster" class="card-image">
                 <span class="card-badge league">League</span>
                 <div class="card-content">
                     <h3 class="card-title">Haig Streetball League - Season 3</h3>
@@ -230,12 +336,10 @@
                     <p>Features 8 teams battling in Group A and Group B, ending with a high-stakes championship round. Playoff brackets and full team rosters are actively tracked.</p>
                 </div>
                 <div class="card-action">
-                    <!-- Updated href to target index_2.html -->
                     <a href="index_2.html" class="btn">View Official Hub</a>
                 </div>
             </div>
 
-            <!-- League Card 1 -->
             <div class="card">
                 <span class="card-badge league">League</span>
                 <div class="card-content">
@@ -252,7 +356,6 @@
                 </div>
             </div>
 
-            <!-- League Card 2 -->
             <div class="card">
                 <span class="card-badge league">League</span>
                 <div class="card-content">
@@ -271,11 +374,9 @@
 
         </div>
 
-        <!-- Weekly Ordinary Games Section -->
         <h2 class="section-title" id="weekly">Weekly Drop-In Games</h2>
         <div class="grid">
             
-            <!-- Weekly Card 1 -->
             <div class="card">
                 <span class="card-badge weekly">Weekly Pick-up</span>
                 <div class="card-content">
@@ -292,7 +393,6 @@
                 </div>
             </div>
 
-            <!-- Weekly Card 2 -->
             <div class="card">
                 <span class="card-badge weekly">Weekly Pick-up</span>
                 <div class="card-content">
@@ -317,5 +417,28 @@
         <p>&copy; 2026 SGTiToHoopers Association. All rights reserved.</p>
     </footer>
 
+    <script>
+        const countDownDate = new Date("Oct 11, 2026 08:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("mins").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("secs").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("league-countdown").innerHTML = "SEASON 3 HAS STARTED!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
