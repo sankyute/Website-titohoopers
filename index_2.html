@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haig Streetball League Season 3</title>
+    <style>
+        :root {
+            --primary: #ff6600;
+            --secondary: #1a1a1a;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --gray: #666666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        header .logo-sub {
+            font-size: 0.8rem;
+            color: #aaa;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-back {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary);
+            color: var(--white) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542652694-40abf526446e?auto=format&fit=crop&q=80') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+            padding-top: 2rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 0.5rem auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-badge {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            align-self: flex-start;
+            margin: 1rem 1rem 0;
+            border-radius: 4px;
+        }
+
+        .card-badge.group-a { background-color: #d946ef; }
+        .card-badge.group-b { background-color: #0ea5e9; }
+        .card-badge.playoff { background-color: var(--primary); }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .card-meta {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta div {
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .team-jersey {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .jersey-black { background: #000; color: #fff; }
+        .jersey-orange { background: var(--primary); color: #fff; }
+
+        /* Media & Utility */
+        .media-box {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .controls-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 1rem;
+            min-width: 250px;
+        }
+
+        .sort-select {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            background-color: var(--white);
+            cursor: pointer;
+            font-weight: 500;
+            min-width: 160px;
+            flex-grow: 1;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        th {
+            background: var(--secondary);
+            color: var(--white);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        td.center { text-align: center; }
+        .row-hover { cursor: pointer; transition: background 0.3s; }
+        .row-hover:hover { background: #f9f9f9; }
+
+        .standings-team {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Roster Lists */
+        .roster-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .roster-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .roster-list li:last-child { border-bottom: none; }
+        .player-meta { font-size: 0.75rem; color: var(--gray); display: block; }
+        
+        .badge-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .player-num {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            min-width: 32px;
+            text-align: center;
+        }
+
+        .player-pos {
+            background: #e2e8f0;
+            color: var(--secondary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            min-width: 36px;
+            text-align: center;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Team Logos - Increased Sizes */
+        .team-logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; 
+            object-fit: cover;
+            vertical-align: middle;
+            background-color: var(--white);
+            border: 2px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .team-logo-sm {
+            width: 35px;
+            height: 35px;
+            margin: 0 8px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            background-color: var(--white);
+            border: 1px solid var(--border);
+        }
+
+        /* Schedule Card Clickable Styles */
+        .schedule-card {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .schedule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border: 1px solid var(--primary);
+        }
+
+        /* Matchup Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8); 
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: var(--light);
+            margin: 5% auto; 
+            padding: 2rem; 
+            border: 1px solid var(--border);
+            width: 95%; 
+            max-width: 1100px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .close-btn {
+            color: var(--gray);
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close-btn:hover {
+            color: var(--primary);
+        }
+        .matchup-container {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .team-roster-side {
+            flex: 1;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .vs-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .matchup-container {
+                flex-direction: column;
+            }
+            .vs-badge {
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="logo">🏀 Haig Streetball</div>
+            <span class="logo-sub">Season 3 Hub</span>
+        </div>
+        <nav>
+            <a href="HRL3_v4.html" class="btn-back">← Back to Main Page</a>
+            <a href="#games">Games</a>
+            <a href="#standings">Standings</a>
+            <a href="#rosters">Rosters</a>
+            <a href="#playoffs">Playoffs</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Season 3 is Here</h1>
+        <p>Singapore Haig 5 Court • 5 Haig Road</p>
+    </section>
+
+    <div class="container">
+        
+        <div class="media-box">
+            <div>
+                <strong>🎵 Haig Streetball Theme</strong><br>
+                <span style="font-size:0.8rem; color:var(--gray);">Produced via Suno AI</span>
+            </div>
+            <audio controls>
+                <source src="theme-song.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="media-box" style="flex-direction: column; align-items: flex-start;">
+            <strong>📺 Season 3 Teaser</strong>
+            <video style="width: 100%; max-height: 400px; background: #000; border-radius: 4px;" muted controls>
+                <source src="teaser.mp4.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- GAMES SCHEDULE -->
+        <h2 class="section-title" id="games">Game Schedule</h2>
+        <div class="controls-bar">
+            <input type="text" id="team-search" class="search-input" placeholder="Search team schedule..." oninput="handleSearch()">
+            <div class="filter-tabs" id="schedule-filters">
+                <button onclick="filterSchedule('ALL')" class="filter-btn active">All Dates</button>
+                <button onclick="filterSchedule('Oct 11')" class="filter-btn">Oct 11</button>
+                <button onclick="filterSchedule('Oct 18')" class="filter-btn">Oct 18</button>
+                <button onclick="filterSchedule('Oct 25')" class="filter-btn">Oct 25</button>
+                <button onclick="filterSchedule('Nov 1')" class="filter-btn">Nov 1</button>
+                <button onclick="filterSchedule('Nov 8')" class="filter-btn">Nov 8</button>
+                <button onclick="filterSchedule('Nov 15')" class="filter-btn">Nov 15</button>
+                <button onclick="filterSchedule('Nov 22')" class="filter-btn">Nov 22</button>
+            </div>
+        </div>
+        <div id="schedule-container" class="grid">
+            <!-- Populated via JS -->
+        </div>
+
+        <!-- STANDINGS -->
+        <h2 class="section-title" id="standings">Current Standings</h2>
+        
+        <h3>Group A</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th class="center">W</th>
+                    <th class="center">L</th>
+                    <th class="center">PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-hover" onclick="jumpToRoster('TNLBCNXMRCY')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>1.</strong> 
+                            <img src="images/NoXmercy.jpeg" class="team-logo-img" alt="NoXMercy"> 
+                            <strong>TNLBCNXMRCY</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('SUPREMO 2.0')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>2.</strong> 
+                            <img src="images/Supremo.jpeg" class="team-logo-img" alt="Supremo 2.0"> 
+                            <strong>SUPREMO 2.0</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('SAINTS')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>3.</strong> 
+                            <img src="images/Saints.jpeg" class="team-logo-img" alt="Saints"> 
+                            <strong>SAINTS</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('HAIG BEASTS')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>4.</strong> 
+                            <img src="images/Haig_Beast.jpeg" class="team-logo-img" alt="Haig Beasts"> 
+                            <strong>HAIG BEASTS</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Group B</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th class="center">W</th>
+                    <th class="center">L</th>
+                    <th class="center">PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-hover" onclick="jumpToRoster('STINGRAYZ')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>1.</strong> 
+                            <img src="images/Stingrayz.jpeg" class="team-logo-img" alt="Stingrayz"> 
+                            <strong>STINGRAYZ</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('HAIG UNITED')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>2.</strong> 
+                            <img src="images/Haig_united.jpeg" class="team-logo-img" alt="Haig United"> 
+                            <strong>HAIG UNITED</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('BOSS MAYOR')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>3.</strong> 
+                            <img src="images/Boss_Mayor.jpeg" class="team-logo-img" alt="Boss Mayor"> 
+                            <strong>BOSS MAYOR</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+                <tr class="row-hover" onclick="jumpToRoster('MERLION HOOPERS')">
+                    <td>
+                        <div class="standings-team">
+                            <strong>4.</strong> 
+                            <img src="images/Merlion_Hoopers.jpeg" class="team-logo-img" alt="Merlion Hoopers"> 
+                            <strong>MERLION HOOPERS</strong>
+                        </div>
+                    </td>
+                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ROSTERS -->
+        <h2 class="section-title" id="rosters">Team Rosters</h2>
+        <div class="controls-bar">
+            <!-- Unified Search, Filter, and Sort Row -->
+            <div class="search-row">
+                <input type="text" id="player-search" class="search-input" placeholder="Search player name..." oninput="handlePlayerSearch()">
+                
+                <select id="roster-filter" class="sort-select" onchange="handleRosterFilter()">
+                    <option value="ALL">Filter: All Teams</option>
+                    <option value="HAIG UNITED">Haig United</option>
+                    <option value="HAIG BEASTS">Haig Beasts</option>
+                    <option value="SAINTS">Saints</option>
+                    <option value="TNLBCNXMRCY">TNLBCNXMRCY</option>
+                    <option value="BOSS MAYOR">Boss Mayor</option>
+                    <option value="MERLION HOOPERS">Merlion Hoopers</option>
+                    <option value="STINGRAYZ">Stingrayz</option>
+                    <option value="SUPREMO 2.0">Supremo 2.0</option>
+                </select>
+
+                <select id="roster-sort" class="sort-select" onchange="handleRosterSort()">
+                    <option value="default">Sort: Jersey # (Default)</option>
+                    <option value="age">Sort: Age</option>
+                    <option value="height">Sort: Height</option>
+                    <option value="position">Sort: Position</option>
+                </select>
+            </div>
+        </div>
+        <div id="roster-container" class="grid">
+            <!-- Populated via JS -->
+        </div>
+
+        <!-- PLAYOFFS -->
+        <h2 class="section-title" id="playoffs">Playoffs Bracket</h2>
+        <div class="grid">
+            <!-- QF 1 -->
+            <div class="card">
+                <span class="card-badge playoff">QF Game 1</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Group A Seed 1</strong> <span>-</span></div>
+                        <div><strong>Group B Seed 4</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- QF 2 -->
+            <div class="card">
+                <span class="card-badge playoff">QF Game 2</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Group A Seed 2</strong> <span>-</span></div>
+                        <div><strong>Group B Seed 3</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- QF 3 -->
+            <div class="card">
+                <span class="card-badge playoff">QF Game 3</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Group A Seed 3</strong> <span>-</span></div>
+                        <div><strong>Group B Seed 2</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- QF 4 -->
+            <div class="card">
+                <span class="card-badge playoff">QF Game 4</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Group A Seed 4</strong> <span>-</span></div>
+                        <div><strong>Group B Seed 1</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Semifinals & Championship</h3>
+        <div class="grid">
+            <!-- Semi 1 -->
+            <div class="card">
+                <span class="card-badge playoff">Semis 1</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Winner QF 1</strong> <span>-</span></div>
+                        <div><strong>Winner QF 2</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Semi 2 -->
+            <div class="card">
+                <span class="card-badge playoff">Semis 2</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong>Winner QF 3</strong> <span>-</span></div>
+                        <div><strong>Winner QF 4</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Finals -->
+            <div class="card" style="border: 2px solid var(--primary);">
+                <span class="card-badge" style="background-color: var(--primary);">🏆 The Finals</span>
+                <div class="card-content">
+                    <h3 class="card-title">TBD</h3>
+                    <div class="card-meta">
+                        <div><strong style="font-size: 1.2rem;">Winner Semis 1</strong> <span>-</span></div>
+                        <div><strong style="font-size: 1.2rem;">Winner Semis 2</strong> <span>-</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Team Matchup Modal -->
+    <div id="matchupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 class="section-title" style="margin-bottom: 0; padding-top: 0;">Game Matchup</h2>
+            <div class="matchup-container" id="matchupContent">
+                <!-- Side-by-side rosters will be injected here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Haig Streetball League. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const teams = {
+            "HAIG UNITED": { name: "Haig United", logo: "images/Haig_united.jpeg" },
+            "TNLBCNXMRCY": { name: "NoXMercy", logo: "images/NoXmercy.jpeg" },
+            "MERLION HOOPERS": { name: "Merlion Hoopers", logo: "images/Merlion_Hoopers.jpeg" },
+            "BOSS MAYOR": { name: "Boss Mayor", logo: "images/Boss_Mayor.jpeg" },
+            "SAINTS": { name: "Team Saints", logo: "images/Saints.jpeg" },
+            "HAIG BEASTS": { name: "Haig Beasts 3.0", logo: "images/Haig_Beast.jpeg" },
+            "STINGRAYZ": { name: "Stingrayz", logo: "images/Stingrayz.jpeg" },
+            "SUPREMO 2.0": { name: "Supremo 2.0", logo: "images/Supremo.jpeg" }
+        };
+
+        const scheduleData = [
+            { dateFull: "October 11", dateShort: "Oct 11", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "STINGRAYZ", homeColor: "Orange", away: "HAIG UNITED", awayColor: "Black" }] },
+            { dateFull: "October 18", dateShort: "Oct 18", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Black", away: "MERLION HOOPERS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", home: "SAINTS", homeColor: "Orange", away: "HAIG BEASTS", awayColor: "Black" }] },
+            { dateFull: "October 25", dateShort: "Oct 25", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "SUPREMO 2.0", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "STINGRAYZ", homeColor: "Orange", away: "MERLION HOOPERS", awayColor: "Black" }] },
+            { dateFull: "November 1", dateShort: "Nov 1", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "HAIG BEASTS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Orange", away: "HAIG UNITED", awayColor: "Black" }] },
+            { dateFull: "November 8", dateShort: "Nov 8", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "SUPREMO 2.0", homeColor: "Black", away: "SAINTS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Orange", away: "STINGRAYZ", awayColor: "Black" }] },
+            { dateFull: "November 15", dateShort: "Nov 15", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "MERLION HOOPERS", homeColor: "Black", away: "HAIG UNITED", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", home: "SUPREMO 2.0", homeColor: "Orange", away: "HAIG BEASTS", awayColor: "Black" }] },
+            { dateFull: "November 22", dateShort: "Nov 22", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "SAINTS", awayColor: "Orange" }] }
+        ];
+
+        const rosterData = {
+            "BOSS MAYOR": [{ name: "Jeck Co 'Jecoy' (C)", meta: "Age: 35 | Ht: 5' 8\" | PF", num: "13" }, { name: "Bernard Torno 'Torns'", meta: "Age: 42 | Ht: 5' 6\" | PG", num: "1" }, { name: "JERRY L. DE JESUS 'Jerry'", meta: "Age: 46 | Ht: 6' 1\" | C", num: "12" }, { name: "Jeffrey Valderrama 'Jeff'", meta: "Age: 42 | Ht: 5' 5\" | SG", num: "10" }, { name: "Joseph Encarnacion 'Joseph'", meta: "Age: 42 | Ht: 5' 7\" | SG", num: "20" }, { name: "Joseph rubia 'Seph'", meta: "Age: 39 | Ht: 5' 7\" | SG", num: "18" }, { name: "Julius Rojas 'Juls'", meta: "Age: 26 | Ht: 5' 9\" | SG", num: "15" }, { name: "Michael Banta 'Michael'", meta: "Age: 31 | Ht: 5' 9\" | PF", num: "28" }, { name: "Paul Joshua Bassig 'Paul'", meta: "Age: 27 | Ht: 5' 7\" | PF", num: "22" }, { name: "Rhen Mark Callado 'Rhen'", meta: "Age: 29 | Ht: 5' 6\" | PG", num: "2" }, { name: "jhef reyes 'boss j'", meta: "Age: 39 | Ht: 5' 4\" | PG", num: "26" }, { name: "nico yturriaga 'nico'", meta: "Age: N/A | Ht: 5' 8\" | SF", num: "79" }],
+            "HAIG BEASTS": [{ name: "Arnold 'Arnold' (C)", meta: "Age: 36 | Ht: 5' 3\" | SG", num: "7" }, { name: "Alexander T. Desisto 'Xander'", meta: "Age: 25 | Ht: 5' 7\" | PG", num: "7" }, { name: "Conrad Perez 'Con tv'", meta: "Age: N/A | Ht: 5' 7\" | SF", num: "10" }, { name: "Enrique De Jesus 'Kim'", meta: "Age: 29 | Ht: 5' 4\" | SG", num: "11" }, { name: "Froilan Olavidez 'Froi'", meta: "Age: 43 | Ht: 5' 9\" | PF", num: "3" }, { name: "Ibrahim Abubakar 'Abs'", meta: "Age: 43 | Ht: 5' 9\" | C", num: "4" }, { name: "Louie Pangan 'Louie'", meta: "Age: 29 | Ht: 5' 9\" | SF", num: "2" }, { name: "Reggie Gammad 'Reggie'", meta: "Age: 37 | Ht: 5' 7\" | SG", num: "15" }, { name: "Ruel Dionco", meta: "Age: 39 | Ht: 5' 4\" | SG", num: "23" }, { name: "Sean Sese 'Sean'", meta: "Age: 47 | Ht: 5' 4\" | SG", num: "26" }, { name: "Sherwin C. Soliman 'Win'", meta: "Age: 49 | Ht: 5' 5\" | SG", num: "4" }, { name: "jerome cabonias 'jerome'", meta: "Age: 41 | Ht: 5' 3\" | PG", num: "9" }],
+            "HAIG UNITED": [{ name: "Leo G. Rico (C)", meta: "Age: 42 | Ht: 5' 8\" | SG", num: "16" }, { name: "Alvin M. Balce 'Alvin'", meta: "Age: 33 | Ht: 5' 7\" | PG", num: "4" }, { name: "Cris Lumabi 'Cris'", meta: "Age: 59 | Ht: 5' 8\" | SG", num: "99" }, { name: "Daryll Santos 'Daryll'", meta: "Age: 37 | Ht: 5' 9\" | PF", num: "25" }, { name: "Delfin Santos Jr 'Jay'", meta: "Age: 41 | Ht: 6' 0\" | C", num: "15" }, { name: "Dwynikko E. Mamangon 'Nikko'", meta: "Age: 27 | Ht: 5' 8\" | SG", num: "7" }, { name: "Kent Ando 'Ando'", meta: "Age: 37 | Ht: 5' 3\" | SG", num: "5" }, { name: "Krisanto Bibal 'KRIS'", meta: "Age: 45 | Ht: 6' 0\" | SG", num: "98" }, { name: "Mark Tuco 'Mark'", meta: "Age: 26 | Ht: 5' 5\" | SG", num: "24" }, { name: "SEAN CAPILI 'SEAN'", meta: "Age: 42 | Ht: 5' 7\" | PF", num: "92" }, { name: "Yushen Chen 'David'", meta: "Age: 45 | Ht: 5' 6\" | SG", num: "6" }],
+            "MERLION HOOPERS": [{ name: "Ronald Pacheco 'Onad' (C)", meta: "Age: 44 | Ht: 5' 5\" | PG", num: "44" }, { name: "Archie Venezuela 'Arch'", meta: "Age: 46 | Ht: 5' 7\" | SF", num: "12" }, { name: "Bal Belen 'Bal'", meta: "Age: N/A | Ht: 5' 5\" | SG", num: "22" }, { name: "Emmanuel G. Bernardo 'Iman'", meta: "Age: 33 | Ht: 5' 8\" | SG", num: "28" }, { name: "Fernando Salenga 'Fernan'", meta: "Age: 53 | Ht: 5' 8\" | PF", num: "13" }, { name: "Jaypee Tajantajan 'Jpoy'", meta: "Age: 35 | Ht: 5' 9\" | PF", num: "17" }, { name: "Jojo Manalili 'Jojo'", meta: "Age: 44 | Ht: 5' 8\" | SG", num: "17" }, { name: "Kevin Ces Legaspi 'Ces'", meta: "Age: 33 | Ht: 5' 9\" | PG", num: "9" }, { name: "Melky 'ImfaktO'", meta: "Age: 45 | Ht: 5' 9\" | SF", num: "12" }, { name: "Miguelito alimario 'Migz'", meta: "Age: 35 | Ht: 5' 8\" | PF", num: "0" }, { name: "Paul Kwong 'Paul'", meta: "Age: 44 | Ht: 5' 6\" | SG", num: "9" }],
+            "SAINTS": [{ name: "Arnel Goyon 'Arnel' (C)", meta: "Age: 42 | Ht: 5' 6\" | SG", num: "30" }, { name: "Daniel M Serrano Jr 'Daniel'", meta: "Age: 55 | Ht: 5' 7\" | SG", num: "72" }, { name: "Daniel swart 'Swart'", meta: "Age: 22 | Ht: 5' 8\" | SG", num: "10" }, { name: "Geoffrey A Eltanal 'Nvls'", meta: "Age: 42 | Ht: 5' 7\" | SF", num: "23" }, { name: "Jojo dano 'Jojo'", meta: "Age: 40 | Ht: 5' 7\" | SG", num: "14" }, { name: "Jonathan Viroomal 'Athan'", meta: "Age: 47 | Ht: 5' 8\" | SG", num: "42" }, { name: "Karl Christian Acain 'Karl'", meta: "Age: 40 | Ht: 5' 10\" | C", num: "34" }, { name: "Lawrence Medina 'Law'", meta: "Age: 36 | Ht: 5' 6\" | SF", num: "14" }, { name: "Reynald dabu 'Dabs'", meta: "Age: 44 | Ht: 6' 3\" | SF", num: "17" }, { name: "Rhey Frianeza 'Rhey'", meta: "Age: 37 | Ht: 5' 7\" | SG", num: "15" }, { name: "Santos Marvin 'Marvin'", meta: "Age: 42 | Ht: 5' 8\" | SF", num: "8" }],
+            "STINGRAYZ": [{ name: "Joseph Marayag 'Seph30' (C)", meta: "Age: 41 | Ht: 5' 3\" | SG", num: "30" }, { name: "JP Jocson 'JP'", meta: "Age: 44 | Ht: 5' 7\" | SG", num: "1" }, { name: "Jhon Pascual 'Jhon'", meta: "Age: 26 | Ht: 5' 6\" | PG", num: "6" }, { name: "Jim Alfred Dacanay 'jim'", meta: "Age: 28 | Ht: 5' 8\" | SF", num: "10" }, { name: "Leonard Pili 'Leonard'", meta: "Age: 41 | Ht: 5' 7\" | PG", num: "11" }, { name: "Manuel Martinez Tan", meta: "Age: 37 | Ht: 5' 9\" | PF", num: "4" }, { name: "Paul Lama 'Luap'", meta: "Age: 35 | Ht: 5' 4\" | SG", num: "0" }, { name: "Romel C. Catarina 'ROCATZ'", meta: "Age: 43 | Ht: 5' 4\" | SG", num: "20" }, { name: "Sylvester amarillo 'Sylvz'", meta: "Age: 38 | Ht: 5' 6\" | SF", num: "19" }, { name: "Victor Javellana 'Vic'", meta: "Age: 43 | Ht: 5' 7\" | SF", num: "11" }, { name: "Yancy Arandia 'Yancy'", meta: "Age: 40 | Ht: 5' 10\" | SF", num: "17" }],
+            "SUPREMO 2.0": [{ name: "Jan Trevor Enriquez 'TREVOR' (C)", meta: "Age: 32 | Ht: 5' 4\" | PG", num: "5" }, { name: "CLARENCE JAY M. TOCAL 'clar'", meta: "Age: 24 | Ht: 5' 7\" | PG", num: "12" }, { name: "Edwin Vernaiz Jr. 'Edz'", meta: "Age: 38 | Ht: 5' 7\" | SG", num: "26" }, { name: "Enrico 'EnriQ'", meta: "Age: 49 | Ht: 5' 9\" | SF", num: "8" }, { name: "Frederick Q Rollera 'Bob'", meta: "Age: 36 | Ht: 5' 8\" | PF", num: "22" }, { name: "Gerald Loquinario 'Jay-R'", meta: "Age: 39 | Ht: 5' 10\" | C", num: "7" }, { name: "Jason Angelo Alfonso 'Jay'", meta: "Age: 28 | Ht: 5' 5\" | PG", num: "13" }, { name: "Justine Santos 'Justine'", meta: "Age: 28 | Ht: 5' 10\" | SG", num: "1" }, { name: "Neil De Paz Fernandez 'DingDong'", meta: "Age: 36 | Ht: 5' 5\" | SG", num: "11" }, { name: "Normelito Alayon 'Mhel'", meta: "Age: 50 | Ht: 5' 5\" | SG", num: "18" }, { name: "San Bacho 'San'", meta: "Age: 41 | Ht: 5' 6\" | SG", num: "8" }],
+            "TNLBCNXMRCY": [{ name: "Elmer Mendoza 'meniga' (C)", meta: "Age: 36 | Ht: 5' 6\" | SG", num: "3" }, { name: "Bryan Lama 'Bryan'", meta: "Age: 29 | Ht: 5' 9\" | SG", num: "10" }, { name: "Chad Francis Momongan 'Chad'", meta: "Age: 44 | Ht: 5' 6\" | SG", num: "10" }, { name: "DAN CARLO 'Konsi'", meta: "Age: 25 | Ht: 5' 5\" | PG", num: "17" }, { name: "Edwin Carlos 'Dwin'", meta: "Age: 45 | Ht: 5' 8\" | SG", num: "6" }, { name: "JASON HANOPOL 'JASON'", meta: "Age: 32 | Ht: 5' 6\" | PG", num: "4" }, { name: "Jesson Labasan 'Jhay'", meta: "Age: 46 | Ht: 5' 8\" | SF", num: "23" }, { name: "Mark Joshua Abenoja 'Maki'", meta: "Age: 26 | Ht: 5' 8\" | SF", num: "13" }, { name: "Mhel Papa 'Mhel'", meta: "Age: 49 | Ht: 5' 6\" | SG", num: "17" }, { name: "Ramil Gatbonton 'Bong'", meta: "Age: 46 | Ht: 5' 7\" | PF", num: "11" }, { name: "Ramil Looc 'Looc'", meta: "Age: 48 | Ht: 5' 11\" | C", num: "42" }]
+        };
+
+        // JUMP FUNCTION
+        function jumpToRoster(teamKey) {
+            document.getElementById('roster-filter').value = teamKey;
+            handleRosterFilter();
+            document.getElementById('rosters').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // SCHEDULE LOGIC
+        let currentScheduleFilter = 'ALL';
+        let currentSearchQuery = '';
+
+        function handleSearch() {
+            currentSearchQuery = document.getElementById('team-search').value.trim().toLowerCase();
+            renderSchedule();
+        }
+
+        function filterSchedule(date) {
+            currentScheduleFilter = date;
+            const buttons = document.querySelectorAll('#schedule-filters .filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.trim().includes(date) || (date === 'ALL' && btn.textContent.trim() === 'All Dates')) {
+                    btn.classList.add('active');
+                }
+            });
+            renderSchedule();
+        }
+
+        // --- UPDATED renderSchedule FUNCTION WITH MODAL TRIGGER ---
+        function renderSchedule() {
+            const container = document.getElementById('schedule-container');
+            container.innerHTML = '';
+
+            let dataToDisplay = scheduleData;
+            
+            if (currentScheduleFilter !== 'ALL') {
+                dataToDisplay = scheduleData.filter(d => d.dateShort === currentScheduleFilter);
+            }
+
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                const matchingTeams = new Set();
+                Object.keys(teams).forEach(t => { if ((teams[t].name || t).toLowerCase().includes(query)) matchingTeams.add(t); });
+                Object.keys(rosterData).forEach(t => { if (rosterData[t].some(p => p.name.toLowerCase().includes(query))) matchingTeams.add(t); });
+                
+                let filteredData = [];
+                dataToDisplay.forEach(day => {
+                    const games = day.games.filter(g => matchingTeams.has(g.home) || matchingTeams.has(g.away) || g.home.toLowerCase().includes(query) || g.away.toLowerCase().includes(query));
+                    if (games.length > 0) filteredData.push({ ...day, games });
+                });
+                dataToDisplay = filteredData;
+            }
+
+            dataToDisplay.forEach(day => {
+                day.games.forEach(game => {
+                    const home = teams[game.home] || { name: game.home };
+                    const away = teams[game.away] || { name: game.away };
+                    const badgeClass = game.group === "GROUP A" ? "group-a" : "group-b";
+                    
+                    const homeJ = game.homeColor === 'Black' ? 'jersey-black' : 'jersey-orange';
+                    const awayJ = game.awayColor === 'Black' ? 'jersey-black' : 'jersey-orange';
+
+                    const card = document.createElement('div');
+                    card.className = "card schedule-card"; // Added schedule-card class
+                    card.onclick = () => showMatchupRosters(game.home, game.away); // Added onclick handler
+                    
+                    card.innerHTML = `
+                        <span class="card-badge ${badgeClass}">${game.group}</span>
+                        <div class="card-content">
+                            <h3 class="card-title">${day.dateShort} - ${game.time} <span style="float:right; font-size: 0.8rem; color:var(--primary); margin-top:5px;">View Rosters</span></h3>
+                            <div class="card-meta">
+                                <div>
+                                    <span style="display: flex; align-items: center;">
+                                        <strong>🏠 Home: </strong>
+                                        <img src="${home.logo || ''}" alt="${home.name}" class="team-logo-sm">
+                                        ${home.name}
+                                    </span>
+                                    <span class="team-jersey ${homeJ}">${game.homeColor}</span>
+                                </div>
+                                <div style="margin-top: 0.5rem;">
+                                    <span style="display: flex; align-items: center;">
+                                        <strong>✈️ Away: </strong>
+                                        <img src="${away.logo || ''}" alt="${away.name}" class="team-logo-sm">
+                                        ${away.name}
+                                    </span>
+                                    <span class="team-jersey ${awayJ}">${game.awayColor}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        }
+
+        // --- NEW MODAL FUNCTIONS ---
+        function showMatchupRosters(homeKey, awayKey) {
+            const homeTeam = teams[homeKey] || { name: homeKey };
+            const awayTeam = teams[awayKey] || { name: awayKey };
+            
+            // Helper function to build a team's roster list
+            const createRosterHTML = (teamKey, teamData) => {
+                const players = (rosterData[teamKey] || []).map(parsePlayer);
+                
+                // Sort numerically by jersey number by default
+                players.sort((a, b) => parseInt(a.num) - parseInt(b.num));
+
+                if(players.length === 0) return `<p>No roster data available.</p>`;
+                
+                const listHtml = players.map(p => `
+                    <li>
+                        <div>
+                            <strong>${p.name}</strong>
+                            <span class="player-meta">${p._strippedMeta}</span>
+                        </div>
+                        <div class="badge-group">
+                            <span class="player-pos">${p._pos}</span>
+                            <span class="player-num">#${p.num}</span>
+                        </div>
+                    </li>
+                `).join('');
+
+                return `
+                    <div style="text-align: center; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">
+                        <img src="${teamData.logo || ''}" alt="${teamData.name}" class="team-logo-img" style="width: 80px; height: 80px; margin-bottom: 10px;">
+                        <h3 style="font-size: 1.4rem;">${teamData.name}</h3>
+                    </div>
+                    <ul class="roster-list" style="margin-top: 0;">
+                        ${listHtml}
+                    </ul>
+                `;
+            };
+
+            // Inject content into the modal container
+            const container = document.getElementById('matchupContent');
+            container.innerHTML = `
+                <div class="team-roster-side">${createRosterHTML(homeKey, homeTeam)}</div>
+                <div class="vs-badge">VS</div>
+                <div class="team-roster-side">${createRosterHTML(awayKey, awayTeam)}</div>
+            `;
+            
+            // Display the modal
+            document.getElementById('matchupModal').style.display = 'block';
+            
+            // Prevent background scrolling while modal is open
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            document.getElementById('matchupModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+        }
+
+        // Close modal if user clicks outside the modal content area
+        window.onclick = function(event) {
+            const modal = document.getElementById('matchupModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // ROSTER LOGIC
+        let currentRosterFilter = 'ALL';
+        let currentPlayerSearchQuery = '';
+        let currentRosterSort = 'default';
+
+        function handlePlayerSearch() {
+            currentPlayerSearchQuery = document.getElementById('player-search').value.trim().toLowerCase();
+            renderRosters();
+        }
+
+        function handleRosterFilter() {
+            currentRosterFilter = document.getElementById('roster-filter').value;
+            renderRosters();
+        }
+
+        function handleRosterSort() {
+            currentRosterSort = document.getElementById('roster-sort').value;
+            renderRosters();
+        }
+
+        function parsePlayer(p) {
+            const parts = p.meta.split('|').map(s => s.trim());
+            
+            let age = 999;
+            if (parts[0]) {
+                const ageMatch = parts[0].match(/(\d+)/);
+                if (ageMatch) age = parseInt(ageMatch[1]);
+            }
+
+            let height = 0;
+            if (parts[1]) {
+                const htMatch = parts[1].match(/(\d+)'\s*(\d+)/);
+                if (htMatch) height = parseInt(htMatch[1]) * 12 + parseInt(htMatch[2]);
+            }
+
+            const position = parts.length > 2 ? parts[2] : 'N/A';
+            const strippedMeta = parts.slice(0, 2).join(' | ');
+
+            return { ...p, _age: age, _height: height, _pos: position, _strippedMeta: strippedMeta };
+        }
+
+        function renderRosters() {
+            const container = document.getElementById('roster-container');
+            container.innerHTML = ''; 
+
+            Object.keys(rosterData).forEach(teamKey => {
+                if (currentRosterFilter !== 'ALL' && teamKey !== currentRosterFilter) return;
+                
+                const team = teams[teamKey] || { name: teamKey };
+                let players = rosterData[teamKey].map(parsePlayer);
+                
+                if (currentPlayerSearchQuery) {
+                    players = players.filter(p => p.name.toLowerCase().includes(currentPlayerSearchQuery));
+                }
+
+                if (players.length === 0) return;
+
+                if (currentRosterSort === 'age') {
+                    players.sort((a, b) => a._age - b._age);
+                } else if (currentRosterSort === 'height') {
+                    players.sort((a, b) => b._height - a._height);
+                } else if (currentRosterSort === 'position') {
+                    const posOrder = { 'PG': 1, 'SG': 2, 'SF': 3, 'PF': 4, 'C': 5 };
+                    players.sort((a, b) => (posOrder[a._pos] || 99) - (posOrder[b._pos] || 99));
+                }
+
+                const card = document.createElement('div');
+                card.className = "card";
+                
+                let listHtml = players.map(p => `
+                    <li>
+                        <div>
+                            <strong>${p.name}</strong>
+                            <span class="player-meta">${p._strippedMeta}</span>
+                        </div>
+                        <div class="badge-group">
+                            <span class="player-pos">${p._pos}</span>
+                            <span class="player-num">#${p.num}</span>
+                        </div>
+                    </li>
+                `).join('');
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <h3 class="card-title" style="display: flex; align-items: center;">
+                            <img src="${team.logo || ''}" alt="${team.name}" class="team-logo-img">
+                            ${team.name}
+                        </h3>
+                        <ul class="roster-list">
+                            ${listHtml}
+                        </ul>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = function() {
+            renderSchedule();
+            renderRosters();
+        };
+    </script>
+</body>
+</html>
