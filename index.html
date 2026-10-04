@@ -68,11 +68,11 @@
             margin: auto; 
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Aligns content to the top */
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
             color: var(--white); 
-            padding: 2rem; /* Even padding around the box */
+            padding: 2rem; 
             z-index: 2;
             
             background-image: 
@@ -84,26 +84,26 @@
             border-radius: 16px;
             width: 90%;
             max-width: 1000px; 
-            min-height: 500px; /* Increased height to create a large gap in the middle */
+            min-height: 500px; 
             border: none;
         }
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-top: 0; /* Pushed to the very top */
-            margin-bottom: 0.5rem; /* Kept close to the paragraph text */
+            margin-top: 0; 
+            margin-bottom: 0.5rem; 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: auto; /* This acts as a spring, pushing the button to the bottom */
+            margin-bottom: auto; 
             font-weight: 500;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
 
         .hero .btn {
-            margin-bottom: 1rem; /* Keeps the button slightly off the bottom edge */
+            margin-bottom: 1rem; 
         }
 
         .logo-marquee {
@@ -270,6 +270,68 @@
             margin-top: 4rem;
             font-size: 0.9rem;
         }
+
+        /* --- RESPONSIVE ADJUSTMENTS (Tablet & Mobile) --- */
+        
+        /* Tablets (iPad) and smaller screens */
+        @media (max-width: 850px) {
+            header {
+                flex-direction: column; /* Stack logo and nav vertically */
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            nav a {
+                margin-left: 0; /* Remove left margin for flex gap to take over */
+            }
+
+            .hero h1 {
+                font-size: 2.5rem; /* Scale down giant text */
+            }
+
+            .countdown-container {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .countdown-container span {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Mobile Phones */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                min-height: 400px; /* Reduce empty space */
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .grid {
+                /* Forces exactly 1 column so wide cards don't break the screen width */
+                grid-template-columns: 1fr; 
+            }
+
+            .marquee-track img {
+                height: 70px; /* Make logos smaller on mobile */
+                margin: 0 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -329,7 +391,7 @@
                 <div class="card-content">
                     <h3 class="card-title">Haig Streetball League - Season 3</h3>
                     <div class="card-meta">
-                        <div><strong>📅 Duration:</strong> Oct 11 - Dec 13</div>
+                        <div><strong>📅 Duration:</strong> Oct 18 - Dec 13</div>
                         <div><strong>📍 Location:</strong> Singapore Haig 5 Court (5 Haig Road Singapore 430005)</div>
                         <div><strong>🏆 Division:</strong> Competitive Streetball (8 Teams)</div>
                     </div>
@@ -418,7 +480,7 @@
     </footer>
 
     <script>
-        const countDownDate = new Date("Oct 11, 2026 08:00:00").getTime();
+        const countDownDate = new Date("Oct 18, 2026 07:00:00").getTime();
 
         const x = setInterval(function() {
             const now = new Date().getTime();
