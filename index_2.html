@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Haig Streetball League Season 3</title>
     <style>
         :root {
@@ -87,17 +87,18 @@
             color: var(--white) !important;
         }
 
-        /* --- UPDATED HERO FOR MARQUEE LAYOUT --- */
+        /* --- FLUID HERO SECTION --- */
         .hero {
             position: relative;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542652694-40abf526446e?auto=format&fit=crop&q=80') no-repeat center center/cover;
-            height: 480px; /* Increased height to fit text and marquee */
+            min-height: 50vh; /* Responsive height */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: var(--white);
             text-align: center;
+            padding: 2rem 0;
         }
 
         .hero-text {
@@ -111,13 +112,13 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3.5rem); /* Fluid typography */
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: var(--primary);
             font-weight: bold;
         }
@@ -142,8 +143,8 @@
         }
 
         .marquee-track img {
-            height: 80px; /* Scaled slightly for hub page */
-            margin: 0 3rem; 
+            height: clamp(50px, 8vw, 80px); /* Fluid logo sizing */
+            margin: 0 clamp(1rem, 3vw, 3rem); 
             object-fit: contain;
         }
 
@@ -161,7 +162,7 @@
         .section-title {
             text-align: center;
             margin-bottom: 2rem;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             position: relative;
             padding-top: 2rem;
         }
@@ -241,7 +242,6 @@
         .jersey-black { background: #000; color: #fff; }
         .jersey-orange { background: var(--primary); color: #fff; }
 
-        /* Media & Utility */
         .media-box {
             background: var(--white);
             border-radius: 8px;
@@ -295,6 +295,7 @@
             gap: 0.5rem;
             overflow-x: auto;
             padding-bottom: 0.5rem;
+            -webkit-overflow-scrolling: touch;
         }
 
         .filter-btn {
@@ -314,15 +315,21 @@
             border-color: var(--primary);
         }
 
-        /* Tables */
+        /* --- RESPONSIVE TABLES --- */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             background: var(--white);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 2rem;
+            min-width: 600px; /* Forces scroll on small screens */
         }
 
         th, td {
@@ -349,7 +356,6 @@
             gap: 10px;
         }
 
-        /* Roster Lists */
         .roster-list {
             list-style: none;
             margin-top: 1rem;
@@ -371,30 +377,28 @@
             gap: 0.5rem;
         }
 
-        .player-num {
-            background: var(--secondary);
-            color: var(--primary);
+        .player-num, .player-pos {
             padding: 2px 8px;
             border-radius: 4px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        .player-num {
+            background: var(--secondary);
+            color: var(--primary);
             font-size: 0.8rem;
             min-width: 32px;
-            text-align: center;
         }
 
         .player-pos {
             background: #e2e8f0;
             color: var(--secondary);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: bold;
             font-size: 0.75rem;
             min-width: 36px;
-            text-align: center;
             border: 1px solid #cbd5e1;
         }
 
-        /* Team Logos */
         .team-logo-img {
             width: 50px;
             height: 50px;
@@ -417,7 +421,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Schedule Card Clickable Styles */
         .schedule-card {
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -428,7 +431,6 @@
             border: 1px solid var(--primary);
         }
 
-        /* Matchup Modal Styles */
         .modal {
             display: none; 
             position: fixed; 
@@ -486,12 +488,52 @@
             color: var(--primary);
         }
 
+        /* --- DEVICE MEDIA QUERIES --- */
+        
+        /* Tablets and iPads */
+        @media (max-width: 1024px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            nav {
+                justify-content: center;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            .grid {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Mobile Phones */
         @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
             .matchup-container {
                 flex-direction: column;
             }
             .vs-badge {
                 padding: 1rem 0;
+            }
+            .modal-content {
+                padding: 1rem;
+                margin: 10% auto;
+            }
+            .search-row {
+                flex-direction: column;
+            }
+            .search-input, .sort-select {
+                min-width: 100%;
+            }
+            .media-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            audio {
+                width: 100%;
             }
         }
     </style>
@@ -504,7 +546,6 @@
             <span class="logo-sub">Season 3 Hub</span>
         </div>
         <nav>
-            <!-- Adjusted navigation back to the main index file based on previous interactions -->
             <a href="index.html" class="btn-back">← Back to Main Page</a>
             <a href="#games">Games</a>
             <a href="#standings">Standings</a>
@@ -519,7 +560,6 @@
             <p>Singapore Haig 5 Court • 5 Haig Road</p>
         </div>
 
-        <!-- NEW: Added Logo Marquee -->
         <div class="logo-marquee">
            <div class="marquee-track">
                 <img src="images/Haig_united.jpeg" alt="Haig United">
@@ -531,7 +571,6 @@
                 <img src="images/Stingrayz.jpeg" alt="Stingrayz">
                 <img src="images/Supremo.jpeg" alt="Supremo">
                 
-                <!-- Repeated Set for Seamless Loop -->
                 <img src="images/Haig_united.jpeg" alt="Haig United">
                 <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
                 <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
@@ -551,16 +590,9 @@
                 <strong>🎵 Haig Streetball Theme</strong><br>
                 <span style="font-size:0.8rem; color:var(--gray);">Produced via Suno AI</span>
             </div>
-            <audio controls>
+            <audio id="theme-audio" controls>
                 <source src="theme-song.mp3" type="audio/mp3">
             </audio>
-        </div>
-
-        <div class="media-box" style="flex-direction: column; align-items: flex-start;">
-            <strong>📺 Season 3 Teaser</strong>
-            <video style="width: 100%; max-height: 400px; background: #000; border-radius: 4px;" muted controls>
-                <source src="teaser.mp4.mp4" type="video/mp4">
-            </video>
         </div>
 
         <!-- GAMES SCHEDULE -->
@@ -569,7 +601,6 @@
             <input type="text" id="team-search" class="search-input" placeholder="Search team schedule..." oninput="handleSearch()">
             <div class="filter-tabs" id="schedule-filters">
                 <button onclick="filterSchedule('ALL')" class="filter-btn active">All Dates</button>
-                <button onclick="filterSchedule('Oct 11')" class="filter-btn">Oct 11</button>
                 <button onclick="filterSchedule('Oct 18')" class="filter-btn">Oct 18</button>
                 <button onclick="filterSchedule('Oct 25')" class="filter-btn">Oct 25</button>
                 <button onclick="filterSchedule('Nov 1')" class="filter-btn">Nov 1</button>
@@ -578,125 +609,126 @@
                 <button onclick="filterSchedule('Nov 22')" class="filter-btn">Nov 22</button>
             </div>
         </div>
-        <div id="schedule-container" class="grid">
-            <!-- Populated via JS -->
-        </div>
+        <div id="schedule-container" class="grid"></div>
 
         <!-- STANDINGS -->
         <h2 class="section-title" id="standings">Current Standings</h2>
         
         <h3>Group A</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th class="center">W</th>
-                    <th class="center">L</th>
-                    <th class="center">PTS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="row-hover" onclick="jumpToRoster('TNLBCNXMRCY')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>1.</strong> 
-                            <img src="images/NoXmercy.jpeg" class="team-logo-img" alt="NoXMercy"> 
-                            <strong>TNLBCNXMRCY</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('SUPREMO 2.0')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>2.</strong> 
-                            <img src="images/Supremo.jpeg" class="team-logo-img" alt="Supremo 2.0"> 
-                            <strong>SUPREMO 2.0</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('SAINTS')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>3.</strong> 
-                            <img src="images/Saints.jpeg" class="team-logo-img" alt="Saints"> 
-                            <strong>SAINTS</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('HAIG BEASTS')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>4.</strong> 
-                            <img src="images/Haig_Beast.jpeg" class="team-logo-img" alt="Haig Beasts"> 
-                            <strong>HAIG BEASTS</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th class="center">W</th>
+                        <th class="center">L</th>
+                        <th class="center">PTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-hover" onclick="jumpToRoster('TNLBCNXMRCY')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>1.</strong> 
+                                <img src="images/NoXmercy.jpeg" class="team-logo-img" alt="NoXMercy"> 
+                                <strong>TNLBCNXMRCY</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('SUPREMO 2.0')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>2.</strong> 
+                                <img src="images/Supremo.jpeg" class="team-logo-img" alt="Supremo 2.0"> 
+                                <strong>SUPREMO 2.0</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('SAINTS')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>3.</strong> 
+                                <img src="images/Saints.jpeg" class="team-logo-img" alt="Saints"> 
+                                <strong>SAINTS</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('HAIG BEASTS')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>4.</strong> 
+                                <img src="images/Haig_Beast.jpeg" class="team-logo-img" alt="Haig Beasts"> 
+                                <strong>HAIG BEASTS</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h3>Group B</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th class="center">W</th>
-                    <th class="center">L</th>
-                    <th class="center">PTS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="row-hover" onclick="jumpToRoster('STINGRAYZ')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>1.</strong> 
-                            <img src="images/Stingrayz.jpeg" class="team-logo-img" alt="Stingrayz"> 
-                            <strong>STINGRAYZ</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('HAIG UNITED')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>2.</strong> 
-                            <img src="images/Haig_united.jpeg" class="team-logo-img" alt="Haig United"> 
-                            <strong>HAIG UNITED</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('BOSS MAYOR')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>3.</strong> 
-                            <img src="images/Boss_Mayor.jpeg" class="team-logo-img" alt="Boss Mayor"> 
-                            <strong>BOSS MAYOR</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-                <tr class="row-hover" onclick="jumpToRoster('MERLION HOOPERS')">
-                    <td>
-                        <div class="standings-team">
-                            <strong>4.</strong> 
-                            <img src="images/Merlion_Hoopers.jpeg" class="team-logo-img" alt="Merlion Hoopers"> 
-                            <strong>MERLION HOOPERS</strong>
-                        </div>
-                    </td>
-                    <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th class="center">W</th>
+                        <th class="center">L</th>
+                        <th class="center">PTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-hover" onclick="jumpToRoster('STINGRAYZ')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>1.</strong> 
+                                <img src="images/Stingrayz.jpeg" class="team-logo-img" alt="Stingrayz"> 
+                                <strong>STINGRAYZ</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('HAIG UNITED')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>2.</strong> 
+                                <img src="images/Haig_united.jpeg" class="team-logo-img" alt="Haig United"> 
+                                <strong>HAIG UNITED</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('BOSS MAYOR')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>3.</strong> 
+                                <img src="images/Boss_Mayor.jpeg" class="team-logo-img" alt="Boss Mayor"> 
+                                <strong>BOSS MAYOR</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                    <tr class="row-hover" onclick="jumpToRoster('MERLION HOOPERS')">
+                        <td>
+                            <div class="standings-team">
+                                <strong>4.</strong> 
+                                <img src="images/Merlion_Hoopers.jpeg" class="team-logo-img" alt="Merlion Hoopers"> 
+                                <strong>MERLION HOOPERS</strong>
+                            </div>
+                        </td>
+                        <td class="center">0</td><td class="center">0</td><td class="center" style="color:var(--primary); font-weight:bold;">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- ROSTERS -->
         <h2 class="section-title" id="rosters">Team Rosters</h2>
         <div class="controls-bar">
-            <!-- Unified Search, Filter, and Sort Row -->
             <div class="search-row">
                 <input type="text" id="player-search" class="search-input" placeholder="Search player name..." oninput="handlePlayerSearch()">
                 
@@ -720,96 +752,38 @@
                 </select>
             </div>
         </div>
-        <div id="roster-container" class="grid">
-            <!-- Populated via JS -->
-        </div>
+        <div id="roster-container" class="grid"></div>
 
         <!-- PLAYOFFS -->
         <h2 class="section-title" id="playoffs">Playoffs Bracket</h2>
+        <p style="text-align: center; color: var(--primary); font-weight: bold; margin-bottom: 2rem; padding: 1rem; border: 1px dashed var(--primary); border-radius: 8px;">
+            *Note: Tentative schedule. Will update for final schedule as it depends on whether the prior game schedule was completed prior to QF games or might adjust as December and some players might not be available.
+        </p>
+        
         <div class="grid">
-            <!-- QF 1 -->
-            <div class="card">
-                <span class="card-badge playoff">QF Game 1</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Group A Seed 1</strong> <span>-</span></div>
-                        <div><strong>Group B Seed 4</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- QF 2 -->
-            <div class="card">
-                <span class="card-badge playoff">QF Game 2</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Group A Seed 2</strong> <span>-</span></div>
-                        <div><strong>Group B Seed 3</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- QF 3 -->
-            <div class="card">
-                <span class="card-badge playoff">QF Game 3</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Group A Seed 3</strong> <span>-</span></div>
-                        <div><strong>Group B Seed 2</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- QF 4 -->
-            <div class="card">
-                <span class="card-badge playoff">QF Game 4</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Group A Seed 4</strong> <span>-</span></div>
-                        <div><strong>Group B Seed 1</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
+            <div class="card"><span class="card-badge playoff">QF Game 1</span><div class="card-content"><h3 class="card-title">Nov 29</h3><div class="card-meta"><div><strong>Group A Seed 1</strong> <span>-</span></div><div><strong>Group B Seed 4</strong> <span>-</span></div></div></div></div>
+            <div class="card"><span class="card-badge playoff">QF Game 2</span><div class="card-content"><h3 class="card-title">Nov 29</h3><div class="card-meta"><div><strong>Group A Seed 2</strong> <span>-</span></div><div><strong>Group B Seed 3</strong> <span>-</span></div></div></div></div>
+            <div class="card"><span class="card-badge playoff">QF Game 3</span><div class="card-content"><h3 class="card-title">Dec 6</h3><div class="card-meta"><div><strong>Group A Seed 3</strong> <span>-</span></div><div><strong>Group B Seed 2</strong> <span>-</span></div></div></div></div>
+            <div class="card"><span class="card-badge playoff">QF Game 4</span><div class="card-content"><h3 class="card-title">Dec 6</h3><div class="card-meta"><div><strong>Group A Seed 4</strong> <span>-</span></div><div><strong>Group B Seed 1</strong> <span>-</span></div></div></div></div>
         </div>
 
         <h3>Semifinals & Championship</h3>
         <div class="grid">
-            <!-- Semi 1 -->
-            <div class="card">
-                <span class="card-badge playoff">Semis 1</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Winner QF 1</strong> <span>-</span></div>
-                        <div><strong>Winner QF 2</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Semi 2 -->
-            <div class="card">
-                <span class="card-badge playoff">Semis 2</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong>Winner QF 3</strong> <span>-</span></div>
-                        <div><strong>Winner QF 4</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Finals -->
-            <div class="card" style="border: 2px solid var(--primary);">
-                <span class="card-badge" style="background-color: var(--primary);">🏆 The Finals</span>
-                <div class="card-content">
-                    <h3 class="card-title">TBD</h3>
-                    <div class="card-meta">
-                        <div><strong style="font-size: 1.2rem;">Winner Semis 1</strong> <span>-</span></div>
-                        <div><strong style="font-size: 1.2rem;">Winner Semis 2</strong> <span>-</span></div>
-                    </div>
-                </div>
-            </div>
+            <div class="card"><span class="card-badge playoff">Semis 1</span><div class="card-content"><h3 class="card-title">Dec 13</h3><div class="card-meta"><div><strong>Winner QF 1</strong> <span>-</span></div><div><strong>Winner QF 2</strong> <span>-</span></div></div></div></div>
+            <div class="card"><span class="card-badge playoff">Semis 2</span><div class="card-content"><h3 class="card-title">Dec 13</h3><div class="card-meta"><div><strong>Winner QF 3</strong> <span>-</span></div><div><strong>Winner QF 4</strong> <span>-</span></div></div></div></div>
+            <div class="card" style="border: 2px solid var(--primary);"><span class="card-badge" style="background-color: var(--primary);">🏆 The Finals</span><div class="card-content"><h3 class="card-title">Dec 20</h3><div class="card-meta"><div><strong style="font-size: 1.2rem;">Winner Semis 1</strong> <span>-</span></div><div><strong style="font-size: 1.2rem;">Winner Semis 2</strong> <span>-</span></div></div></div></div>
         </div>
-
+    </div>
+    
+    <!-- Teaser Video Modal -->
+    <div id="teaserModal" class="modal">
+        <div class="modal-content" style="max-width: 800px; text-align: center; margin-top: 10%;">
+            <span class="close-btn" onclick="closeTeaser()">&times;</span>
+            <h2 class="section-title" style="margin-bottom: 1rem; padding-top: 0;">📺 Haig Road League Season 3!</h2>
+            <video id="teaser-video" style="width: 100%; max-height: 400px; background: #000; border-radius: 4px;" controls autoplay>
+                <source src="teaser.mp4.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
     <!-- Team Matchup Modal -->
@@ -817,14 +791,12 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h2 class="section-title" style="margin-bottom: 0; padding-top: 0;">Game Matchup</h2>
-            <div class="matchup-container" id="matchupContent">
-                <!-- Side-by-side rosters will be injected here via JS -->
-            </div>
+            <div class="matchup-container" id="matchupContent"></div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Haig Streetball League. All rights reserved.</p>
+        <p style="text-align: center; padding: 2rem;">&copy; 2026 Haig Streetball League. All rights reserved.</p>
     </footer>
 
     <script>
@@ -840,13 +812,12 @@
         };
 
         const scheduleData = [
-            { dateFull: "October 11", dateShort: "Oct 11", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "STINGRAYZ", homeColor: "Orange", away: "HAIG UNITED", awayColor: "Black" }] },
             { dateFull: "October 18", dateShort: "Oct 18", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Black", away: "MERLION HOOPERS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", home: "SAINTS", homeColor: "Orange", away: "HAIG BEASTS", awayColor: "Black" }] },
             { dateFull: "October 25", dateShort: "Oct 25", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "SUPREMO 2.0", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "STINGRAYZ", homeColor: "Orange", away: "MERLION HOOPERS", awayColor: "Black" }] },
             { dateFull: "November 1", dateShort: "Nov 1", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "HAIG BEASTS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Orange", away: "HAIG UNITED", awayColor: "Black" }] },
             { dateFull: "November 8", dateShort: "Nov 8", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "SUPREMO 2.0", homeColor: "Black", away: "SAINTS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "BOSS MAYOR", homeColor: "Orange", away: "STINGRAYZ", awayColor: "Black" }] },
             { dateFull: "November 15", dateShort: "Nov 15", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", home: "MERLION HOOPERS", homeColor: "Black", away: "HAIG UNITED", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", home: "SUPREMO 2.0", homeColor: "Orange", away: "HAIG BEASTS", awayColor: "Black" }] },
-            { dateFull: "November 22", dateShort: "Nov 22", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "SAINTS", awayColor: "Orange" }] }
+            { dateFull: "November 22", dateShort: "Nov 22", day: "Sunday", games: [{ time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", home: "TNLBCNXMRCY", homeColor: "Black", away: "SAINTS", awayColor: "Orange" }, { time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", home: "STINGRAYZ", homeColor: "Orange", away: "HAIG UNITED", awayColor: "Black" }] }
         ];
 
         const rosterData = {
@@ -860,14 +831,12 @@
             "TNLBCNXMRCY": [{ name: "Elmer Mendoza 'meniga' (C)", meta: "Age: 36 | Ht: 5' 6\" | SG", num: "3" }, { name: "Bryan Lama 'Bryan'", meta: "Age: 29 | Ht: 5' 9\" | SG", num: "10" }, { name: "Chad Francis Momongan 'Chad'", meta: "Age: 44 | Ht: 5' 6\" | SG", num: "10" }, { name: "DAN CARLO 'Konsi'", meta: "Age: 25 | Ht: 5' 5\" | PG", num: "17" }, { name: "Edwin Carlos 'Dwin'", meta: "Age: 45 | Ht: 5' 8\" | SG", num: "6" }, { name: "JASON HANOPOL 'JASON'", meta: "Age: 32 | Ht: 5' 6\" | PG", num: "4" }, { name: "Jesson Labasan 'Jhay'", meta: "Age: 46 | Ht: 5' 8\" | SF", num: "23" }, { name: "Mark Joshua Abenoja 'Maki'", meta: "Age: 26 | Ht: 5' 8\" | SF", num: "13" }, { name: "Mhel Papa 'Mhel'", meta: "Age: 49 | Ht: 5' 6\" | SG", num: "17" }, { name: "Ramil Gatbonton 'Bong'", meta: "Age: 46 | Ht: 5' 7\" | PF", num: "11" }, { name: "Ramil Looc 'Looc'", meta: "Age: 48 | Ht: 5' 11\" | C", num: "42" }]
         };
 
-        // JUMP FUNCTION
         function jumpToRoster(teamKey) {
             document.getElementById('roster-filter').value = teamKey;
             handleRosterFilter();
             document.getElementById('rosters').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // SCHEDULE LOGIC
         let currentScheduleFilter = 'ALL';
         let currentSearchQuery = '';
 
@@ -917,7 +886,6 @@
                     const home = teams[game.home] || { name: game.home };
                     const away = teams[game.away] || { name: game.away };
                     const badgeClass = game.group === "GROUP A" ? "group-a" : "group-b";
-                    
                     const homeJ = game.homeColor === 'Black' ? 'jersey-black' : 'jersey-orange';
                     const awayJ = game.awayColor === 'Black' ? 'jersey-black' : 'jersey-orange';
 
@@ -1003,15 +971,28 @@
             document.getElementById('matchupModal').style.display = 'none';
             document.body.style.overflow = 'auto'; 
         }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('matchupModal');
-            if (event.target === modal) {
-                closeModal();
+        
+        function closeTeaser() {
+            document.getElementById('teaserModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+            
+            const video = document.getElementById('teaser-video');
+            if (video) video.pause();
+            
+            const audio = document.getElementById('theme-audio');
+            if (audio) {
+                audio.play().catch(error => console.log("Audio playback prevented:", error));
             }
         }
 
-        // ROSTER LOGIC
+        window.onclick = function(event) {
+            const matchupModal = document.getElementById('matchupModal');
+            const teaserModal = document.getElementById('teaserModal');
+            
+            if (event.target === matchupModal) closeModal();
+            else if (event.target === teaserModal) closeTeaser();
+        }
+
         let currentRosterFilter = 'ALL';
         let currentPlayerSearchQuery = '';
         let currentRosterSort = 'default';
@@ -1033,22 +1014,18 @@
 
         function parsePlayer(p) {
             const parts = p.meta.split('|').map(s => s.trim());
-            
             let age = 999;
             if (parts[0]) {
                 const ageMatch = parts[0].match(/(\d+)/);
                 if (ageMatch) age = parseInt(ageMatch[1]);
             }
-
             let height = 0;
             if (parts[1]) {
                 const htMatch = parts[1].match(/(\d+)'\s*(\d+)/);
                 if (htMatch) height = parseInt(htMatch[1]) * 12 + parseInt(htMatch[2]);
             }
-
             const position = parts.length > 2 ? parts[2] : 'N/A';
             const strippedMeta = parts.slice(0, 2).join(' | ');
-
             return { ...p, _age: age, _height: height, _pos: position, _strippedMeta: strippedMeta };
         }
 
@@ -1111,6 +1088,9 @@
         window.onload = function() {
             renderSchedule();
             renderRosters();
+            
+            document.getElementById('teaserModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
         };
     </script>
 </body>
