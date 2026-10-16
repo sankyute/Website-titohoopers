@@ -2,17 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGTitoHoopers | Leagues & Weekly Pick-Up Basketball</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>SGTitoHoopers | Haig Streetball League Season 3 Hub</title>
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* --- DYNAMIC THEME SYSTEM (LIGHT / DARK MODES) --- */
         :root {
             --primary: #ff6600;
+            --primary-hover: #e05500;
             --secondary: #1a1a1a;
-            --light: #f4f4f4;
-            --white: #ffffff;
-            --gray: #666666;
+            
+            /* Light Theme Defaults */
+            --bg-main: #f4f4f4;
+            --bg-card: #ffffff;
+            --bg-card-sub: #f8fafc;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --text-light: #777777;
+            --border-color: #e5e7eb;
+            --header-bg: #1a1a1a;
+            --header-text: #ffffff;
+            --ticker-bg: #121212;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --green: #16a34a;
+            --accent-red: #e11d48;
+        }
+
+        body.dark-mode {
+            --secondary: #121212;
+            --bg-main: #0d0d0d;
+            --bg-card: #181818;
+            --bg-card-sub: #222222;
+            --text-main: #f4f4f4;
+            --text-muted: #bbbbbb;
+            --text-light: #888888;
+            --border-color: #2e2e2e;
+            --header-bg: #121212;
+            --header-text: #ffffff;
+            --ticker-bg: #121212;
+            --card-shadow: 0 4px 16px rgba(0,0,0,0.5);
+            --green: #22c55e;
         }
 
         * {
@@ -20,98 +50,142 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            background-color: var(--light);
-            color: var(--secondary);
+            background-color: var(--bg-main);
+            color: var(--text-main);
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
         }
 
+        /* --- HEADER NAVIGATION & THEME SWITCHER --- */
         header {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 1rem 2rem;
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 0.8rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         header .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: var(--primary);
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        header .logo-sub {
+            font-size: 0.75rem;
+            color: #aaa;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: var(--white);
+            color: var(--header-text);
             text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            padding: 0.3rem 0.2rem;
         }
 
         nav a:hover, nav a.active {
             color: var(--primary);
         }
 
-        .hero {
-            position: relative;
-            min-height: 550px;
+        .theme-toggle-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--primary);
+            color: #ffffff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.82rem;
             display: flex;
-            flex-direction: column;
-            background-color: var(--white); 
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.3s ease;
+            min-height: 36px;
         }
 
-        /* Middle Text Container with Players Background */
+        .theme-toggle-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* --- HERO & MARQUEE --- */
+        .hero {
+            position: relative;
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-main); 
+        }
+
         .hero-content {
-            margin: auto; 
+            margin: 1.5rem auto 1rem; 
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             text-align: center;
-            color: var(--white); 
-            padding: 2rem; 
+            color: #ffffff; 
+            padding: 2.5rem 1.2rem; 
             z-index: 2;
-            
             background-image: 
-                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('images/players.jpeg'); 
-            
             background-size: cover;
-            background-position: top center; 
+            background-position: center center; 
             border-radius: 16px;
-            width: 90%;
-            max-width: 1000px; 
-            min-height: 500px; 
-            border: none;
+            width: 92%;
+            max-width: 1100px; 
+            box-shadow: var(--card-shadow);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-top: 0; 
+            font-size: clamp(1.8rem, 4.5vw, 3.2rem);
             margin-bottom: 0.5rem; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+            text-transform: uppercase;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: auto; 
-            font-weight: 500;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
-
-        .hero .btn {
-            margin-bottom: 1rem; 
+            font-size: clamp(0.95rem, 2vw, 1.2rem);
+            margin-bottom: 1.5rem; 
+            font-weight: 600;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+            color: var(--primary);
         }
 
         .logo-marquee {
             width: 100%;
             background-color: transparent; 
-            padding: 1.5rem 0 1rem;
+            padding: 1.25rem 0 1rem;
             overflow: hidden;
             border-top: 4px solid var(--primary);
             z-index: 2;
@@ -121,23 +195,25 @@
         }
 
         .countdown-container {
-            background-color: var(--white);
-            color: var(--secondary);
-            font-size: 1.2rem;
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            font-size: clamp(0.85rem, 2.5vw, 1.05rem);
             font-weight: bold;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 30px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             border: 2px solid var(--primary);
             z-index: 3;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
         }
 
         .countdown-container span {
             color: var(--primary);
-            font-size: 1.4rem;
-            margin: 0 0.2rem;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin: 0 0.15rem;
         }
 
         .marquee-track {
@@ -147,8 +223,8 @@
         }
 
         .marquee-track img {
-            height: 100px; 
-            margin: 0 3rem; 
+            height: clamp(45px, 7vw, 75px); 
+            margin: 0 clamp(1rem, 3vw, 2.5rem); 
             object-fit: contain;
         }
 
@@ -159,105 +235,121 @@
 
         .btn {
             background-color: var(--primary);
-            color: var(--white);
+            color: #ffffff;
             padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            min-height: 44px;
+            line-height: 1.4;
         }
 
         .btn:hover {
-            background-color: #e05500;
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
         }
 
         .container {
-            max-width: 1200px;
-            margin: 3rem auto;
+            max-width: 1280px;
+            margin: 1.5rem auto 3rem;
             padding: 0 1rem;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
+            margin-bottom: 1.75rem;
+            font-size: clamp(1.4rem, 3.5vw, 1.9rem);
             position: relative;
+            padding-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
+            width: 45px;
             height: 4px;
             background-color: var(--primary);
-            margin: 0.5rem auto 0;
+            margin: 0.4rem auto 0;
+            border-radius: 2px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 3rem;
         }
 
+        /* --- CARDS & HIGH CONTRAST TEXT --- */
         .card {
-            background-color: var(--white);
-            border-radius: 8px;
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        /* UPDATED: Displays full image uncropped */
         .card-image {
             width: 100%;
-            height: auto; 
-            display: block;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
+            max-height: 320px;
+            object-fit: cover;
+            object-position: top;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .card-badge {
-            background-color: var(--secondary);
-            color: var(--white);
+            background-color: #1a1a1a;
+            color: #ffffff;
             padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             font-weight: bold;
             display: inline-block;
-            align-self: flex-start;
-            margin: 1rem 1rem 0;
             border-radius: 4px;
         }
 
-        .card-badge.league { background-color: #d946ef; }
-        .card-badge.weekly { background-color: #0ea5e9; }
+        .card-badge.group-a { background-color: #d946ef; color: #fff; }
+        .card-badge.group-b { background-color: #0ea5e9; color: #fff; }
+        .card-badge.playoff { background-color: var(--primary); color: #fff; }
+        .card-badge.league { background-color: #d946ef; color: #fff; }
+        .card-badge.weekly { background-color: #0ea5e9; color: #fff; }
 
         .card-content {
-            padding: 1.5rem;
+            padding: 1.25rem;
             flex-grow: 1;
         }
 
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         .card-meta {
-            font-size: 0.9rem;
-            color: var(--gray);
+            font-size: 0.88rem;
+            color: var(--text-muted);
             margin-bottom: 1rem;
         }
 
         .card-meta div { margin-bottom: 0.25rem; }
+        .card-meta strong { color: var(--text-main); }
 
         .card-action {
-            padding: 1.5rem;
-            border-top: 1px solid #eee;
-            background-color: #fafafa;
+            padding: 1rem 1.25rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-card-sub);
         }
 
         .card-action .btn {
@@ -265,315 +357,1362 @@
             text-align: center;
         }
 
-        /* --- Social Links Styles --- */
+        /* --- SCHEDULE & MATCH CARDS --- */
+        .schedule-card {
+            cursor: pointer;
+            padding: 1.1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .match-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .match-time-text {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .match-league-sub {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 500;
+            display: block;
+        }
+
+        .match-team-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .match-team-row {
+            background-color: var(--bg-card-sub);
+            border-radius: 8px;
+            padding: 0.6rem 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .team-identity {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .team-name-text {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-main);
+        }
+
+        .match-score {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .winner-arrow {
+            color: var(--accent-red);
+            font-size: 0.75rem;
+        }
+
+        .team-jersey {
+            font-size: 0.68rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .jersey-black { background: #000000; color: #ffffff; }
+        .jersey-orange { background: var(--primary); color: #ffffff; }
+
+        .media-box {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border-radius: 10px;
+            padding: 1.1rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .controls-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            min-width: 240px;
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-size: 0.85rem;
+            min-height: 38px;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        /* --- ROSTER LIST --- */
+        .roster-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .roster-list li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text-main);
+        }
+        .roster-list li:last-child { border-bottom: none; }
+        .player-meta { font-size: 0.75rem; color: var(--text-muted); display: block; }
+        
+        .badge-group {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .player-num, .player-pos {
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .player-num {
+            background: #1a1a1a;
+            color: var(--primary);
+            font-size: 0.78rem;
+            min-width: 30px;
+        }
+
+        .player-pos {
+            background: var(--bg-card-sub);
+            color: var(--text-main);
+            font-size: 0.72rem;
+            min-width: 34px;
+            border: 1px solid var(--border-color);
+        }
+
+        .team-logo-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%; 
+            object-fit: cover;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .team-logo-sm {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
+            background-color: #ffffff;
+        }
+
+        /* --- MODAL --- */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.85); 
+            backdrop-filter: blur(5px);
+            padding: 1rem 0;
+        }
+
+        .modal-content {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 2% auto; 
+            padding: 1.5rem; 
+            border: 1px solid var(--border-color);
+            width: 94%; 
+            max-width: 850px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-height: 90vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .close-btn {
+            color: var(--text-main);
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .btn-action-close {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 280px;
+            margin-top: 1rem;
+        }
+
+        .matchup-container {
+            display: flex;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .team-roster-side {
+            flex: 1;
+            background: var(--bg-card);
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .vs-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* --- PAGES CONTAINERS --- */
+        #games-page-view, #standings-page-view, #teams-page-view, #players-page-view, #playoffs-page-view {
+            display: none;
+        }
+
+        .top-ticker-wrapper {
+            background-color: var(--ticker-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.6rem 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #121212;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .ticker-container {
+            display: inline-flex;
+            gap: 0.75rem;
+            padding: 0 1rem;
+        }
+
+        .ticker-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            min-width: 210px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .ticker-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .ticker-header {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .ticker-team-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .ticker-team-info {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .ticker-team-logo {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #444;
+            background: #fff;
+        }
+
+        .ticker-score {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .league-title-bar {
+            background-color: var(--secondary);
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .league-title-bar h1 {
+            font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        .league-sub-tag {
+            font-size: 0.72rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .filter-select-bar {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .dropdown-select {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            min-width: 220px;
+            outline: none;
+        }
+
+        /* --- STANDINGS TABLE --- */
+        .standings-table-container {
+            width: 100%;
+            overflow-x: auto;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table.standings-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 750px;
+        }
+
+        table.standings-table thead tr {
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+        }
+
+        table.standings-table th {
+            padding: 0.85rem 0.9rem;
+            font-weight: 800;
+        }
+
+        table.standings-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        table.standings-table tbody tr:hover {
+            background-color: rgba(255, 102, 0, 0.08);
+        }
+
+        table.standings-table td {
+            padding: 0.8rem 0.9rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .rank-cell { font-weight: 800; width: 55px; color: var(--text-light); }
+        .rank-top-1 { color: #f59e0b; }
+        .rank-top-2 { color: #94a3b8; }
+        .rank-top-3 { color: #d97706; }
+
+        .team-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-weight: 700;
+        }
+
+        .team-logo-table {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #444;
+            background: #fff;
+        }
+
+        .center { text-align: center; }
+        .pd-positive { color: var(--green); font-weight: 800; }
+        .pd-negative { color: var(--accent-red); font-weight: 800; }
+
+        /* --- LEADERS GRID --- */
+        .leaders-section-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .leader-category-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .category-header {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .leader-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.55rem 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .leader-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .leader-left {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .leader-rank-badge {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #262626;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .leader-rank-badge.top1 { background: #f59e0b; color: #000; }
+        .leader-rank-badge.top2 { background: #94a3b8; color: #000; }
+        .leader-rank-badge.top3 { background: #d97706; color: #fff; }
+
+        .player-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #2a2a2a;
+            object-fit: cover;
+            border: 1px solid #444;
+            flex-shrink: 0;
+        }
+
+        .player-info { display: flex; flex-direction: column; }
+        .player-name { font-size: 0.85rem; font-weight: 700; color: var(--text-main); }
+        .player-team { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+
+        .leader-right {
+            display: flex;
+            align-items: center;
+            padding-left: 0.4rem;
+            border-left: 2px solid var(--primary);
+        }
+
+        .stat-value-box { text-align: right; }
+        .stat-label { font-size: 0.6rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; display: block; }
+        .stat-number { font-size: 1.1rem; font-weight: 900; color: var(--text-main); }
+
+        /* ==========================================================================
+           TEAMS PAGE VIEW STYLES
+           ========================================================================== */
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .team-square-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.75rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            box-shadow: var(--card-shadow);
+        }
+
+        .team-square-card:hover {
+            transform: scale(1.03);
+            border-color: var(--primary);
+        }
+
+        .team-logo-box {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border: 1px solid var(--border-color);
+            background-color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-logo-box img.static-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.8));
+            transition: opacity 0.2s ease;
+        }
+
+        .team-logo-box video.hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .team-square-name {
+            margin-top: 0.65rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .group-header-label {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.85rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ==========================================================================
+           PLAYERS PAGE VIEW STYLES
+           ========================================================================== */
+        .players-control-row {
+            display: flex;
+            gap: 0.85rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .players-search-box {
+            flex-grow: 1;
+            position: relative;
+            min-width: 240px;
+        }
+
+        .players-search-box input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 0.6rem 1rem 0.6rem 2.4rem;
+            color: var(--text-main);
+            font-size: 0.88rem;
+            outline: none;
+        }
+
+        .players-search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .players-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            outline: none;
+            cursor: pointer;
+            min-width: 130px;
+        }
+
+        .players-table-container {
+            width: 100%;
+            overflow-x: auto;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table.players-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 650px;
+        }
+
+        table.players-table thead tr {
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        table.players-table th {
+            padding: 0.85rem;
+            font-weight: 700;
+        }
+
+        table.players-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        table.players-table tbody tr:hover {
+            background-color: var(--bg-card-sub);
+        }
+
+        table.players-table td {
+            padding: 0.75rem 0.85rem;
+            font-size: 0.88rem;
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .player-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .player-team-logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+        }
+
+        .player-name-block {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .player-main-name {
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .player-age-ht {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        /* ORANGE JERSEY STYLES */
+        .orange-jersey-badge {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 28px;
+        }
+
+        .orange-jersey-svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--primary);
+        }
+
+        .orange-jersey-number {
+            position: absolute;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 900;
+            line-height: 1;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* --- SOCIAL LINKS STYLES --- */
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
             flex-wrap: wrap;
         }
 
         .social-btn {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1.5rem;
+            gap: 0.65rem;
+            padding: 0.7rem 1.4rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--white);
+            font-size: 1rem;
+            color: #ffffff;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .social-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
-        .btn-facebook {
-            background-color: #1877F2;
-        }
-
-        .btn-youtube {
-            background-color: #FF0000;
-        }
+        .btn-facebook { background-color: #1877F2; }
+        .btn-youtube { background-color: #FF0000; }
 
         footer {
             background-color: var(--secondary);
-            color: var(--white);
+            color: #ffffff;
             text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
+            padding: 1.75rem 1rem;
+            margin-top: 3.5rem;
+            font-size: 0.88rem;
         }
 
-        /* --- MODAL STYLES --- */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0,0,0,0.9); 
+        /* --- DEVICE SPECIFIC RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 1024px) {
+            header { flex-direction: column; text-align: center; padding: 0.8rem 1rem; }
+            nav { justify-content: center; width: 100%; }
+            .grid { gap: 1rem; }
+            .leaders-grid { grid-template-columns: repeat(2, 1fr); }
+            .teams-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 90%;
-            max-width: 800px;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 8px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* --- RESPONSIVE ADJUSTMENTS (Tablet & Mobile) --- */
-        @media (max-width: 850px) {
-            header {
-                flex-direction: column; 
-                gap: 1rem;
-                padding: 1rem;
-            }
-            
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-            
-            nav a {
-                margin-left: 0; 
-            }
-
-            .hero h1 {
-                font-size: 2.5rem; 
-            }
-
-            .countdown-container {
-                font-size: 1rem;
-                text-align: center;
-            }
-
-            .countdown-container span {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-content {
-                min-height: 400px; 
-                width: 95%;
-                padding: 1.5rem;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: var(--secondary);
-            }
-
-            .grid {
-                grid-template-columns: 1fr; 
-            }
-
-            .marquee-track img {
-                height: 70px; 
-                margin: 0 1.5rem;
-            }
-            
-            .social-links {
-                flex-direction: column;
-                padding: 0 1rem;
-            }
-            
-            .social-btn {
-                justify-content: center;
-            }
-            
-            .close-modal {
-                top: 10px;
-                right: 20px;
-                font-size: 30px;
-            }
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
+            .matchup-container { flex-direction: column; }
+            .vs-badge { padding: 0.5rem 0; }
+            .modal-content { padding: 1.1rem 0.85rem; width: 95%; margin: 4% auto; }
+            .leaders-grid { grid-template-columns: 1fr; }
+            .teams-grid { grid-template-columns: repeat(2, 1fr); }
+            .social-links { flex-direction: column; }
+            .social-btn { justify-content: center; }
+            nav { gap: 0.6rem; }
+            nav a { font-size: 0.8rem; }
+            .hero-content { width: 95%; padding: 1.75rem 1rem; }
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
 
+    <!-- MAIN HEADER NAVIGATION & THEME TOGGLE -->
     <header>
-        <div class="logo">🏀 SGTitoHoopers</div>
+        <div onclick="switchPage('home')">
+            <div class="logo">🏀 SGTitoHoopers</div>
+            <span class="logo-sub">Haig Streetball Season 3 Hub</span>
+        </div>
         <nav>
-            <a href="#all" class="active">All Events</a>
-            <a href="#leagues">Leagues</a>
-            <a href="#weekly">Weekly Games</a>
-            <a href="#contact">Contact</a>
+            <a id="nav-home" onclick="switchPage('home')" class="active">Main Hub</a>
+            <a id="nav-games" onclick="switchPage('games')">Games</a>
+            <a id="nav-standings" onclick="switchPage('standings')">Standings</a>
+            <a id="nav-teams" onclick="switchPage('teams')">Teams</a>
+            <a id="nav-players" onclick="switchPage('players')">Players</a>
+            <a id="nav-playoffs" onclick="switchPage('playoffs')">Playoffs Bracket</a>
+            <a href="#contact" onclick="scrollToContact()">Contact</a>
+            
+            <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">
+                <span id="themeBtnIcon">☀️</span> <span id="themeBtnText">Light Mode</span>
+            </button>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hit The Court. Own The Game.</h1>
-            <p>Join competitive seasonal leagues or drop in for casual weekly games.</p>
-            <a href="#events" class="btn">Browse Events</a>
-        </div>
-
-        <div class="logo-marquee">
-            <div class="countdown-container" id="league-countdown">
-                League Tip-Off in: <span id="days">00</span>d <span id="hours">00</span>h <span id="mins">00</span>m <span id="secs">00</span>s
+    <!-- ==========================================================================
+         1. HOMEPAGE VIEW CONTAINER (DEFAULT MAIN HUB - SCHEDULE REMOVED)
+         ========================================================================== -->
+    <div id="home-page-view">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hit The Court. Own The Game.</h1>
+                <p>Singapore Haig 5 Court • 5 Haig Road</p>
+                <a onclick="switchPage('games')" class="btn">View Games Schedule</a>
             </div>
 
-           <div class="marquee-track">
-                <img src="images/Haig_united.jpeg" alt="Haig United">
-                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
-                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
-                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
-                <img src="images/Saints.jpeg" alt="Saints">
-                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
-                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
-                <img src="images/Supremo.jpeg" alt="Supremo">
-                
-                <img src="images/Haig_united.jpeg" alt="Haig United">
-                <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
-                <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
-                <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
-                <img src="images/Saints.jpeg" alt="Saints">
-                <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
-                <img src="images/Stingrayz.jpeg" alt="Stingrayz">
-                <img src="images/Supremo.jpeg" alt="Supremo">
-            </div>
-        </div>
-    </section>
-
-    <div class="container" id="events">
-        
-        <h2 class="section-title" id="leagues">Competitive Leagues</h2>
-        <div class="grid">
-           
-            <div class="card">
-                <!-- UPDATED: Points to new image with id for JS -->
-                <img src="images/commissioner.jfif" alt="Haig Streetball League Season 3 Poster" class="card-image" id="leaguePoster">
-                <span class="card-badge league">League</span>
-                <div class="card-content">
-                    <h3 class="card-title">Haig Streetball League - Season 3</h3>
-                    <div class="card-meta">
-                        <div><strong>📅 Duration:</strong> Oct 18 - Dec 13</div>
-                        <div><strong>📍 Location:</strong> Singapore Haig 5 Court (5 Haig Road Singapore 430005)</div>
-                        <div><strong>🏆 Division:</strong> Competitive Streetball (8 Teams)</div>
-                    </div>
-                    <p>Features 8 teams battling in Group A and Group B, ending with a high-stakes championship round. Playoff brackets and full team rosters are actively tracked.</p>
+            <div class="logo-marquee">
+                <div class="countdown-container" id="league-countdown">
+                    League Tip-Off in: <span id="days">00</span>d <span id="hours">00</span>h <span id="mins">00</span>m <span id="secs">00</span>s
                 </div>
-                <div class="card-action">
-                    <a href="index_2.html" class="btn">View Official Hub</a>
+
+                <div class="marquee-track">
+                    <img src="images/Haig_united.jpeg" alt="Haig United">
+                    <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                    <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                    <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                    <img src="images/Saints.jpeg" alt="Saints">
+                    <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                    <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                    <img src="images/Supremo.jpeg" alt="Supremo">
+                    
+                    <img src="images/Haig_united.jpeg" alt="Haig United">
+                    <img src="images/NoXmercy.jpeg" alt="Nox Mercy">
+                    <img src="images/Merlion_Hoopers.jpeg" alt="Merlion Hoopers">
+                    <img src="images/Boss_Mayor.jpeg" alt="Boss Mayor">
+                    <img src="images/Saints.jpeg" alt="Saints">
+                    <img src="images/Haig_Beast.jpeg" alt="Haig Beast 3.0">
+                    <img src="images/Stingrayz.jpeg" alt="Stingrayz">
+                    <img src="images/Supremo.jpeg" alt="Supremo">
                 </div>
             </div>
+        </section>
 
-            <div class="card">
-                <span class="card-badge league">League</span>
-                <div class="card-content">
-                    <h3 class="card-title">3 point shot competition</h3>
-                    <div class="card-meta">
-                        <div><strong>📅 Duration:</strong> Dec 6 </div>
-                        <div><strong>📍 Location:</strong> TBD</div>
-                        <div><strong>🏆 Division:</strong> TBD</div>
-                    </div>
-                    <p>Open to any players interested to join</p>
-                </div>
-                <div class="card-action">
-                    <a href="#" class="btn">Register 🚧⚒️ </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <span class="card-badge league">League</span>
-                <div class="card-content">
-                    <h3 class="card-title">3x3 Saturday Showdown</h3>
-                    <div class="card-meta">
-                        <div><strong>📅 Duration:</strong> TBD </div>
-                        <div><strong>📍 Location:</strong> TBD </div>
-                        <div><strong>🏆 Division:</strong> TBD </div>
-                    </div>
-                    <p>Fast-paced half-court action. Ideal for teams of 8 looking for high-energy weekend competition.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#" class="btn">Register Team 🚧⚒️ </a>
-                </div>
-            </div>
-
-        </div>
-
-        <h2 class="section-title" id="weekly">Weekly Drop-In Games</h2>
-        <div class="grid">
+        <div class="container" id="events">
             
-            <div class="card">
-                <span class="card-badge weekly">Weekly Pick-up</span>
-                <div class="card-content">
-                    <h3 class="card-title">Saturday Papawis</h3>
-                    <div class="card-meta">
-                        <div><strong>📅 Schedule:</strong> Every Saturday (8:00 AM - 9:30 AM) & Sunday (7:00 AM - 9:30 AM) </div>
-                        <div><strong>📍 Location:</strong> Haig Road Court 5</div>
-                        <div><strong>💵 Fee:</strong> Free </div>
-                    </div>
-                    <p>Just show up, lace up, and play. Teams are randomized on the spot. Perfect for conditioning your body.</p>
+            <div class="media-box">
+                <div>
+                    <strong>🎵 Haig Streetball Theme Song</strong><br>
+                    <span style="font-size:0.82rem; color:var(--text-muted);">Produced via Suno AI</span>
                 </div>
-                <div class="card-action">
-                    <a href="#" class="btn">Reserve a Spot (TBD 🚧⚒)</a>
-                </div>
+                <audio id="theme-audio" controls style="max-width: 100%;">
+                    <source src="theme-song.mp3" type="audio/mp3">
+                </audio>
             </div>
 
-            <div class="card">
-                <span class="card-badge weekly">Weekly Pick-up</span>
-                <div class="card-content">
-                    <h3 class="card-title">Indoor Papawis </h3>
-                    <div class="card-meta">
-                        <div><strong>📅 Schedule:</strong> Depends on Kallang's court availablity </div>
-                        <div><strong>📍 Location:</strong> The Kallang </div>
-                        <div><strong>💵 Fee:</strong> $6 </div>
+            <!-- COMPETITIVE LEAGUES SECTION -->
+            <h2 class="section-title">Competitive Leagues</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <img src="images/League_Poster.jpeg" alt="Haig Streetball League Season 3 Poster" class="card-image">
+                    <span class="card-badge league" style="margin: 1rem 1rem 0; align-self: flex-start;">League</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Haig Streetball League - Season 3</h3>
+                        <div class="card-meta">
+                            <div><strong>📅 Duration:</strong> Oct 18 - Dec 13</div>
+                            <div><strong>📍 Location:</strong> Singapore Haig 5 Court (5 Haig Road Singapore 430005)</div>
+                            <div><strong>🏆 Division:</strong> Competitive Streetball (8 Teams)</div>
+                        </div>
+                        <p>Features 8 teams battling in Group A and Group B, ending with a high-stakes championship round. Playoff brackets, statistical leaders, and full rosters are actively tracked.</p>
                     </div>
-                    <p>Start your Weekend right with full-court runs before work. Moderate to high intensity. Limit 20 players.</p>
+                    <div class="card-action">
+                        <a onclick="switchPage('games')" class="btn">View Match Schedule</a>
+                    </div>
                 </div>
-                <div class="card-action">
-                    <a href="#" class="btn">Reserve a Spot 🚧⚒️ </a>
+
+                <div class="card">
+                    <span class="card-badge league" style="margin: 1rem 1rem 0; align-self: flex-start;">League</span>
+                    <div class="card-content">
+                        <h3 class="card-title">3 Point Shot Competition</h3>
+                        <div class="card-meta">
+                            <div><strong>📅 Date:</strong> Dec 6</div>
+                            <div><strong>📍 Location:</strong> Haig Court 5</div>
+                            <div><strong>🏆 Division:</strong> Open Shootout</div>
+                        </div>
+                        <p>Open to all players interested in testing their long-range shooting ability against top local sharpshooters.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn">Register 🚧⚒️</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge league" style="margin: 1rem 1rem 0; align-self: flex-start;">League</span>
+                    <div class="card-content">
+                        <h3 class="card-title">3x3 Saturday Showdown</h3>
+                        <div class="card-meta">
+                            <div><strong>📅 Duration:</strong> TBD</div>
+                            <div><strong>📍 Location:</strong> Haig Court 5</div>
+                            <div><strong>🏆 Division:</strong> Half-Court 3v3</div>
+                        </div>
+                        <p>Fast-paced half-court action. Ideal for teams seeking high-energy weekend basketball competition.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn">Register Team 🚧⚒️</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- WEEKLY PICK-UP GAMES SECTION -->
+            <h2 class="section-title">Weekly Drop-In Games</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <span class="card-badge weekly" style="margin: 1rem 1rem 0; align-self: flex-start;">Weekly Pick-up</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Saturday Papawis</h3>
+                        <div class="card-meta">
+                            <div><strong>📅 Schedule:</strong> Saturday (8:00 AM - 9:30 AM) & Sunday (7:00 AM - 9:30 AM)</div>
+                            <div><strong>📍 Location:</strong> Haig Road Court 5</div>
+                            <div><strong>💵 Fee:</strong> Free</div>
+                        </div>
+                        <p>Just show up, lace up, and play. Teams are randomized on the spot. Perfect for conditioning and staying active.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn">Reserve a Spot (TBD 🚧⚒)</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge weekly" style="margin: 1rem 1rem 0; align-self: flex-start;">Weekly Pick-up</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Indoor Papawis</h3>
+                        <div class="card-meta">
+                            <div><strong>📅 Schedule:</strong> Subject to Kallang court availability</div>
+                            <div><strong>📍 Location:</strong> The Kallang</div>
+                            <div><strong>💵 Fee:</strong> $6 per entry</div>
+                        </div>
+                        <p>Start your weekend right with full-court indoor runs. Moderate to high intensity. Limited to 20 players.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn">Reserve a Spot 🚧⚒️</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="container" id="contact" style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="section-title">Contact Us</h2>
+                <p style="font-size: 1.05rem; color: var(--text-muted);">Follow and subscribe to stay updated with the latest streetball action!</p>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1eGi7GEdJ6/" target="_blank" rel="noopener noreferrer" class="social-btn btn-facebook">
+                        <i class="fa-brands fa-facebook-f"></i> Follow SGTitoHoopers
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@ConTVSportsHighlights" target="_blank" rel="noopener noreferrer" class="social-btn btn-youtube">
+                        <i class="fa-brands fa-youtube"></i> Subscribe to ConTV
+                    </a>
                 </div>
             </div>
 
         </div>
-
     </div>
 
-    <!-- CONTACT SECTION WITH NAMES -->
-    <div class="container" id="contact" style="text-align: center; margin-bottom: 2rem;">
-        <h2 class="section-title">Contact Us</h2>
-        <p style="font-size: 1.1rem;">Follow and subscribe to stay updated with the latest action!</p>
-        
-        <div class="social-links">
-            <a href="https://www.facebook.com/share/1eGi7GEdJ6/" target="_blank" rel="noopener noreferrer" class="social-btn btn-facebook">
-                <i class="fa-brands fa-facebook-f"></i> Follow SGTitoHoopers
-            </a>
+
+    <!-- ==========================================================================
+         2. DEDICATED GAMES SCHEDULE PAGE VIEW
+         ========================================================================== -->
+    <div id="games-page-view">
+        <div class="league-title-bar">
+            <span class="league-sub-tag">SEASON THREE • FULL MATCH SCHEDULE</span>
+            <h1>GAME SCHEDULE</h1>
+        </div>
+        <div class="container">
+            <div class="controls-bar">
+                <input type="text" id="team-search" class="search-input" placeholder="Search team schedule..." oninput="handleSearch()">
+                <div class="filter-tabs" id="schedule-filters">
+                    <button onclick="filterSchedule('ALL')" class="filter-btn active">All Dates</button>
+                    <button onclick="filterSchedule('Oct 18')" class="filter-btn">Oct 18</button>
+                    <button onclick="filterSchedule('Oct 25')" class="filter-btn">Oct 25</button>
+                    <button onclick="filterSchedule('Nov 1')" class="filter-btn">Nov 1</button>
+                    <button onclick="filterSchedule('Nov 8')" class="filter-btn">Nov 8</button>
+                    <button onclick="filterSchedule('Nov 15')" class="filter-btn">Nov 15</button>
+                    <button onclick="filterSchedule('Nov 22')" class="filter-btn">Nov 22</button>
+                </div>
+            </div>
+            <div id="schedule-container" class="grid"></div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         3. STANDINGS VIEW
+         ========================================================================== -->
+    <div id="standings-page-view">
+        <div class="top-ticker-wrapper">
+            <div class="ticker-container" id="ticker-container"></div>
+        </div>
+
+        <div class="league-title-bar">
+            <span class="league-sub-tag">SEASON THREE • REGULAR SEASON</span>
+            <h1>HAIG STREETBALL LEAGUE STANDINGS</h1>
+        </div>
+
+        <div class="container">
+            <div class="filter-select-bar">
+                <select id="stage-select" class="dropdown-select" onchange="filterStandingsTable()">
+                    <option value="REGULAR">Regular Season (All Teams)</option>
+                    <option value="GROUP_A">Group A</option>
+                    <option value="GROUP_B">Group B</option>
+                </select>
+            </div>
+
+            <div class="standings-table-container">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th class="center">RANK</th>
+                            <th>TEAM</th>
+                            <th class="center">PTS</th>
+                            <th class="center">MATCH</th>
+                            <th class="center">WIN</th>
+                            <th class="center">LOSS</th>
+                            <th class="center">DRAW</th>
+                            <th class="center">PF</th>
+                            <th class="center">PA</th>
+                            <th class="center">PD</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standings-tbody"></tbody>
+                </table>
+            </div>
+
+            <h2 class="leaders-section-title">LEAGUE STATISTICAL LEADERS</h2>
+            <div id="leaders-container"></div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         4. TEAMS PAGE VIEW (TOP TEASER VIDEO + GROUP A TOP & GROUP B BELOW)
+         ========================================================================== -->
+    <div id="teams-page-view">
+        <div class="league-title-bar">
+            <span class="league-sub-tag">SEASON THREE • TEAMS</span>
+            <h1>TEAMS</h1>
+        </div>
+        <div class="container">
+            <!-- TOP SEASON 3 TEASER VIDEO -->
+            <div style="text-align: center; margin-bottom: 2.25rem;">
+                <video controls autoplay muted loop playsinline style="width: 100%; max-width: 900px; max-height: 480px; background: #000; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+                    <source src="images/Season 3 Teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- GROUP A TEAMS (4 ON TOP) -->
+            <div class="group-header-label">
+                <span>GROUP A</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Hover logo to play video preview</span>
+            </div>
+            <div class="teams-grid" id="teams-grid-group-a">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <!-- GROUP B TEAMS (4 BELOW) -->
+            <div class="group-header-label">
+                <span>GROUP B</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Hover logo to play video preview</span>
+            </div>
+            <div class="teams-grid" id="teams-grid-group-b">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         5. PLAYERS PAGE VIEW
+         ========================================================================== -->
+    <div id="players-page-view">
+        <div class="league-title-bar">
+            <span class="league-sub-tag">SEASON THREE • ROSTER DATABASE</span>
+            <h1>PLAYERS</h1>
+        </div>
+        <div class="container">
+            <div class="players-control-row">
+                <div class="players-search-box">
+                    <input type="text" id="players-table-search" placeholder="Search players..." oninput="renderPlayersTable()">
+                </div>
+                <select id="players-team-filter" class="players-select" onchange="renderPlayersTable()">
+                    <option value="ALL">All teams</option>
+                </select>
+                <select id="players-pos-filter" class="players-select" onchange="renderPlayersTable()">
+                    <option value="ALL">All positions</option>
+                    <option value="PG">Point Guard (PG)</option>
+                    <option value="SG">Shooting Guard (SG)</option>
+                    <option value="SF">Small Forward (SF)</option>
+                    <option value="PF">Power Forward (PF)</option>
+                    <option value="C">Center (C)</option>
+                </select>
+            </div>
+
+            <div class="players-table-container">
+                <table class="players-table">
+                    <thead>
+                        <tr>
+                            <th>PLAYER</th>
+                            <th>TEAM</th>
+                            <th>POSITION</th>
+                            <th class="center">JERSEY</th>
+                        </tr>
+                    </thead>
+                    <tbody id="players-table-tbody">
+                        <!-- Rendered dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         6. PLAYOFFS BRACKET PAGE VIEW (HIGH CONTRAST LIGHT/DARK COMPATIBLE)
+         ========================================================================== -->
+    <div id="playoffs-page-view">
+        <div class="league-title-bar">
+            <span class="league-sub-tag">SEASON THREE • TOURNAMENT BRACKET</span>
+            <h1>PLAYOFFS BRACKET</h1>
+        </div>
+        <div class="container">
+            <p style="text-align: center; color: var(--primary); font-weight: bold; margin-bottom: 2rem; padding: 1rem; border: 1px dashed var(--primary); border-radius: 8px; background: rgba(255,102,0,0.05); font-size: 0.9rem;">
+                *Note: Tentative schedule. Will update for final schedule as it depends on whether the prior game schedule was completed prior to QF games or might adjust as December and some players might not be available.
+            </p>
             
-            <a href="https://www.youtube.com/@ConTVSportsHighlights" target="_blank" rel="noopener noreferrer" class="social-btn btn-youtube">
-                <i class="fa-brands fa-youtube"></i> Subscribe to ConTV
-            </a>
+            <h2 class="section-title">Quarterfinals</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">QF Game 1</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Nov 29</h3>
+                        <div class="card-meta">
+                            <div><strong>Group A Seed 1</strong> <span>-</span></div>
+                            <div><strong>Group B Seed 4</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">QF Game 2</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Nov 29</h3>
+                        <div class="card-meta">
+                            <div><strong>Group A Seed 2</strong> <span>-</span></div>
+                            <div><strong>Group B Seed 3</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">QF Game 3</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Dec 6</h3>
+                        <div class="card-meta">
+                            <div><strong>Group A Seed 3</strong> <span>-</span></div>
+                            <div><strong>Group B Seed 2</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">QF Game 4</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Dec 6</h3>
+                        <div class="card-meta">
+                            <div><strong>Group A Seed 4</strong> <span>-</span></div>
+                            <div><strong>Group B Seed 1</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Semifinals & Championship</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">Semis 1</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Dec 13</h3>
+                        <div class="card-meta">
+                            <div><strong>Winner QF 1</strong> <span>-</span></div>
+                            <div><strong>Winner QF 2</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge playoff" style="margin: 1rem 1rem 0; align-self: flex-start;">Semis 2</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Dec 13</h3>
+                        <div class="card-meta">
+                            <div><strong>Winner QF 3</strong> <span>-</span></div>
+                            <div><strong>Winner QF 4</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid var(--primary);">
+                    <span class="card-badge" style="background-color: var(--primary); color: #fff; margin: 1rem 1rem 0; align-self: flex-start;">🏆 The Finals</span>
+                    <div class="card-content" style="padding:1.25rem;">
+                        <h3 class="card-title">Dec 20</h3>
+                        <div class="card-meta">
+                            <div><strong style="font-size: 1.1rem;">Winner Semis 1</strong> <span>-</span></div>
+                            <div><strong style="font-size: 1.1rem;">Winner Semis 2</strong> <span>-</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Teaser Video Modal -->
+    <div id="teaserModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <button type="button" class="close-btn" onclick="closeTeaser()">&times;</button>
+            <h2 class="section-title" style="margin-bottom: 1rem; padding-top: 0;">📺 Haig Road League Season 3!</h2>
+            <video id="teaser-video" style="width: 100%; max-height: 50vh; background: #000; border-radius: 6px;" controls autoplay playsinline>
+                <source src="images/Season 3 Teaser.mp4" type="video/mp4">
+            </video>
+            <div>
+                <button type="button" class="btn-action-close" onclick="closeTeaser()">Close & Enter Hub</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Matchup & Statistics Modal -->
+    <div id="matchupModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 class="section-title" style="margin-bottom: 0; padding-top: 0;" id="modalHeaderTitle">Game Matchup</h2>
+            <div id="gameStatsSection"></div>
+            <div class="matchup-container" id="matchupContent"></div>
         </div>
     </div>
 
@@ -581,16 +1720,777 @@
         <p>&copy; 2026 SGTitoHoopers Association. All rights reserved.</p>
     </footer>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="fullImage">
-    </div>
-
     <script>
+        let uploadedGameLogs = [];
+
+        // THEME TOGGLE SWITCH (LIGHT / DARK)
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeBtnIcon');
+            const text = document.getElementById('themeBtnText');
+
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                icon.textContent = '🌙';
+                text.textContent = 'Dark Mode';
+                localStorage.setItem('sgtito_theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                icon.textContent = '☀️';
+                text.textContent = 'Light Mode';
+                localStorage.setItem('sgtito_theme', 'dark');
+            }
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('sgtito_theme');
+            const icon = document.getElementById('themeBtnIcon');
+            const text = document.getElementById('themeBtnText');
+
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                if(icon) icon.textContent = '🌙';
+                if(text) text.textContent = 'Dark Mode';
+            } else {
+                document.body.classList.add('dark-mode');
+                if(icon) icon.textContent = '☀️';
+                if(text) text.textContent = 'Light Mode';
+            }
+        }
+
+        // Dynamic Page View Router
+        function switchPage(page) {
+            const views = {
+                'home': document.getElementById('home-page-view'),
+                'games': document.getElementById('games-page-view'),
+                'standings': document.getElementById('standings-page-view'),
+                'teams': document.getElementById('teams-page-view'),
+                'players': document.getElementById('players-page-view'),
+                'playoffs': document.getElementById('playoffs-page-view')
+            };
+
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+
+            Object.keys(views).forEach(k => {
+                if(views[k]) views[k].style.display = 'none';
+            });
+
+            if (views[page]) {
+                views[page].style.display = 'block';
+                const activeNav = document.getElementById('nav-' + page);
+                if (activeNav) activeNav.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            if (page === 'games') {
+                renderSchedule();
+            } else if (page === 'standings') {
+                renderScoreTicker();
+                renderStandings('REGULAR');
+                renderLeaders();
+            } else if (page === 'teams') {
+                renderTeamsGrid();
+            } else if (page === 'players') {
+                populatePlayerFilters();
+                renderPlayersTable();
+            }
+        }
+
+        function scrollToContact() {
+            switchPage('home');
+            setTimeout(() => {
+                const el = document.getElementById('contact');
+                if(el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 120);
+        }
+
+        const teams = {
+            "HAIG UNITED": { name: "Haig United", logo: "images/Haig_united.jpeg" },
+            "TNLBCNXMRCY": { name: "NoXMercy", logo: "images/NoXmercy.jpeg" },
+            "MERLION HOOPERS": { name: "Merlion Hoopers", logo: "images/Merlion_Hoopers.jpeg" },
+            "BOSS MAYOR": { name: "Boss Mayor", logo: "images/Boss_Mayor.jpeg" },
+            "SAINTS": { name: "Team Saints", logo: "images/Saints.jpeg" },
+            "HAIG BEASTS": { name: "Haig Beasts 3.0", logo: "images/Haig_Beast.jpeg" },
+            "STINGRAYZ": { name: "Stingrayz", logo: "images/Stingrayz.jpeg" },
+            "SUPREMO 2.0": { name: "Supremo 2.0", logo: "images/Supremo.jpeg" }
+        };
+
+        const groupATeams = [
+            { key: "HAIG BEASTS", name: "Haig Beasts 3.0", logo: "images/Haig_Beast.jpeg", video: "images/HaigBeast_gif.mp4" },
+            { key: "SAINTS", name: "Team Saints", logo: "images/Saints.jpeg", video: "images/Saintz_gif.mp4" },
+            { key: "SUPREMO 2.0", name: "Supremo 2.0", logo: "images/Supremo.jpeg", video: "images/Supremo_gif.mp4" },
+            { key: "TNLBCNXMRCY", name: "NoXMercy", logo: "images/NoXmercy.jpeg", video: "images/NoXMercy_gif.mp4" }
+        ];
+
+        const groupBTeams = [
+            { key: "BOSS MAYOR", name: "Boss Mayor", logo: "images/Boss_Mayor.jpeg", video: "images/BossMayor_gif.mp4" },
+            { key: "HAIG UNITED", name: "Haig United", logo: "images/Haig_united.jpeg", video: "images/HaigUnited_gif.mp4" },
+            { key: "MERLION HOOPERS", name: "Merlion Hoopers", logo: "images/Merlion_Hoopers.jpeg", video: "images/MerlionHoopers_gif.mp4" },
+            { key: "STINGRAYZ", name: "Stingrayz", logo: "images/Stingrayz.jpeg", video: "images/Stingrayz_gif.mp4" }
+        ];
+
+        const scheduleData = [
+            { 
+                dateFull: "October 18", 
+                dateShort: "Oct 18", 
+                day: "Sunday", 
+                games: [
+                    { id: "g1", time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", team1: "BOSS MAYOR", team1Color: "Black", team2: "MERLION HOOPERS", team2Color: "Orange", completed: false }, 
+                    { id: "g2", time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", team1: "SAINTS", team1Color: "Orange", team2: "HAIG BEASTS", team2Color: "Black", completed: false }
+                ] 
+            },
+            { 
+                dateFull: "October 25", 
+                dateShort: "Oct 25", 
+                day: "Sunday", 
+                games: [
+                    { id: "g3", time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", team1: "TNLBCNXMRCY", team1Color: "Black", team2: "SUPREMO 2.0", team2Color: "Orange", completed: false }, 
+                    { id: "g4", time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", team1: "STINGRAYZ", team1Color: "Orange", team2: "MERLION HOOPERS", team2Color: "Black", completed: false }
+                ] 
+            },
+            { 
+                dateFull: "November 1", 
+                dateShort: "Nov 1", 
+                day: "Sunday", 
+                games: [
+                    { id: "g5", time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", team1: "TNLBCNXMRCY", team1Color: "Black", team2: "HAIG BEASTS", team2Color: "Orange", completed: false }, 
+                    { id: "g6", time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", team1: "BOSS MAYOR", team1Color: "Orange", team2: "HAIG UNITED", team2Color: "Black", completed: false }
+                ] 
+            },
+            { 
+                dateFull: "November 8", 
+                dateShort: "Nov 8", 
+                day: "Sunday", 
+                games: [
+                    { id: "g7", time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", team1: "SUPREMO 2.0", team1Color: "Black", team2: "SAINTS", team2Color: "Orange", completed: false }, 
+                    { id: "g8", time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", team1: "BOSS MAYOR", team1Color: "Orange", team2: "STINGRAYZ", team2Color: "Black", completed: false }
+                ] 
+            },
+            { 
+                dateFull: "November 15", 
+                dateShort: "Nov 15", 
+                day: "Sunday", 
+                games: [
+                    { id: "g9", time: "7:15 AM", gameNum: "Game 1", group: "GROUP B", team1: "MERLION HOOPERS", team1Color: "Black", team2: "HAIG UNITED", team2Color: "Orange", completed: false }, 
+                    { id: "g10", time: "8:30 AM", gameNum: "Game 2", group: "GROUP A", team1: "SUPREMO 2.0", team1Color: "Orange", team2: "HAIG BEASTS", team2Color: "Black", completed: false }
+                ] 
+            },
+            { 
+                dateFull: "November 22", 
+                dateShort: "Nov 22", 
+                day: "Sunday", 
+                games: [
+                    { id: "g11", time: "7:15 AM", gameNum: "Game 1", group: "GROUP A", team1: "TNLBCNXMRCY", team1Color: "Black", team2: "SAINTS", team2Color: "Orange", completed: false }, 
+                    { id: "g12", time: "8:30 AM", gameNum: "Game 2", group: "GROUP B", team1: "STINGRAYZ", team1Color: "Orange", team2: "HAIG UNITED", team2Color: "Black", completed: false }
+                ] 
+            }
+        ];
+
+        const standingsData = [
+            { team: "BOSS MAYOR", group: "GROUP_B", logo: "images/Boss_Mayor.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "TNLBCNXMRCY", group: "GROUP_A", logo: "images/NoXmercy.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "SUPREMO 2.0", group: "GROUP_A", logo: "images/Supremo.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "HAIG UNITED", group: "GROUP_B", logo: "images/Haig_united.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "STINGRAYZ", group: "GROUP_B", logo: "images/Stingrayz.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "SAINTS", group: "GROUP_A", logo: "images/Saints.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "HAIG BEASTS", group: "GROUP_A", logo: "images/Haig_Beast.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 },
+            { team: "MERLION HOOPERS", group: "GROUP_B", logo: "images/Merlion_Hoopers.jpeg", pts: 0, m: 0, w: 0, l: 0, d: 0, pf: 0, pa: 0 }
+        ];
+
+        const rosterData = {
+            "BOSS MAYOR": [{ name: "Jeck Co 'Jecoy' (C)", meta: "Age: 35 | Ht: 5' 8\" | PF", num: "13" }, { name: "Bernard Torno 'Torns'", meta: "Age: 42 | Ht: 5' 6\" | PG", num: "1" }, { name: "JERRY L. DE JESUS 'Jerry'", meta: "Age: 46 | Ht: 6' 1\" | C", num: "12" }, { name: "Jeffrey Valderrama 'Jeff'", meta: "Age: 42 | Ht: 5' 5\" | SG", num: "10" }, { name: "Joseph Encarnacion 'Joseph'", meta: "Age: 42 | Ht: 5' 7\" | SG", num: "20" }, { name: "Joseph rubia 'Seph'", meta: "Age: 39 | Ht: 5' 7\" | SG", num: "18" }, { name: "Julius Rojas 'Juls'", meta: "Age: 26 | Ht: 5' 9\" | SG", num: "15" }, { name: "Michael Banta 'Michael'", meta: "Age: 31 | Ht: 5' 9\" | PF", num: "28" }, { name: "Paul Joshua Bassig 'Paul'", meta: "Age: 27 | Ht: 5' 7\" | PF", num: "22" }, { name: "Rhen Mark Callado 'Rhen'", meta: "Age: 29 | Ht: 5' 6\" | PG", num: "2" }, { name: "jhef reyes 'boss j'", meta: "Age: 39 | Ht: 5' 4\" | PG", num: "26" }, { name: "nico yturriaga 'nico'", meta: "Age: N/A | Ht: 5' 8\" | SF", num: "79" }],
+            "HAIG BEASTS": [{ name: "Arnold 'Arnold' (C)", meta: "Age: 36 | Ht: 5' 3\" | SG", num: "7" }, { name: "Alexander T. Desisto 'Xander'", meta: "Age: 25 | Ht: 5' 7\" | PG", num: "7" }, { name: "Conrad Perez 'Con tv'", meta: "Age: N/A | Ht: 5' 7\" | SF", num: "10" }, { name: "Enrique De Jesus 'Kim'", meta: "Age: 29 | Ht: 5' 4\" | SG", num: "11" }, { name: "Froilan Olavidez 'Froi'", meta: "Age: 43 | Ht: 5' 9\" | PF", num: "3" }, { name: "Ibrahim Abubakar 'Abs'", meta: "Age: 43 | Ht: 5' 9\" | C", num: "4" }, { name: "Louie Pangan 'Louie'", meta: "Age: 29 | Ht: 5' 9\" | SF", num: "2" }, { name: "Reggie Gammad 'Reggie'", meta: "Age: 37 | Ht: 5' 7\" | SG", num: "15" }, { name: "Ruel Dionco", meta: "Age: 39 | Ht: 5' 4\" | SG", num: "23" }, { name: "Sean Sese 'Sean'", meta: "Age: 47 | Ht: 5' 4\" | SG", num: "26" }, { name: "Sherwin C. Soliman 'Win'", meta: "Age: 49 | Ht: 5' 5\" | SG", num: "4" }, { name: "jerome cabonias 'jerome'", meta: "Age: 41 | Ht: 5' 3\" | PG", num: "9" }],
+            "HAIG UNITED": [{ name: "Leo G. Rico (C)", meta: "Age: 42 | Ht: 5' 8\" | SG", num: "16" }, { name: "Alvin M. Balce 'Alvin'", meta: "Age: 33 | Ht: 5' 7\" | PG", num: "4" }, { name: "Cris Lumabi 'Cris'", meta: "Age: 59 | Ht: 5' 8\" | SG", num: "99" }, { name: "Daryll Santos 'Daryll'", meta: "Age: 37 | Ht: 5' 9\" | PF", num: "25" }, { name: "Delfin Santos Jr 'Jay'", meta: "Age: 41 | Ht: 6' 0\" | C", num: "15" }, { name: "Dwynikko E. Mamangon 'Nikko'", meta: "Age: 27 | Ht: 5' 8\" | SG", num: "7" }, { name: "Kent Ando 'Ando'", meta: "Age: 37 | Ht: 5' 3\" | SG", num: "5" }, { name: "Krisanto Bibal 'KRIS'", meta: "Age: 45 | Ht: 6' 0\" | SG", num: "98" }, { name: "Mark Tuco 'Mark'", meta: "Age: 26 | Ht: 5' 5\" | SG", num: "24" }, { name: "SEAN CAPILI 'SEAN'", meta: "Age: 42 | Ht: 5' 7\" | PF", num: "92" }, { name: "Yushen Chen 'David'", meta: "Age: 45 | Ht: 5' 6\" | SG", num: "6" }],
+            "MERLION HOOPERS": [{ name: "Ronald Pacheco 'Onad' (C)", meta: "Age: 44 | Ht: 5' 5\" | PG", num: "44" }, { name: "Archie Venezuela 'Arch'", meta: "Age: 46 | Ht: 5' 7\" | SF", num: "12" }, { name: "Bal Belen 'Bal'", meta: "Age: N/A | Ht: 5' 5\" | SG", num: "22" }, { name: "Emmanuel G. Bernardo 'Iman'", meta: "Age: 33 | Ht: 5' 8\" | SG", num: "28" }, { name: "Fernando Salenga 'Fernan'", meta: "Age: 53 | Ht: 5' 8\" | PF", num: "13" }, { name: "Jaypee Tajantajan 'Jpoy'", meta: "Age: 35 | Ht: 5' 9\" | PF", num: "17" }, { name: "Jojo Manalili 'Jojo'", meta: "Age: 44 | Ht: 5' 8\" | SG", num: "17" }, { name: "Kevin Ces Legaspi 'Ces'", meta: "Age: 33 | Ht: 5' 9\" | PG", num: "9" }, { name: "Melky 'ImfaktO'", meta: "Age: 45 | Ht: 5' 9\" | SF", num: "12" }, { name: "Miguelito alimario 'Migz'", meta: "Age: 35 | Ht: 5' 8\" | PF", num: "0" }, { name: "Paul Kwong 'Paul'", meta: "Age: 44 | Ht: 5' 6\" | SG", num: "9" }],
+            "SAINTS": [{ name: "Arnel Goyon 'Arnel' (C)", meta: "Age: 42 | Ht: 5' 6\" | SG", num: "30" }, { name: "Daniel M Serrano Jr 'Daniel'", meta: "Age: 55 | Ht: 5' 7\" | SG", num: "72" }, { name: "Daniel swart 'Swart'", meta: "Age: 22 | Ht: 5' 8\" | SG", num: "10" }, { name: "Geoffrey A Eltanal 'Nvls'", meta: "Age: 42 | Ht: 5' 7\" | SF", num: "23" }, { name: "Jojo dano 'Jojo'", meta: "Age: 40 | Ht: 5' 7\" | SG", num: "14" }, { name: "Jonathan Viroomal 'Athan'", meta: "Age: 47 | Ht: 5' 8\" | SG", num: "42" }, { name: "Karl Christian Acain 'Karl'", meta: "Age: 40 | Ht: 5' 10\" | C", num: "34" }, { name: "Lawrence Medina 'Law'", meta: "Age: 36 | Ht: 5' 6\" | SF", num: "14" }, { name: "Reynald dabu 'Dabs'", meta: "Age: 44 | Ht: 6' 3\" | SF", num: "17" }, { name: "Rhey Frianeza 'Rhey'", meta: "Age: 37 | Ht: 5' 7\" | SG", num: "15" }, { name: "Santos Marvin 'Marvin'", meta: "Age: 42 | Ht: 5' 8\" | SF", num: "8" }],
+            "STINGRAYZ": [{ name: "Joseph Marayag 'Seph30' (C)", meta: "Age: 41 | Ht: 5' 3\" | SG", num: "30" }, { name: "JP Jocson 'JP'", meta: "Age: 44 | Ht: 5' 7\" | SG", num: "1" }, { name: "Jhon Pascual 'Jhon'", meta: "Age: 26 | Ht: 5' 6\" | PG", num: "6" }, { name: "Jim Alfred Dacanay 'jim'", meta: "Age: 28 | Ht: 5' 8\" | SF", num: "10" }, { name: "Leonard Pili 'Leonard'", meta: "Age: 41 | Ht: 5' 7\" | PG", num: "11" }, { name: "Manuel Martinez Tan", meta: "Age: 37 | Ht: 5' 9\" | PF", num: "4" }, { name: "Paul Lama 'Luap'", meta: "Age: 35 | Ht: 5' 4\" | SG", num: "0" }, { name: "Romel C. Catarina 'ROCATZ'", meta: "Age: 43 | Ht: 5' 4\" | SG", num: "20" }, { name: "Sylvester amarillo 'Sylvz'", meta: "Age: 38 | Ht: 5' 6\" | SF", num: "19" }, { name: "Victor Javellana 'Vic'", meta: "Age: 43 | Ht: 5' 7\" | SF", num: "11" }, { name: "Yancy Arandia 'Yancy'", meta: "Age: 40 | Ht: 5' 10\" | SF", num: "17" }],
+            "SUPREMO 2.0": [{ name: "Jan Trevor Enriquez 'TREVOR' (C)", meta: "Age: 32 | Ht: 5' 4\" | PG", num: "5" }, { name: "CLARENCE JAY M. TOCAL 'clar'", meta: "Age: 24 | Ht: 5' 7\" | PG", num: "12" }, { name: "Edwin Vernaiz Jr. 'Edz'", meta: "Age: 38 | Ht: 5' 7\" | SG", num: "26" }, { name: "Enrico 'EnriQ'", meta: "Age: 49 | Ht: 5' 9\" | SF", num: "8" }, { name: "Frederick Q Rollera 'Bob'", meta: "Age: 36 | Ht: 5' 8\" | PF", num: "22" }, { name: "Gerald Loquinario 'Jay-R'", meta: "Age: 39 | Ht: 5' 10\" | C", num: "7" }, { name: "Jason Angelo Alfonso 'Jay'", meta: "Age: 28 | Ht: 5' 5\" | PG", num: "13" }, { name: "Justine Santos 'Justine'", meta: "Age: 28 | Ht: 5' 10\" | SG", num: "1" }, { name: "Neil De Paz Fernandez 'DingDong'", meta: "Age: 36 | Ht: 5' 5\" | SG", num: "11" }, { name: "Normelito Alayon 'Mhel'", meta: "Age: 50 | Ht: 5' 5\" | SG", num: "18" }, { name: "San Bacho 'San'", meta: "Age: 41 | Ht: 5' 6\" | SG", num: "8" }],
+            "TNLBCNXMRCY": [{ name: "Elmer Mendoza 'meniga' (C)", meta: "Age: 36 | Ht: 5' 6\" | SG", num: "3" }, { name: "Bryan Lama 'Bryan'", meta: "Age: 29 | Ht: 5' 9\" | SG", num: "10" }, { name: "Chad Francis Momongan 'Chad'", meta: "Age: 44 | Ht: 5' 6\" | SG", num: "10" }, { name: "DAN CARLO 'Konsi'", meta: "Age: 25 | Ht: 5' 5\" | PG", num: "17" }, { name: "Edwin Carlos 'Dwin'", meta: "Age: 45 | Ht: 5' 8\" | SG", num: "6" }, { name: "JASON HANOPOL 'JASON'", meta: "Age: 32 | Ht: 5' 6\" | PG", num: "4" }, { name: "Jesson Labasan 'Jhay'", meta: "Age: 46 | Ht: 5' 8\" | SF", num: "23" }, { name: "Mark Joshua Abenoja 'Maki'", meta: "Age: 26 | Ht: 5' 8\" | SF", num: "13" }, { name: "Mhel Papa 'Mhel'", meta: "Age: 49 | Ht: 5' 6\" | SG", num: "17" }, { name: "Ramil Gatbonton 'Bong'", meta: "Age: 46 | Ht: 5' 7\" | PF", num: "11" }, { name: "Ramil Looc 'Looc'", meta: "Age: 48 | Ht: 5' 11\" | C", num: "42" }]
+        };
+
+        // Render TEAMS Page Grids
+        function renderTeamsGrid() {
+            const containerA = document.getElementById('teams-grid-group-a');
+            const containerB = document.getElementById('teams-grid-group-b');
+
+            if (containerA) {
+                containerA.innerHTML = '';
+                groupATeams.forEach(team => {
+                    containerA.appendChild(createTeamSquareCard(team));
+                });
+            }
+
+            if (containerB) {
+                containerB.innerHTML = '';
+                groupBTeams.forEach(team => {
+                    containerB.appendChild(createTeamSquareCard(team));
+                });
+            }
+        }
+
+        function createTeamSquareCard(team) {
+            const card = document.createElement('div');
+            card.className = 'team-square-card';
+            card.onclick = () => {
+                switchPage('players');
+                const filterEl = document.getElementById('players-team-filter');
+                if (filterEl) {
+                    filterEl.value = team.key;
+                    renderPlayersTable();
+                }
+            };
+            
+            card.innerHTML = `
+                <div class="team-logo-box" onmouseenter="playTeamVideo(this)" onmouseleave="pauseTeamVideo(this)">
+                    <img src="${team.logo}" alt="${team.name}" class="static-logo">
+                    <video src="${team.video}" class="hover-video" muted loop playsinline preload="auto" style="display:none;"></video>
+                </div>
+                <div class="team-square-name">${team.name}</div>
+            `;
+            return card;
+        }
+
+        function playTeamVideo(logoBox) {
+            const img = logoBox.querySelector('.static-logo');
+            const vid = logoBox.querySelector('.hover-video');
+            if (img && vid) {
+                img.style.opacity = '0';
+                vid.style.display = 'block';
+                vid.play().catch(e => console.log('Video play interrupted:', e));
+            }
+        }
+
+        function pauseTeamVideo(logoBox) {
+            const img = logoBox.querySelector('.static-logo');
+            const vid = logoBox.querySelector('.hover-video');
+            if (img && vid) {
+                vid.pause();
+                vid.currentTime = 0;
+                vid.style.display = 'none';
+                img.style.opacity = '1';
+            }
+        }
+
+        function populatePlayerFilters() {
+            const select = document.getElementById('players-team-filter');
+            if(select && select.options.length <= 1) {
+                Object.keys(teams).forEach(teamKey => {
+                    const opt = document.createElement('option');
+                    opt.value = teamKey;
+                    opt.textContent = teams[teamKey].name;
+                    select.appendChild(opt);
+                });
+            }
+        }
+
+        function renderPlayersTable() {
+            const tbody = document.getElementById('players-table-tbody');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+
+            const searchVal = (document.getElementById('players-table-search')?.value || '').trim().toLowerCase();
+            const teamFilter = document.getElementById('players-team-filter')?.value || 'ALL';
+            const posFilter = document.getElementById('players-pos-filter')?.value || 'ALL';
+
+            let allPlayers = [];
+
+            Object.keys(rosterData).forEach(teamKey => {
+                if (teamFilter !== 'ALL' && teamKey !== teamFilter) return;
+                
+                const teamObj = teams[teamKey] || { name: teamKey, logo: '' };
+                rosterData[teamKey].forEach(p => {
+                    const parsed = parsePlayer(p);
+                    if (posFilter !== 'ALL' && parsed._pos !== posFilter) return;
+                    if (searchVal && !parsed.name.toLowerCase().includes(searchVal) && !teamObj.name.toLowerCase().includes(searchVal)) return;
+
+                    allPlayers.push({
+                        ...parsed,
+                        teamKey: teamKey,
+                        teamName: teamObj.name,
+                        teamLogo: teamObj.logo
+                    });
+                });
+            });
+
+            allPlayers.sort((a, b) => a.name.localeCompare(b.name));
+
+            allPlayers.forEach(p => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>
+                        <div class="player-cell">
+                            <img src="${p.teamLogo}" alt="${p.teamName}" class="player-team-logo">
+                            <div class="player-name-block">
+                                <span class="player-main-name">${p.name}</span>
+                                <span class="player-age-ht">| ${p._ageHtText}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="font-weight: 700;">${p.teamName}</td>
+                    <td><span class="player-pos">${p._pos}</span></td>
+                    <td class="center">
+                        <div class="orange-jersey-badge">
+                            <svg class="orange-jersey-svg" viewBox="0 0 24 24">
+                                <path d="M6 3L2 6v3l3 1v11h14V10l3-1V6l-4-3h-3a3 3 0 0 1-6 0H6z"/>
+                            </svg>
+                            <span class="orange-jersey-number">${p.num}</span>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function parsePlayer(p) {
+            const parts = p.meta.split('|').map(s => s.trim());
+            let age = 999;
+            let ageText = "N/A";
+            if (parts[0]) {
+                const ageMatch = parts[0].match(/(\d+)/);
+                if (ageMatch) { age = parseInt(ageMatch[1]); ageText = ageMatch[1]; }
+            }
+            let height = 0;
+            let htText = "N/A";
+            if (parts[1]) {
+                const htMatch = parts[1].match(/(\d+'\s*\d+)/);
+                if (htMatch) { htText = htMatch[1] + '"'; }
+            }
+            const position = parts.length > 2 ? parts[2] : 'N/A';
+            const ageHtText = `${ageText} yrs • ${htText}`;
+            const strippedMeta = parts.slice(0, 2).join(' | ');
+            return { ...p, _age: age, _height: height, _pos: position, _strippedMeta: strippedMeta, _ageHtText: ageHtText };
+        }
+
+        function renderScoreTicker() {
+            const container = document.getElementById('ticker-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            scheduleData.forEach(day => {
+                day.games.forEach(game => {
+                    const team1Key = game.team1 || game.home;
+                    const team2Key = game.team2 || game.away;
+                    const team1 = teams[team1Key] || { name: team1Key, logo: '' };
+                    const team2 = teams[team2Key] || { name: team2Key, logo: '' };
+
+                    const isCompleted = game.completed === true;
+                    const t1Score = isCompleted ? (game.team1Score ?? game.homeScore ?? 0) : '-';
+                    const t2Score = isCompleted ? (game.team2Score ?? game.awayScore ?? 0) : '-';
+
+                    const card = document.createElement('div');
+                    card.className = 'ticker-card';
+                    card.onclick = () => showMatchupRosters(game, day.dateShort);
+
+                    card.innerHTML = `
+                        <div class="ticker-header">
+                            <span>${day.dateShort} • ${game.time}</span>
+                            <span>${game.group}</span>
+                        </div>
+                        <div class="ticker-team-row">
+                            <div class="ticker-team-info">
+                                <img src="${team1.logo || ''}" class="ticker-team-logo" alt="${team1.name}"> 
+                                <span>${team1.name.toUpperCase()}</span>
+                            </div>
+                            <span class="ticker-score">${t1Score}</span>
+                        </div>
+                        <div class="ticker-team-row">
+                            <div class="ticker-team-info">
+                                <img src="${team2.logo || ''}" class="ticker-team-logo" alt="${team2.name}"> 
+                                <span>${team2.name.toUpperCase()}</span>
+                            </div>
+                            <span class="ticker-score">${t2Score}</span>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        }
+
+        function computeAggregatedStats(gameLogs) {
+            const playerTotals = {};
+            gameLogs.forEach(game => {
+                const boxScore = game.boxScore || [];
+                const pbp = game.playByPlay || [];
+
+                boxScore.forEach(p => {
+                    const key = p.name + "_" + (p.team || "team");
+                    if (!playerTotals[key]) {
+                        playerTotals[key] = { name: p.name, team: p.team || "TEAM", pts: 0, reb: 0, ast: 0, pm3: 0, pm2: 0, ft: 0 };
+                    }
+                    playerTotals[key].pts += p.pts || 0;
+                    playerTotals[key].reb += p.reb || 0;
+                    playerTotals[key].ast += p.ast || 0;
+                });
+
+                pbp.forEach(action => {
+                    const data = action.actionData;
+                    if (data && data.playerId) {
+                        const boxPlayer = boxScore.find(item => item.id === data.playerId);
+                        if (boxPlayer) {
+                            const key = boxPlayer.name + "_" + (boxPlayer.team || "team");
+                            if (playerTotals[key]) {
+                                if (data.type === '3PM') playerTotals[key].pm3 += 1;
+                                else if (data.type === '2PM' || data.type === '2FGM') playerTotals[key].pm2 += 1;
+                                else if (data.type === 'FT' || data.type === 'FTM') playerTotals[key].ft += 1;
+                            }
+                        }
+                    }
+                });
+            });
+            return Object.values(playerTotals);
+        }
+
+        function renderLeaders() {
+            const leadersContainer = document.getElementById('leaders-container');
+            const computedPlayers = computeAggregatedStats(uploadedGameLogs);
+
+            const renderCategoryCards = (catKey, catUnit) => {
+                let html = '';
+                let sortedList = [...computedPlayers].filter(p => p[catKey] > 0);
+                sortedList.sort((a, b) => b[catKey] - a[catKey]);
+
+                for (let i = 0; i < 5; i++) {
+                    const p = sortedList[i];
+                    const rank = i + 1;
+                    let rankClass = '';
+                    let badgeLabel = rank;
+                    if (rank === 1) { rankClass = 'top1'; badgeLabel = '🏆 1'; }
+                    else if (rank === 2) { rankClass = 'top2'; }
+                    else if (rank === 3) { rankClass = 'top3'; }
+
+                    const name = p ? p.name : '—';
+                    const team = p ? p.team.toUpperCase() : '—';
+                    const val = p ? p[catKey] : '0';
+
+                    html += `
+                        <div class="leader-card">
+                            <div class="leader-left">
+                                <span class="leader-rank-badge ${rankClass}">${badgeLabel}</span>
+                                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&auto=format&fit=crop&q=80" class="player-avatar">
+                                <div class="player-info">
+                                    <span class="player-name">${name}</span>
+                                    <span class="player-team">${team}</span>
+                                </div>
+                            </div>
+                            <div class="leader-right">
+                                <div class="stat-value-box">
+                                    <span class="stat-label">${catUnit}</span>
+                                    <span class="stat-number">${val}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                return html;
+            };
+
+            leadersContainer.innerHTML = `
+                <div class="leaders-grid">
+                    <div class="leader-category-block"><div class="category-header">POINTS</div>${renderCategoryCards("pts", "PTS")}</div>
+                    <div class="leader-category-block"><div class="category-header">REBOUNDS</div>${renderCategoryCards("reb", "REB")}</div>
+                    <div class="leader-category-block"><div class="category-header">ASSISTS</div>${renderCategoryCards("ast", "AST")}</div>
+                </div>
+                <div class="leaders-grid">
+                    <div class="leader-category-block"><div class="category-header">3-POINTERS</div>${renderCategoryCards("pm3", "3PM")}</div>
+                    <div class="leader-category-block"><div class="category-header">2-POINTERS</div>${renderCategoryCards("pm2", "2PM")}</div>
+                    <div class="leader-category-block"><div class="category-header">FREE THROWS</div>${renderCategoryCards("ft", "FT")}</div>
+                </div>
+            `;
+        }
+
+        function renderStandings(filterGroup = 'REGULAR') {
+            const tbody = document.getElementById('standings-tbody');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+
+            let filtered = standingsData;
+            if (filterGroup !== 'REGULAR') {
+                filtered = standingsData.filter(item => item.group === filterGroup);
+            }
+
+            const hasGamesStarted = filtered.some(item => item.m > 0);
+            if (hasGamesStarted) {
+                filtered.sort((a, b) => b.pts - a.pts || (b.pf - b.pa) - (a.pf - a.pa));
+            }
+
+            filtered.forEach((item, index) => {
+                const rank = index + 1;
+                const pd = item.pf - item.pa;
+                let rankClass = '';
+                let rankPrefix = '-';
+
+                if (hasGamesStarted) {
+                    rankPrefix = rank;
+                    if (rank === 1) { rankClass = 'rank-top-1'; rankPrefix = '🏆 1'; }
+                    else if (rank === 2) { rankClass = 'rank-top-2'; rankPrefix = '🏆 2'; }
+                    else if (rank === 3) { rankClass = 'rank-top-3'; rankPrefix = '🏆 3'; }
+                }
+
+                let pdClass = 'pd-positive';
+                let pdStr = `+${pd}`;
+                if (pd < 0) { pdClass = 'pd-negative'; pdStr = `${pd}`; } 
+                else if (pd === 0) { pdClass = ''; pdStr = '0'; }
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="center rank-cell ${rankClass}">${rankPrefix}</td>
+                    <td>
+                        <div class="team-cell">
+                            <img src="${item.logo}" class="team-logo-table" alt="${item.team}">
+                            <span>${item.team}</span>
+                        </div>
+                    </td>
+                    <td class="center" style="color: var(--primary); font-weight: 900; font-size: 1.05rem;">${item.pts}</td>
+                    <td class="center">${item.m}</td>
+                    <td class="center" style="color: var(--green); font-weight: 700;">${item.w}</td>
+                    <td class="center" style="color: var(--accent-red); font-weight: 700;">${item.l}</td>
+                    <td class="center">${item.d}</td>
+                    <td class="center">${item.pf}</td>
+                    <td class="center">${item.pa}</td>
+                    <td class="center ${pdClass}">${pdStr}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterStandingsTable() {
+            const val = document.getElementById('stage-select').value;
+            renderStandings(val);
+        }
+
+        let currentScheduleFilter = 'ALL';
+        let currentSearchQuery = '';
+
+        function handleSearch() {
+            currentSearchQuery = document.getElementById('team-search').value.trim().toLowerCase();
+            renderSchedule();
+        }
+
+        function filterSchedule(date) {
+            currentScheduleFilter = date;
+            const buttons = document.querySelectorAll('#schedule-filters .filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.trim().includes(date) || (date === 'ALL' && btn.textContent.trim() === 'All Dates')) {
+                    btn.classList.add('active');
+                }
+            });
+            renderSchedule();
+        }
+
+        function renderSchedule() {
+            const container = document.getElementById('schedule-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            let dataToDisplay = scheduleData;
+            if (currentScheduleFilter !== 'ALL') {
+                dataToDisplay = scheduleData.filter(d => d.dateShort === currentScheduleFilter);
+            }
+
+            if (currentSearchQuery) {
+                const query = currentSearchQuery;
+                const matchingTeams = new Set();
+                Object.keys(teams).forEach(t => { if ((teams[t].name || t).toLowerCase().includes(query)) matchingTeams.add(t); });
+                Object.keys(rosterData).forEach(t => { if (rosterData[t].some(p => p.name.toLowerCase().includes(query))) matchingTeams.add(t); });
+                
+                let filteredData = [];
+                dataToDisplay.forEach(day => {
+                    const games = day.games.filter(g => {
+                        const t1 = g.team1 || g.home;
+                        const t2 = g.team2 || g.away;
+                        return matchingTeams.has(t1) || matchingTeams.has(t2) || t1.toLowerCase().includes(query) || t2.toLowerCase().includes(query);
+                    });
+                    if (games.length > 0) filteredData.push({ ...day, games });
+                });
+                dataToDisplay = filteredData;
+            }
+
+            dataToDisplay.forEach(day => {
+                day.games.forEach(game => {
+                    const team1Key = game.team1 || game.home;
+                    const team2Key = game.team2 || game.away;
+                    const team1Color = game.team1Color || game.homeColor;
+                    const team2Color = game.team2Color || game.awayColor;
+                    
+                    const team1 = teams[team1Key] || { name: team1Key };
+                    const team2 = teams[team2Key] || { name: team2Key };
+                    
+                    const badgeClass = game.group === "GROUP A" ? "group-a" : "group-b";
+                    const team1J = team1Color === 'Black' ? 'jersey-black' : 'jersey-orange';
+                    const team2J = team2Color === 'Black' ? 'jersey-black' : 'jersey-orange';
+                    
+                    const isCompleted = game.completed === true;
+                    const t1Score = isCompleted ? (game.team1Score ?? game.homeScore ?? 0) : '-';
+                    const t2Score = isCompleted ? (game.team2Score ?? game.awayScore ?? 0) : '-';
+                    
+                    const isT1Winner = isCompleted && t1Score > t2Score;
+                    const isT2Winner = isCompleted && t2Score > t1Score;
+
+                    const card = document.createElement('div');
+                    card.className = "card schedule-card";
+                    card.onclick = () => showMatchupRosters(game, day.dateShort);
+                    
+                    card.innerHTML = `
+                        <div class="match-card-header">
+                            <div>
+                                <span class="match-time-text">${day.dateShort} / ${game.time}</span>
+                                <span class="match-league-sub">Haig League Season 3</span>
+                            </div>
+                            <span class="card-badge ${badgeClass}">${game.group}</span>
+                        </div>
+
+                        <div class="match-team-list">
+                            <div class="match-team-row">
+                                <div class="team-identity">
+                                    <img src="${team1.logo || ''}" alt="${team1.name}" class="team-logo-sm">
+                                    <span class="team-name-text">${team1.name}</span>
+                                    <span class="team-jersey ${team1J}">${team1Color}</span>
+                                </div>
+                                <div class="match-score">
+                                    ${t1Score}
+                                    ${isT1Winner ? '<span class="winner-arrow">◀</span>' : ''}
+                                </div>
+                            </div>
+
+                            <div class="match-team-row">
+                                <div class="team-identity">
+                                    <img src="${team2.logo || ''}" alt="${team2.name}" class="team-logo-sm">
+                                    <span class="team-name-text">${team2.name}</span>
+                                    <span class="team-jersey ${team2J}">${team2Color}</span>
+                                </div>
+                                <div class="match-score">
+                                    ${t2Score}
+                                    ${isT2Winner ? '<span class="winner-arrow">◀</span>' : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        }
+
+        // Show Game Matchup Modal with Positional Alignment (PG vs PG, SG vs SG, SF vs SF, PF vs PF, C vs C)
+        function showMatchupRosters(game, dateStr) {
+            const team1Key = game.team1 || game.home;
+            const team2Key = game.team2 || game.away;
+            const team1 = teams[team1Key] || { name: team1Key };
+            const team2 = teams[team2Key] || { name: team2Key };
+
+            const t1Score = game.team1Score ?? game.homeScore ?? 0;
+            const t2Score = game.team2Score ?? game.awayScore ?? 0;
+
+            document.getElementById('modalHeaderTitle').innerText = `${game.group}: ${team1.name} vs ${team2.name}`;
+            
+            const statsContainer = document.getElementById('gameStatsSection');
+            if (game.completed === true && game.stats) {
+                statsContainer.innerHTML = `
+                    <div class="stats-wrapper">
+                        <h3>📊 Game Statistics</h3>
+                        <div class="score-board">
+                            <div class="team-box">
+                                <div style="font-size: 1.1rem; font-weight: bold;">${team1.name}</div>
+                                <div class="score-num">${t1Score}</div>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">FINAL</div>
+                            <div class="team-box">
+                                <div style="font-size: 1.1rem; font-weight: bold;">${team2.name}</div>
+                                <div class="score-num">${t2Score}</div>
+                            </div>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card"><div class="stat-title">${team1.name} Top Scorer</div><div class="stat-value">${game.stats.topScorerTeam1 || 'N/A'}</div></div>
+                            <div class="stat-card"><div class="stat-title">${team2.name} Top Scorer</div><div class="stat-value">${game.stats.topScorerTeam2 || 'N/A'}</div></div>
+                            <div class="stat-card"><div class="stat-title">Rebounds Leader</div><div class="stat-value">${game.stats.reboundsLeader || 'N/A'}</div></div>
+                            <div class="stat-card"><div class="stat-title">Assists Leader</div><div class="stat-value">${game.stats.assistsLeader || 'N/A'}</div></div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                statsContainer.innerHTML = `
+                    <div class="stats-wrapper" style="background: var(--bg-card); padding: 1.1rem; border-radius: 8px; margin-bottom: 1.25rem; border: 1px solid var(--border-color);">
+                        <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 0.4rem; margin-bottom: 0.85rem; font-size: 1.1rem;">📊 Game Statistics</h3>
+                        <div style="text-align: center; padding: 0.85rem; background: rgba(255,102,0,0.08); border-radius: 6px; color: var(--primary); font-weight: bold; font-size: 0.9rem;">
+                            🚫 No statistics yet — match has not started.
+                        </div>
+                    </div>
+                `;
+            }
+
+            const createPositionalRosterHTML = (teamKey, teamData) => {
+                const players = (rosterData[teamKey] || []).map(parsePlayer);
+                
+                // Sort by standard basketball position priority: PG -> SG -> SF -> PF -> C
+                const posRank = { 'PG': 1, 'SG': 2, 'SF': 3, 'PF': 4, 'C': 5 };
+                players.sort((a, b) => {
+                    const rA = posRank[a._pos] || 99;
+                    const rB = posRank[b._pos] || 99;
+                    if (rA !== rB) return rA - rB;
+                    return parseInt(a.num || 0) - parseInt(b.num || 0);
+                });
+
+                if(players.length === 0) return `<p>No roster data available.</p>`;
+                
+                const listHtml = players.map(p => `
+                    <li>
+                        <div>
+                            <strong>${p.name}</strong>
+                            <span class="player-meta">${p._strippedMeta}</span>
+                        </div>
+                        <div class="badge-group">
+                            <span class="player-pos">${p._pos}</span>
+                            <span class="player-num">#${p.num}</span>
+                        </div>
+                    </li>
+                `).join('');
+
+                return `
+                    <div style="text-align: center; margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.85rem;">
+                        <img src="${teamData.logo || ''}" alt="${teamData.name}" class="team-logo-img" style="width: 65px; height: 65px; margin-bottom: 6px;">
+                        <h3 style="font-size: 1.2rem;">${teamData.name}</h3>
+                    </div>
+                    <ul class="roster-list" style="margin-top: 0;">${listHtml}</ul>
+                `;
+            };
+
+            const container = document.getElementById('matchupContent');
+            container.innerHTML = `
+                <div class="team-roster-side">${createPositionalRosterHTML(team1Key, team1)}</div>
+                <div class="vs-badge"><span>VS</span></div>
+                <div class="team-roster-side">${createPositionalRosterHTML(team2Key, team2)}</div>
+            `;
+            
+            document.getElementById('matchupModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            document.getElementById('matchupModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+        
+        function closeTeaser() {
+            document.getElementById('teaserModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+            const video = document.getElementById('teaser-video');
+            if (video) video.pause();
+            const audio = document.getElementById('theme-audio');
+            if (audio) audio.play().catch(e => console.log("Audio autoplay block:", e));
+        }
+
+        window.addEventListener('click', function(event) {
+            const matchupModal = document.getElementById('matchupModal');
+            const teaserModal = document.getElementById('teaserModal');
+            if (event.target === matchupModal) closeModal();
+            if (event.target === teaserModal) closeTeaser();
+        });
+
+        // COUNTDOWN TIMER JS
         const countDownDate = new Date("Oct 18, 2026 07:00:00").getTime();
 
-        const x = setInterval(function() {
+        setInterval(function() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
 
@@ -599,41 +2499,33 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("mins").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("secs").innerHTML = seconds.toString().padStart(2, '0');
+            const dEl = document.getElementById("days");
+            const hEl = document.getElementById("hours");
+            const mEl = document.getElementById("mins");
+            const sEl = document.getElementById("secs");
+
+            if(dEl) dEl.innerHTML = days.toString().padStart(2, '0');
+            if(hEl) hEl.innerHTML = hours.toString().padStart(2, '0');
+            if(mEl) mEl.innerHTML = minutes.toString().padStart(2, '0');
+            if(sEl) sEl.innerHTML = seconds.toString().padStart(2, '0');
 
             if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("league-countdown").innerHTML = "SEASON 3 HAS STARTED!";
+                const el = document.getElementById("league-countdown");
+                if (el) el.innerHTML = "SEASON 3 IS UNDERWAY!";
             }
         }, 1000);
 
-        // Modal Logic
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("fullImage");
-        const closeModal = document.querySelector(".close-modal");
-        const posterImg = document.getElementById("leaguePoster");
-
-        if (posterImg) {
-            posterImg.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        }
-
-        if (closeModal) {
-            closeModal.onclick = function() { 
-                modal.style.display = "none";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
+        window.onload = function() {
+            initTheme();
+            renderSchedule();
+            renderScoreTicker();
+            renderLeaders();
+            renderTeamsGrid();
+            populatePlayerFilters();
+            
+            document.getElementById('teaserModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
+        };
     </script>
 </body>
 </html>
