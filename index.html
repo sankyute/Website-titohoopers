@@ -1530,7 +1530,7 @@
             <!-- GROUP A TEAMS (4 ON TOP) -->
             <div class="group-header-label">
                 <span>GROUP A</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Hover logo to play video preview</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Double-click team to view players • Hover/Wait 3s for video</span>
             </div>
             <div class="teams-grid" id="teams-grid-group-a">
                 <!-- Rendered dynamically -->
@@ -1539,7 +1539,7 @@
             <!-- GROUP B TEAMS (4 BELOW) -->
             <div class="group-header-label">
                 <span>GROUP B</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Hover logo to play video preview</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Double-click team to view players • Hover/Wait 3s for video</span>
             </div>
             <div class="teams-grid" id="teams-grid-group-b">
                 <!-- Rendered dynamically -->
@@ -1557,6 +1557,13 @@
             <h1>PLAYERS</h1>
         </div>
         <div class="container">
+            <!-- BACK TO TEAMS BUTTON CONTAINER -->
+            <div id="back-to-teams-container" style="display: none; margin-bottom: 1.25rem;">
+                <button onclick="backToTeams()" class="btn" style="background-color: var(--secondary); border: 1px solid var(--primary); display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <i class="fa-solid fa-arrow-left"></i> ← Back to Teams
+                </button>
+            </div>
+
             <div class="players-control-row">
                 <div class="players-search-box">
                     <input type="text" id="players-table-search" placeholder="Search players..." oninput="renderPlayersTable()">
@@ -1722,6 +1729,8 @@
 
     <script>
         let uploadedGameLogs = [];
+        let navigatedFromTeams = false;
+        let mobileAutoPlayTimeout = null;
 
         // THEME TOGGLE SWITCH (LIGHT / DARK)
         function toggleTheme() {
@@ -1782,6 +1791,12 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
+            // Pause team videos and clear mobile autoplay timer when leaving teams page
+            if (page !== 'teams') {
+                if (mobileAutoPlayTimeout) clearTimeout(mobileAutoPlayTimeout);
+                document.querySelectorAll('.team-logo-box').forEach(pauseTeamVideo);
+            }
+
             if (page === 'games') {
                 renderSchedule();
             } else if (page === 'standings') {
@@ -1790,9 +1805,17 @@
                 renderLeaders();
             } else if (page === 'teams') {
                 renderTeamsGrid();
+                handleMobileTeamAutoPlay();
             } else if (page === 'players') {
                 populatePlayerFilters();
                 renderPlayersTable();
+                
+                // Show Back to Teams button if navigated directly from Teams selection
+                const backBtnContainer = document.getElementById('back-to-teams-container');
+                if (backBtnContainer) {
+                    backBtnContainer.style.display = navigatedFromTeams ? 'block' : 'none';
+                }
+                navigatedFromTeams = false; // Reset navigation state
             }
         }
 
@@ -1802,6 +1825,41 @@
                 const el = document.getElementById('contact');
                 if(el) el.scrollIntoView({ behavior: 'smooth' });
             }, 120);
+        }
+
+        // Navigate to Players from Teams Page with Back Button state
+        function goToPlayersFromTeam(teamKey) {
+            navigatedFromTeams = true;
+            switchPage('players');
+            const filterEl = document.getElementById('players-team-filter');
+            if (filterEl) {
+                filterEl.value = teamKey;
+                renderPlayersTable();
+            }
+        }
+
+        // Return to Teams Page
+        function backToTeams() {
+            const backBtnContainer = document.getElementById('back-to-teams-container');
+            if (backBtnContainer) {
+                backBtnContainer.style.display = 'none';
+            }
+            switchPage('teams');
+        }
+
+        // Auto-play Team GIFs/Videos on Mobile phone screens after 3s delay
+        function handleMobileTeamAutoPlay() {
+            if (mobileAutoPlayTimeout) clearTimeout(mobileAutoPlayTimeout);
+
+            const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+            if (isMobile) {
+                mobileAutoPlayTimeout = setTimeout(() => {
+                    const logoBoxes = document.querySelectorAll('.team-logo-box');
+                    logoBoxes.forEach(logoBox => {
+                        playTeamVideo(logoBox);
+                    });
+                }, 3000); // 3 seconds delay
+            }
         }
 
         const teams = {
@@ -1931,13 +1989,14 @@
         function createTeamSquareCard(team) {
             const card = document.createElement('div');
             card.className = 'team-square-card';
+            
+            // Handle double-click & single-click to view player list
+            card.ondblclick = () => {
+                goToPlayersFromTeam(team.key);
+            };
+
             card.onclick = () => {
-                switchPage('players');
-                const filterEl = document.getElementById('players-team-filter');
-                if (filterEl) {
-                    filterEl.value = team.key;
-                    renderPlayersTable();
-                }
+                goToPlayersFromTeam(team.key);
             };
             
             card.innerHTML = `
@@ -2371,7 +2430,7 @@
             });
         }
 
-        // Show Game Matchup Modal with Positional Alignment (PG vs PG, SG vs SG, SF vs SF, PF vs PF, C vs C)
+        // Show Game Matchup Modal with Positional Alignment
         function showMatchupRosters(game, dateStr) {
             const team1Key = game.team1 || game.home;
             const team2Key = game.team2 || game.away;
