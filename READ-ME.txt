@@ -1,0 +1,20 @@
+HRL3 GAME 1 WEBSITE UPDATE
+
+1. Back up your existing website index.html.
+2. Extract this ZIP. Copy index.html, data/, and matches/ into the root of your existing website repository. Keep all existing images, CSS, video and other files.
+3. Commit/upload the changes to your GitHub Pages publishing branch.
+4. Open the published website. Game 1 shows BOSS MAYOR 59 - 64 MERLION HOOPERS. Click its schedule card or score ticker to open the matchup, then View full match report.
+5. Open the Leaders page for whole-season and per-game team/player tables.
+
+AFTER FUTURE GAMES
+Save Game and Save League Progress in score-machine. Extract the new league ZIP. Check that league.json still contains every previous result with the correct scores. Replace data/league.json with that file. Add each interactive match HTML to matches/ using its stable ID, e.g. R01-G2.html. Retain all older reports. Match JSON files may also be stored alongside them as backups; this website reads data/league.json as its source.
+
+IMPORTANT
+Replacing matches/R01-G1.json alone will not update the website totals. The corrected Game 1 is already inside data/league.json in this package. The old ZIP's league-results.html was not included because it contains stale 0-0 data.
+Local double-click preview uses bundled Game 1. To test future JSON updates use your published site or VS Code Live Server.
+Standings: group-stage results only, default win=1/loss=0/draw=0. Change STANDINGS_POINTS in index.html to your official league policy. Ranking is provisional (points then score difference), without head-to-head tie-breaks. Season statistics include all FINAL results, including playoffs. Player totals use stable player IDs; GP requires playing time or a recorded statistic. REB/AST/etc for teams are sums of player statistics and do not include separate team-only events.
+All schedules and website media paths are preserved. The interactive match report is the exact HTML you supplied.
+
+UI UPDATE: side-by-side final scoreboard, winner indicators on ticker, YouTube watch button for Game 1, icon-only team map reset. Replace index.html AND matches/R01-G1.html to see all UI changes.
+
+LOGO UPDATE: upload the included images/ folder too. Match report logo paths now use ../images/Boss_Mayor.jpeg and ../images/Merlion_Hoopers.jpeg, matching the index. All eight uploaded logos are included with exact case-sensitive filenames.
