@@ -1,0 +1,13 @@
+ACTION PHOTO SLIDESHOW
+
+Upload real JPEG photos to images/action/ using these exact filenames:
+action-1.jpg through action-30.jpg
+
+You can upload any number up to 30. Missing files are skipped automatically.
+Photos appear in numerical order. Filenames are lowercase and use .jpg.
+Renaming a PNG or HEIC file to .jpg does not convert it; export it as JPEG first.
+Landscape photos around 1600 pixels wide work well.
+If no action photos load, the existing images/players.jpeg is used.
+
+Replace index.html once with this version. Afterwards, just upload photos to the folder and refresh the website.
+For more than 30 slots, change length:30 in ACTION_PHOTOS in index.html.

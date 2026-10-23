@@ -1,0 +1,38 @@
+SEASON 3 GAME PHOTOS
+
+Create one folder per match ID below. For example:
+images/leagues/hrl3/R01-G1/mvp.jpg
+images/leagues/hrl3/R01-G1/action-1.jpg
+images/leagues/hrl3/R01-G1/action-2.jpg
+images/leagues/hrl3/R01-G2/mvp.jpeg
+images/leagues/hrl3/R01-G2/action-1.jpeg
+
+Each game supports one mvp image and action-1 through action-30.
+.jpg, .jpeg and .png are supported (lowercase). Missing photos are skipped.
+Photo numbering can contain gaps. Reload the website after uploading.
+The Season League card uses your existing images/commissioner.jfif poster.
+Actual photos are not included in this update.
+
+MATCH FOLDER NAMES:
+R01-G1
+R01-G2
+R02-G1
+R02-G2
+R03-G1
+R03-G2
+R04-G1
+R04-G2
+R05-G1
+R05-G2
+R06-G1
+R06-G2
+QF1
+QF2
+QF3
+QF4
+SEMIS1
+SEMIS2
+MINOR-FINAL
+FINAL
+CLASS-1
+CLASS-2
