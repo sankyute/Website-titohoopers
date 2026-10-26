@@ -2288,7 +2288,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
                 const row=game?.boxScore?.find(row=>playerIdentity(row.name,row.team==='home'?game.homeTeam:game.awayTeam)===identity);
                 const completed=Boolean(game||entry.scheduled?.completed);
                 const participated=row&&(Number(row.playingTime)>0||fieldGoalTotals(row).fga>0||['pts','reb','ast','stl','blk','to','pf'].some(k=>Number(row[k])>0));
-                const status=completed?(participated?'Final':row?'Did not play':'Stats unavailable'):'Upcoming';
+                const status=completed?(participated?matchFinalLabel(game||entry.scheduled):row?'Did not play':'Stats unavailable'):'Upcoming';
                 const fg=row?fieldGoalTotals(row):null;
                 const statCells=participated?['pts','reb','ast','stl','blk'].map(k=>`<td>${Number(row[k])||0}</td>`).join('')+`<td>${e(row.twoPtStr||'—')}</td><td>${e(row.threePtStr||'—')}</td><td>${e(row.ftStr||'—')}</td><td>${fg.fgm}/${fg.fga}</td><td>${fg.fga?(100*fg.fgm/fg.fga).toFixed(1)+'%':'—'}</td>`:Array(10).fill('<td class="unplayed-stat">—</td>').join('');
                 const firstScore=game?.finalScore.Home??entry.scheduled?.team1Score,secondScore=game?.finalScore.Away??entry.scheduled?.team2Score;
@@ -2553,7 +2553,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
                         <div class="match-card-header">
                             <div>
                                 <span class="match-time-text">${day.dateShort} / ${game.time}</span>
-                                <span class="match-league-sub">Haig League Season 3</span>
+                                <span class="match-league-sub">Haig League Season 3</span>${isCompleted && game.matchId === 'R02-G1' ? '<span class="match-league-sub">Final (OT)</span>' : ''}
                             </div>
                             <span class="card-badge ${badgeClass}">${game.group}</span>
                         </div>
@@ -2613,7 +2613,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
                                 <div class="score-line"><span class="score-num">${t1Score}</span></div>
                                 <div class="win-label">${t1Score>t2Score?'WINNER':''}</div>
                             </div>
-                            <div class="result-status">${t1Score>t2Score?'<span class="winner-arrow" aria-label="Left team wins">◀</span>':''}<span>FINAL</span>${t2Score>t1Score?'<span class="winner-arrow" aria-label="Right team wins">▶</span>':''}</div>
+                            <div class="result-status">${t1Score>t2Score?'<span class="winner-arrow" aria-label="Left team wins">◀</span>':''}<span>${matchFinalLabel(game)}</span>${t2Score>t1Score?'<span class="winner-arrow" aria-label="Right team wins">▶</span>':''}</div>
                             <div class="team-box ${t2Score>t1Score?'result-winner':''}">
                                 <img class="result-logo" src="${team2.logo||''}" alt="">
                                 <div class="result-name">${escapeText(team2.name)}</div>
@@ -2756,6 +2756,11 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
         const teamAlias = {HAIGBEASTS:'HAIG BEASTS'};
         const teamKey = name => teamAlias[String(name).toUpperCase()] || String(name).toUpperCase();
         const escapeText = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        function matchFinalLabel(game) {
+            const id = game?.leagueContext?.matchId || game?.matchId || game?.id;
+            return id === 'R02-G1' ? 'Final (OT)' : 'Final';
+        }
+
         function applyLeagueResults(data) {
             const unique = new Map();
             for (const [id,game] of Object.entries(data.results || {})) {
@@ -2953,12 +2958,12 @@ document.addEventListener('visibilitychange',resumeOrSuspend);let started=false;
 })();
 </script><script>window.addEventListener('popstate',()=>{const page=location.hash.slice(1)||'home';if(page.startsWith('players?')||page.startsWith('teams?team=')||document.getElementById(page+'-page-view'))switchPage(page,false);else switchPage('home',false)});</script><script>
 // Set each highlight URL to a YouTube highlight clip when ready. Full-game links remain separate.
-const GAME_HIGHLIGHT_URLS = {};
+const GAME_HIGHLIGHT_URLS = {'R01-G1':'https://www.youtube.com/watch?v=nnuIU4KdpCg','R01-G2':'https://www.youtube.com/watch?v=nnuIU4KdpCg'};
 const FULL_GAME_URLS={'R01-G1':'https://www.youtube.com/watch?v=I7c1K_BK1EU','R01-G2':'https://www.youtube.com/watch?v=LILsRLrxhpY&t=5s','R02-G1':'https://www.youtube.com/watch?v=jjsq2PlJKEs&t=2661s'};
 function renderGameHighlights(matchId){
  const panel=document.getElementById('game-highlights-content');panel.replaceChildren();const url=GAME_HIGHLIGHT_URLS[matchId];let id='';
  if(url){try{const u=new URL(url);if(u.hostname==='youtu.be')id=u.pathname.slice(1);else if(['youtube.com','www.youtube.com','m.youtube.com'].includes(u.hostname))id=u.searchParams.get('v')||u.pathname.split('/').pop();}catch{}}
- if(/^[a-zA-Z0-9_-]{11}$/.test(id)){const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/'+id;frame.title=matchId+' game highlights';frame.loading='lazy';frame.allow='accelerometer; encrypted-media; gyroscope; picture-in-picture';frame.allowFullscreen=true;panel.append(frame);const watch=document.createElement('a');watch.href=url;watch.target='_blank';watch.rel='noopener noreferrer';watch.className='btn';watch.textContent='Watch highlights on YouTube ↗';panel.append(watch)}else{const empty=document.createElement('div');empty.className='highlights-empty';const title=document.createElement('strong');title.textContent='Highlights coming soon';const text=document.createElement('p');text.textContent='Game highlights will appear here once available.';empty.append(title,text);panel.append(empty)}
+ if(/^[a-zA-Z0-9_-]{11}$/.test(id)){const frame=document.createElement('iframe');frame.referrerPolicy='strict-origin-when-cross-origin';frame.src='https://www.youtube-nocookie.com/embed/'+id+'?playsinline=1';frame.title=matchId+' game highlights';frame.loading='lazy';frame.allow='accelerometer; encrypted-media; gyroscope; picture-in-picture';frame.allowFullscreen=true;if(location.protocol==='http:'||location.protocol==='https:'){panel.append(frame)}else{const note=document.createElement('p');note.className='highlights-empty';note.textContent='Watch highlights on YouTube, or open the published website to play them here.';panel.append(note)}const watch=document.createElement('a');watch.href=url;watch.target='_blank';watch.rel='noopener noreferrer';watch.className='btn';watch.textContent='Watch highlights on YouTube ↗';panel.append(watch)}else{const empty=document.createElement('div');empty.className='highlights-empty';const title=document.createElement('strong');title.textContent='Highlights coming soon';const text=document.createElement('p');text.textContent='Game highlights will appear here once available.';empty.append(title,text);panel.append(empty)}
  if(FULL_GAME_URLS[matchId]){const full=document.createElement('a');full.href=FULL_GAME_URLS[matchId];full.target='_blank';full.rel='noopener noreferrer';full.className='full-game-link';full.textContent='Watch the full game on YouTube ↗';panel.append(full)}
 }
 </script><script>
