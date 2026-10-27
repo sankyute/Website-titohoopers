@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "title": "Haig Road League Season 3",
   "gameType": "Season League",
-  "date": "2026-10-27T07:16:55.630Z",
+  "date": "2026-10-27T09:37:49.376Z",
   "status": "FINAL",
   "period": "FINAL",
   "timeRemaining": 0,
@@ -36,8 +36,8 @@
   },
   "matchSettings": {
     "format": "5v5",
-    "quarters": 4,
     "quarterLength": 10,
+    "quarters": 4,
     "otLength": 5,
     "timeoutsPerQuarter": 1,
     "foulLimit": 5,
@@ -1472,7 +1472,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1488,7 +1490,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1504,7 +1508,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1520,7 +1526,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1536,7 +1544,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1552,7 +1562,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1568,7 +1580,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1584,7 +1598,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1603,7 +1619,9 @@
             "shotCoords": {
               "x": 325.72694631827494,
               "y": 57.58813262472027
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1619,7 +1637,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P044",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1635,7 +1655,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1654,7 +1676,9 @@
             "shotCoords": {
               "x": 29.88688899058676,
               "y": 191.96044208240087
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1666,7 +1690,11 @@
             "playerId": null,
             "team": "away",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1685,7 +1713,9 @@
             "shotCoords": {
               "x": 225.76733650448267,
               "y": 42.43336088137282
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1701,7 +1731,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1720,7 +1752,9 @@
             "shotCoords": {
               "x": 62.19706590009536,
               "y": 107.09372031965523
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1739,7 +1773,9 @@
             "shotCoords": {
               "x": 257.0678203855691,
               "y": 65.67067755450556
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1758,7 +1794,9 @@
             "shotCoords": {
               "x": 272.21321581190125,
               "y": 52.53654204360445
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1774,7 +1812,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1793,7 +1833,9 @@
             "shotCoords": {
               "x": 255.04843432872482,
               "y": 55.56749639227394
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1812,7 +1854,9 @@
             "shotCoords": {
               "x": 284.32953215296703,
               "y": 42.43336088137282
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1828,7 +1872,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P052",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1847,7 +1893,9 @@
             "shotCoords": {
               "x": 251.0096622150363,
               "y": 52.53654204360445
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1863,7 +1911,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1882,7 +1932,9 @@
             "shotCoords": {
               "x": 60.17767984325107,
               "y": 102.0421297385394
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1898,7 +1950,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1914,7 +1968,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1933,7 +1989,9 @@
             "shotCoords": {
               "x": 328.75602540354134,
               "y": 116.18658336566368
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1949,7 +2007,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1965,7 +2025,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1984,7 +2046,9 @@
             "shotCoords": {
               "x": 57.14860075798464,
               "y": 187.9191696175082
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -1997,7 +2061,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P052",
-            "playerOutId": "P072"
+            "playerOutId": "P072",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2010,7 +2077,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P061",
-            "playerOutId": "P007"
+            "playerOutId": "P007",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2023,7 +2093,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P036",
-            "playerOutId": "P078"
+            "playerOutId": "P078",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2036,7 +2109,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P077",
-            "playerOutId": "P029"
+            "playerOutId": "P029",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2049,7 +2125,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P013"
+            "playerOutId": "P013",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2062,7 +2141,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P047",
-            "playerOutId": "P080"
+            "playerOutId": "P080",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2075,7 +2157,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P011",
-            "playerOutId": "P081"
+            "playerOutId": "P081",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2088,7 +2173,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P006",
-            "playerOutId": "P042"
+            "playerOutId": "P042",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -2107,7 +2195,9 @@
             "shotCoords": {
               "x": 244.95150404450342,
               "y": 70.72226813562138
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2123,7 +2213,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2142,7 +2234,9 @@
             "shotCoords": {
               "x": 217.68979227710554,
               "y": 28.28890725424855
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2158,7 +2252,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2177,7 +2273,9 @@
             "shotCoords": {
               "x": 285.33922518138917,
               "y": 40.4127246489265
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2193,7 +2291,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2212,7 +2312,9 @@
             "shotCoords": {
               "x": 210.6219410781505,
               "y": 34.35081595158752
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2228,7 +2330,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P081",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2244,7 +2348,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2263,7 +2369,9 @@
             "shotCoords": {
               "x": 38.97412624638606,
               "y": 205.09457759330198
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2282,7 +2390,9 @@
             "shotCoords": {
               "x": 302.5040066645656,
               "y": 43.44367899759599
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2298,7 +2408,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2314,7 +2426,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2330,7 +2444,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2346,7 +2462,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2362,7 +2480,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2381,7 +2501,9 @@
             "shotCoords": {
               "x": 476.1712075531743,
               "y": 110.1246746683247
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2400,7 +2522,9 @@
             "shotCoords": {
               "x": 418.61870493311216,
               "y": 222.26998556909575
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2419,7 +2543,9 @@
             "shotCoords": {
               "x": 166.19544782757617,
               "y": 136.39294569012694
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2438,7 +2564,9 @@
             "shotCoords": {
               "x": 247.98058312976983,
               "y": 289.9612993560476
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2457,7 +2585,9 @@
             "shotCoords": {
               "x": 276.25198792558984,
               "y": 51.52622392738129
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2473,7 +2603,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2492,7 +2624,9 @@
             "shotCoords": {
               "x": 112.68171732120256,
               "y": 62.63972320583608
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2511,7 +2645,9 @@
             "shotCoords": {
               "x": 278.27137398243417,
               "y": 32.3301797191412
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2527,7 +2663,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2546,7 +2684,9 @@
             "shotCoords": {
               "x": 35.94504716111962,
               "y": 165.69217106059867
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2565,7 +2705,9 @@
             "shotCoords": {
               "x": 279.2810670108563,
               "y": 35.36113406781069
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2581,7 +2723,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2600,7 +2744,9 @@
             "shotCoords": {
               "x": 223.74795044763837,
               "y": 30.309543486694874
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2616,7 +2762,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2632,7 +2780,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2648,7 +2798,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2667,7 +2819,9 @@
             "shotCoords": {
               "x": 283.3198391245449,
               "y": 41.42304276514967
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2683,7 +2837,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2699,7 +2855,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2715,7 +2873,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -2734,7 +2894,9 @@
             "shotCoords": {
               "x": 248.99027615819196,
               "y": 56.5778145084971
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         }
       ],
@@ -3457,7 +3619,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3473,7 +3637,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3489,7 +3655,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3505,7 +3673,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3524,7 +3694,9 @@
             "shotCoords": {
               "x": 228.7964155897491,
               "y": 185.89853338506188
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3540,7 +3712,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3556,7 +3730,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3590,7 +3766,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3606,7 +3784,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3625,7 +3805,9 @@
             "shotCoords": {
               "x": 239.90303890239267,
               "y": 83.8564036465225
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3641,7 +3823,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3657,7 +3841,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3673,7 +3859,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3689,7 +3877,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3708,7 +3898,9 @@
             "shotCoords": {
               "x": 147.01128028755545,
               "y": 112.14531090077104
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3724,7 +3916,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3743,7 +3937,9 @@
             "shotCoords": {
               "x": 277.261680954012,
               "y": 35.36113406781069
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3759,7 +3955,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3775,7 +3973,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3794,7 +3994,9 @@
             "shotCoords": {
               "x": 184.36992233917476,
               "y": 77.7944949491835
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3813,7 +4015,9 @@
             "shotCoords": {
               "x": 259.0872064424134,
               "y": 86.88735799519198
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3829,7 +4033,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3845,7 +4051,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3861,7 +4069,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3880,7 +4090,9 @@
             "shotCoords": {
               "x": 407.51208162046856,
               "y": 125.27944641167215
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3899,7 +4111,9 @@
             "shotCoords": {
               "x": 69.26491709905038,
               "y": 112.14531090077104
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -3912,7 +4126,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P077",
-            "playerOutId": "P029"
+            "playerOutId": "P029",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3925,7 +4142,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P013"
+            "playerOutId": "P013",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3938,7 +4158,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P011",
-            "playerOutId": "P080"
+            "playerOutId": "P080",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3951,7 +4174,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P047",
-            "playerOutId": "P011"
+            "playerOutId": "P011",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3964,7 +4190,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P006",
-            "playerOutId": "P042"
+            "playerOutId": "P042",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3977,7 +4206,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P011",
-            "playerOutId": "P081"
+            "playerOutId": "P081",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -3990,7 +4222,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P061",
-            "playerOutId": "P052"
+            "playerOutId": "P052",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4003,7 +4238,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P036",
-            "playerOutId": "P072"
+            "playerOutId": "P072",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4016,7 +4254,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P050",
-            "playerOutId": "P044"
+            "playerOutId": "P044",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4032,7 +4273,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4048,7 +4291,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P081",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4064,7 +4309,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4083,7 +4330,9 @@
             "shotCoords": {
               "x": 298.465234550877,
               "y": 53.54686015982762
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4099,7 +4348,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4115,7 +4366,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4131,7 +4384,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4147,7 +4402,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4166,7 +4423,9 @@
             "shotCoords": {
               "x": 208.60255502130622,
               "y": 62.63972320583608
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4185,7 +4444,9 @@
             "shotCoords": {
               "x": 287.35861123823344,
               "y": 47.48495146248864
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4201,7 +4462,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P072",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4217,7 +4480,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4236,7 +4501,9 @@
             "shotCoords": {
               "x": 227.78672256132697,
               "y": 68.70163190317504
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4252,7 +4519,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4271,7 +4540,9 @@
             "shotCoords": {
               "x": 254.0387413003027,
               "y": 67.6913137869519
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4287,7 +4558,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4306,7 +4579,9 @@
             "shotCoords": {
               "x": 249.99996918661412,
               "y": 59.60876885716659
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4322,7 +4597,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4341,7 +4618,9 @@
             "shotCoords": {
               "x": 468.0936633257972,
               "y": 163.67153482815232
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4357,7 +4636,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4376,7 +4657,9 @@
             "shotCoords": {
               "x": 287.35861123823344,
               "y": 284.9097087749318
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4392,7 +4675,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4408,7 +4693,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4424,7 +4711,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4440,7 +4729,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4459,7 +4750,9 @@
             "shotCoords": {
               "x": 248.99027615819196,
               "y": 66.68099567072873
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4475,7 +4768,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4494,7 +4789,9 @@
             "shotCoords": {
               "x": 137.92404303175616,
               "y": 56.5778145084971
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4513,7 +4810,9 @@
             "shotCoords": {
               "x": 252.01935524345842,
               "y": 72.7429043680677
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4529,7 +4828,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4548,7 +4849,9 @@
             "shotCoords": {
               "x": 277.261680954012,
               "y": 41.42304276514967
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4564,7 +4867,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4580,7 +4885,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4599,7 +4906,9 @@
             "shotCoords": {
               "x": 235.86426678870413,
               "y": 289.9612993560476
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -4612,7 +4921,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P078",
-            "playerOutId": "P036"
+            "playerOutId": "P036",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4625,7 +4937,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P072",
-            "playerOutId": "P050"
+            "playerOutId": "P050",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4638,7 +4953,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P007",
-            "playerOutId": "P061"
+            "playerOutId": "P061",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4651,7 +4969,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P080",
-            "playerOutId": "P011"
+            "playerOutId": "P011",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4664,7 +4985,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P081",
-            "playerOutId": "P088"
+            "playerOutId": "P088",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4677,7 +5001,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P042",
-            "playerOutId": "P077"
+            "playerOutId": "P077",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4690,7 +5017,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P013",
-            "playerOutId": "P047"
+            "playerOutId": "P047",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -4703,7 +5033,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P029",
-            "playerOutId": "P006"
+            "playerOutId": "P006",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         }
       ],
@@ -5426,7 +5759,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5442,7 +5777,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5458,7 +5795,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5471,7 +5810,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P061",
-            "playerOutId": "P007"
+            "playerOutId": "P007",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5526,7 +5868,9 @@
             "shotCoords": {
               "x": 311.5912439203649,
               "y": 39.40240653270334
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5542,7 +5886,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P029",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5558,7 +5904,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P044",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5570,7 +5918,11 @@
             "playerId": null,
             "team": "home",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5586,7 +5938,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5602,7 +5956,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5621,7 +5977,9 @@
             "shotCoords": {
               "x": 37.96443321796391,
               "y": 180.8469428039461
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5637,7 +5995,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5653,7 +6013,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5666,7 +6028,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P029",
-            "playerOutId": "P077"
+            "playerOutId": "P077",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5682,7 +6047,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5698,7 +6065,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5717,7 +6086,9 @@
             "shotCoords": {
               "x": 262.11628552767985,
               "y": 85.8770398789688
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5733,7 +6104,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5752,7 +6125,9 @@
             "shotCoords": {
               "x": 211.63163410657265,
               "y": 43.44367899759599
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5768,7 +6143,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5787,7 +6164,9 @@
             "shotCoords": {
               "x": 278.27137398243417,
               "y": 281.87875442626233
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5803,7 +6182,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5822,7 +6203,9 @@
             "shotCoords": {
               "x": 241.92242495923696,
               "y": 136.39294569012694
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5835,7 +6218,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P077",
-            "playerOutId": "P013"
+            "playerOutId": "P013",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5848,7 +6234,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P013",
-            "playerOutId": "P081"
+            "playerOutId": "P081",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5861,7 +6250,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P011",
-            "playerOutId": "P077"
+            "playerOutId": "P077",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5874,7 +6266,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P047",
-            "playerOutId": "P080"
+            "playerOutId": "P080",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5890,7 +6285,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5906,7 +6303,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5922,7 +6321,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5935,7 +6336,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P013"
+            "playerOutId": "P013",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -5951,7 +6355,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5970,7 +6376,9 @@
             "shotCoords": {
               "x": 403.47330950678,
               "y": 229.3422123826579
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -5986,7 +6394,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P077",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6002,7 +6412,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6021,7 +6433,9 @@
             "shotCoords": {
               "x": 92.48785675275968,
               "y": 229.3422123826579
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6037,7 +6451,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6056,7 +6472,9 @@
             "shotCoords": {
               "x": 290.3876903234999,
               "y": 283.8993906587086
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6072,7 +6490,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6088,7 +6508,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6101,7 +6523,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P036",
-            "playerOutId": "P072"
+            "playerOutId": "P072",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6117,7 +6542,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6133,7 +6560,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6152,7 +6581,9 @@
             "shotCoords": {
               "x": 235.86426678870413,
               "y": 146.49612685235857
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6168,7 +6599,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6187,7 +6620,9 @@
             "shotCoords": {
               "x": 248.99027615819196,
               "y": 160.64058047948282
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6206,7 +6641,9 @@
             "shotCoords": {
               "x": 237.8836528455484,
               "y": 117.19690148188684
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6222,7 +6659,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6256,7 +6695,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6275,7 +6716,9 @@
             "shotCoords": {
               "x": 169.22452691284263,
               "y": 51.52622392738129
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6309,7 +6752,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6321,7 +6766,11 @@
             "playerId": null,
             "team": "away",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6337,7 +6786,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6356,7 +6807,9 @@
             "shotCoords": {
               "x": 256.058127357147,
               "y": 60.61908697338975
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6372,7 +6825,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P042",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6391,7 +6846,9 @@
             "shotCoords": {
               "x": 322.6978672330085,
               "y": 38.39208841648017
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6407,7 +6864,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6426,7 +6885,9 @@
             "shotCoords": {
               "x": 238.89334587397053,
               "y": 63.65004132205924
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6442,7 +6903,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6461,7 +6924,9 @@
             "shotCoords": {
               "x": 213.65102016341694,
               "y": 54.55717827605077
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6477,7 +6942,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6496,7 +6963,9 @@
             "shotCoords": {
               "x": 224.75764347606054,
               "y": 59.60876885716659
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -6509,7 +6978,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P072",
-            "playerOutId": "P036"
+            "playerOutId": "P036",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6522,7 +6994,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P044",
-            "playerOutId": "P061"
+            "playerOutId": "P061",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6535,7 +7010,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P080",
-            "playerOutId": "P088"
+            "playerOutId": "P088",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6548,7 +7026,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P013",
-            "playerOutId": "P047"
+            "playerOutId": "P047",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6561,7 +7042,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P042",
-            "playerOutId": "P077"
+            "playerOutId": "P077",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -6574,7 +7058,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P081",
-            "playerOutId": "P011"
+            "playerOutId": "P011",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         }
       ],
@@ -7300,7 +7787,9 @@
             "shotCoords": {
               "x": 471.1227424110636,
               "y": 77.7944949491835
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7312,7 +7801,11 @@
             "playerId": null,
             "team": "home",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7328,7 +7821,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7344,7 +7839,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7357,7 +7854,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P061",
-            "playerOutId": "P078"
+            "playerOutId": "P078",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -7373,7 +7873,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7389,7 +7891,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7408,7 +7912,9 @@
             "shotCoords": {
               "x": 19.789958706365315,
               "y": 83.8564036465225
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7421,7 +7927,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P042"
+            "playerOutId": "P042",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -7437,7 +7946,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7453,7 +7964,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7469,7 +7982,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7485,7 +8000,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P042",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7504,7 +8021,9 @@
             "shotCoords": {
               "x": 228.7964155897491,
               "y": 36.37145218403385
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7559,7 +8078,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P072",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7571,7 +8092,11 @@
             "playerId": null,
             "team": "home",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7629,7 +8154,9 @@
             "shotCoords": {
               "x": 286.3489182098113,
               "y": 35.36113406781069
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7645,7 +8172,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7664,7 +8193,9 @@
             "shotCoords": {
               "x": 221.72856439079408,
               "y": 44.45399711381915
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7680,7 +8211,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": "P044",
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7696,7 +8229,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7712,7 +8247,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7728,7 +8265,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7744,7 +8283,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7763,7 +8304,9 @@
             "shotCoords": {
               "x": 227.78672256132697,
               "y": 42.43336088137282
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7779,7 +8322,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7798,7 +8343,9 @@
             "shotCoords": {
               "x": 241.92242495923696,
               "y": 71.73258625184454
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7814,7 +8361,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7830,7 +8379,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7843,7 +8394,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P029",
-            "playerOutId": "P013"
+            "playerOutId": "P013",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -7856,7 +8410,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P077",
-            "playerOutId": "P006"
+            "playerOutId": "P006",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -7872,7 +8429,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7891,7 +8450,9 @@
             "shotCoords": {
               "x": 404.48300253520216,
               "y": 57.58813262472027
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7907,7 +8468,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7926,7 +8489,9 @@
             "shotCoords": {
               "x": 172.25360599810904,
               "y": 42.43336088137282
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7945,7 +8510,9 @@
             "shotCoords": {
               "x": 215.67040622026124,
               "y": 49.50558769493497
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7961,7 +8528,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7980,7 +8549,9 @@
             "shotCoords": {
               "x": 23.82873082005389,
               "y": 28.28890725424855
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -7996,7 +8567,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8012,7 +8585,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8025,7 +8600,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P011"
+            "playerOutId": "P011",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8041,7 +8619,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8057,7 +8637,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8073,7 +8655,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8089,7 +8673,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8108,7 +8694,9 @@
             "shotCoords": {
               "x": 182.35053628233047,
               "y": 55.56749639227394
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8127,7 +8715,9 @@
             "shotCoords": {
               "x": 294.42646243718843,
               "y": 47.48495146248864
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8143,7 +8733,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8162,7 +8754,9 @@
             "shotCoords": {
               "x": 331.78510448880775,
               "y": 192.97076019862402
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8178,7 +8772,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8194,7 +8790,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8210,7 +8808,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8229,7 +8829,9 @@
             "shotCoords": {
               "x": 282.3101460961227,
               "y": 47.48495146248864
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8242,7 +8844,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P011",
-            "playerOutId": "P088"
+            "playerOutId": "P088",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8258,7 +8863,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8274,7 +8881,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8293,7 +8902,9 @@
             "shotCoords": {
               "x": 204.56378290761765,
               "y": 87.89767611141514
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8306,7 +8917,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P006",
-            "playerOutId": "P077"
+            "playerOutId": "P077",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8322,7 +8936,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8341,7 +8957,9 @@
             "shotCoords": {
               "x": 217.68979227710554,
               "y": 49.50558769493497
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8357,7 +8975,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8376,7 +8996,9 @@
             "shotCoords": {
               "x": 217.68979227710554,
               "y": 43.44367899759599
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8392,7 +9014,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8411,7 +9035,9 @@
             "shotCoords": {
               "x": 321.68817420458635,
               "y": 278.8478000775928
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8430,7 +9056,9 @@
             "shotCoords": {
               "x": 31.906275047431045,
               "y": 176.80567033905342
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8446,7 +9074,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8465,7 +9095,9 @@
             "shotCoords": {
               "x": 236.87395981712626,
               "y": 306.1263892156182
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8481,7 +9113,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8515,7 +9149,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8528,7 +9164,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P077",
-            "playerOutId": "P006"
+            "playerOutId": "P006",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8544,7 +9183,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8563,7 +9204,9 @@
             "shotCoords": {
               "x": 226.77702953290483,
               "y": 41.42304276514967
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8579,7 +9222,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8598,7 +9243,9 @@
             "shotCoords": {
               "x": 22.81903779163175,
               "y": 23.237316673132735
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8614,7 +9261,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8630,7 +9279,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8664,7 +9315,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8680,7 +9333,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8696,7 +9351,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8715,7 +9372,9 @@
             "shotCoords": {
               "x": 464.05489121210866,
               "y": 154.57867178214386
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8728,7 +9387,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P088",
-            "playerOutId": "P047"
+            "playerOutId": "P047",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8741,7 +9403,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P072",
-            "playerOutId": "P036"
+            "playerOutId": "P036",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8754,7 +9419,10 @@
             "team": "home",
             "pts": 0,
             "playerInId": "P007",
-            "playerOutId": "P061"
+            "playerOutId": "P061",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -8766,7 +9434,11 @@
             "playerId": null,
             "team": "home",
             "type": "TIMEOUT",
-            "pts": 0
+            "pts": 0,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8785,7 +9457,9 @@
             "shotCoords": {
               "x": 326.7366393466971,
               "y": 137.40326380635008
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8801,7 +9475,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8820,7 +9496,9 @@
             "shotCoords": {
               "x": 108.64294520751399,
               "y": 240.45571166111264
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8857,7 +9535,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8876,7 +9556,9 @@
             "shotCoords": {
               "x": 184.36992233917476,
               "y": 91.9389485763078
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8895,7 +9577,9 @@
             "shotCoords": {
               "x": 474.15182149633006,
               "y": 105.0730840872089
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8911,7 +9595,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8930,7 +9616,9 @@
             "shotCoords": {
               "x": 94.50724280960395,
               "y": 200.0429870121862
-            }
+            },
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8946,7 +9634,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8962,7 +9652,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8978,7 +9670,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -8994,7 +9688,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -9010,7 +9706,9 @@
             "assistPlayerId": null,
             "turnoverPlayerId": null,
             "shotLocation": null,
-            "shotCoords": null
+            "shotCoords": null,
+            "playerInId": null,
+            "playerOutId": null
           }
         },
         {
@@ -9023,7 +9721,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P047",
-            "playerOutId": "P081"
+            "playerOutId": "P081",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -9036,7 +9737,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P081",
-            "playerOutId": "P088"
+            "playerOutId": "P088",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -9049,7 +9753,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P006",
-            "playerOutId": "P042"
+            "playerOutId": "P042",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -9062,7 +9769,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P080",
-            "playerOutId": "P047"
+            "playerOutId": "P047",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         },
         {
@@ -9075,7 +9785,10 @@
             "team": "away",
             "pts": 0,
             "playerInId": "P013",
-            "playerOutId": "P011"
+            "playerOutId": "P011",
+            "playerId": null,
+            "assistPlayerId": null,
+            "turnoverPlayerId": null
           }
         }
       ],
@@ -9102,7 +9815,9 @@
         "shotCoords": {
           "x": 471.1227424110636,
           "y": 77.7944949491835
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9114,7 +9829,11 @@
         "playerId": null,
         "team": "home",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9130,7 +9849,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9146,7 +9867,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9159,7 +9882,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P061",
-        "playerOutId": "P078"
+        "playerOutId": "P078",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -9175,7 +9901,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9191,7 +9919,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9210,7 +9940,9 @@
         "shotCoords": {
           "x": 19.789958706365315,
           "y": 83.8564036465225
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9223,7 +9955,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P042"
+        "playerOutId": "P042",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -9239,7 +9974,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9255,7 +9992,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9271,7 +10010,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9287,7 +10028,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P042",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9306,7 +10049,9 @@
         "shotCoords": {
           "x": 228.7964155897491,
           "y": 36.37145218403385
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9361,7 +10106,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P072",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9373,7 +10120,11 @@
         "playerId": null,
         "team": "home",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9431,7 +10182,9 @@
         "shotCoords": {
           "x": 286.3489182098113,
           "y": 35.36113406781069
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9447,7 +10200,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9466,7 +10221,9 @@
         "shotCoords": {
           "x": 221.72856439079408,
           "y": 44.45399711381915
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9482,7 +10239,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P044",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9498,7 +10257,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9514,7 +10275,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9530,7 +10293,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9546,7 +10311,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9565,7 +10332,9 @@
         "shotCoords": {
           "x": 227.78672256132697,
           "y": 42.43336088137282
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9581,7 +10350,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9600,7 +10371,9 @@
         "shotCoords": {
           "x": 241.92242495923696,
           "y": 71.73258625184454
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9616,7 +10389,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9632,7 +10407,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9645,7 +10422,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P029",
-        "playerOutId": "P013"
+        "playerOutId": "P013",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -9658,7 +10438,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P077",
-        "playerOutId": "P006"
+        "playerOutId": "P006",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -9674,7 +10457,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9693,7 +10478,9 @@
         "shotCoords": {
           "x": 404.48300253520216,
           "y": 57.58813262472027
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9709,7 +10496,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9728,7 +10517,9 @@
         "shotCoords": {
           "x": 172.25360599810904,
           "y": 42.43336088137282
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9747,7 +10538,9 @@
         "shotCoords": {
           "x": 215.67040622026124,
           "y": 49.50558769493497
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9763,7 +10556,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9782,7 +10577,9 @@
         "shotCoords": {
           "x": 23.82873082005389,
           "y": 28.28890725424855
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9798,7 +10595,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9814,7 +10613,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9827,7 +10628,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P011"
+        "playerOutId": "P011",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -9843,7 +10647,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9859,7 +10665,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9875,7 +10683,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9891,7 +10701,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9910,7 +10722,9 @@
         "shotCoords": {
           "x": 182.35053628233047,
           "y": 55.56749639227394
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9929,7 +10743,9 @@
         "shotCoords": {
           "x": 294.42646243718843,
           "y": 47.48495146248864
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9945,7 +10761,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9964,7 +10782,9 @@
         "shotCoords": {
           "x": 331.78510448880775,
           "y": 192.97076019862402
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9980,7 +10800,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -9996,7 +10818,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10012,7 +10836,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10031,7 +10857,9 @@
         "shotCoords": {
           "x": 282.3101460961227,
           "y": 47.48495146248864
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10044,7 +10872,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P011",
-        "playerOutId": "P088"
+        "playerOutId": "P088",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10060,7 +10891,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10076,7 +10909,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10095,7 +10930,9 @@
         "shotCoords": {
           "x": 204.56378290761765,
           "y": 87.89767611141514
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10108,7 +10945,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P006",
-        "playerOutId": "P077"
+        "playerOutId": "P077",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10124,7 +10964,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10143,7 +10985,9 @@
         "shotCoords": {
           "x": 217.68979227710554,
           "y": 49.50558769493497
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10159,7 +11003,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10178,7 +11024,9 @@
         "shotCoords": {
           "x": 217.68979227710554,
           "y": 43.44367899759599
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10194,7 +11042,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10213,7 +11063,9 @@
         "shotCoords": {
           "x": 321.68817420458635,
           "y": 278.8478000775928
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10232,7 +11084,9 @@
         "shotCoords": {
           "x": 31.906275047431045,
           "y": 176.80567033905342
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10248,7 +11102,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10267,7 +11123,9 @@
         "shotCoords": {
           "x": 236.87395981712626,
           "y": 306.1263892156182
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10283,7 +11141,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10317,7 +11177,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10330,7 +11192,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P077",
-        "playerOutId": "P006"
+        "playerOutId": "P006",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10346,7 +11211,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10365,7 +11232,9 @@
         "shotCoords": {
           "x": 226.77702953290483,
           "y": 41.42304276514967
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10381,7 +11250,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10400,7 +11271,9 @@
         "shotCoords": {
           "x": 22.81903779163175,
           "y": 23.237316673132735
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10416,7 +11289,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10432,7 +11307,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10466,7 +11343,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10482,7 +11361,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10498,7 +11379,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10517,7 +11400,9 @@
         "shotCoords": {
           "x": 464.05489121210866,
           "y": 154.57867178214386
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10530,7 +11415,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P047"
+        "playerOutId": "P047",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10543,7 +11431,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P072",
-        "playerOutId": "P036"
+        "playerOutId": "P036",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10556,7 +11447,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P007",
-        "playerOutId": "P061"
+        "playerOutId": "P061",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10568,7 +11462,11 @@
         "playerId": null,
         "team": "home",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10587,7 +11485,9 @@
         "shotCoords": {
           "x": 326.7366393466971,
           "y": 137.40326380635008
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10603,7 +11503,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10622,7 +11524,9 @@
         "shotCoords": {
           "x": 108.64294520751399,
           "y": 240.45571166111264
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10659,7 +11563,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10678,7 +11584,9 @@
         "shotCoords": {
           "x": 184.36992233917476,
           "y": 91.9389485763078
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10697,7 +11605,9 @@
         "shotCoords": {
           "x": 474.15182149633006,
           "y": 105.0730840872089
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10713,7 +11623,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10732,7 +11644,9 @@
         "shotCoords": {
           "x": 94.50724280960395,
           "y": 200.0429870121862
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10748,7 +11662,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10764,7 +11680,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10780,7 +11698,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10796,7 +11716,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10812,7 +11734,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10825,7 +11749,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P047",
-        "playerOutId": "P081"
+        "playerOutId": "P081",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10838,7 +11765,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P081",
-        "playerOutId": "P088"
+        "playerOutId": "P088",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10851,7 +11781,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P006",
-        "playerOutId": "P042"
+        "playerOutId": "P042",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10864,7 +11797,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P080",
-        "playerOutId": "P047"
+        "playerOutId": "P047",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10877,7 +11813,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P013",
-        "playerOutId": "P011"
+        "playerOutId": "P011",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10893,7 +11832,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10909,7 +11850,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10925,7 +11868,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -10938,7 +11883,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P061",
-        "playerOutId": "P007"
+        "playerOutId": "P007",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -10993,7 +11941,9 @@
         "shotCoords": {
           "x": 311.5912439203649,
           "y": 39.40240653270334
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11009,7 +11959,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P029",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11025,7 +11977,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P044",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11037,7 +11991,11 @@
         "playerId": null,
         "team": "home",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11053,7 +12011,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11069,7 +12029,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11088,7 +12050,9 @@
         "shotCoords": {
           "x": 37.96443321796391,
           "y": 180.8469428039461
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11104,7 +12068,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11120,7 +12086,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11133,7 +12101,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P029",
-        "playerOutId": "P077"
+        "playerOutId": "P077",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11149,7 +12120,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11165,7 +12138,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11184,7 +12159,9 @@
         "shotCoords": {
           "x": 262.11628552767985,
           "y": 85.8770398789688
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11200,7 +12177,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11219,7 +12198,9 @@
         "shotCoords": {
           "x": 211.63163410657265,
           "y": 43.44367899759599
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11235,7 +12216,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11254,7 +12237,9 @@
         "shotCoords": {
           "x": 278.27137398243417,
           "y": 281.87875442626233
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11270,7 +12255,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11289,7 +12276,9 @@
         "shotCoords": {
           "x": 241.92242495923696,
           "y": 136.39294569012694
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11302,7 +12291,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P077",
-        "playerOutId": "P013"
+        "playerOutId": "P013",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11315,7 +12307,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P013",
-        "playerOutId": "P081"
+        "playerOutId": "P081",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11328,7 +12323,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P011",
-        "playerOutId": "P077"
+        "playerOutId": "P077",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11341,7 +12339,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P047",
-        "playerOutId": "P080"
+        "playerOutId": "P080",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11357,7 +12358,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11373,7 +12376,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11389,7 +12394,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11402,7 +12409,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P013"
+        "playerOutId": "P013",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11418,7 +12428,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11437,7 +12449,9 @@
         "shotCoords": {
           "x": 403.47330950678,
           "y": 229.3422123826579
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11453,7 +12467,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P077",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11469,7 +12485,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11488,7 +12506,9 @@
         "shotCoords": {
           "x": 92.48785675275968,
           "y": 229.3422123826579
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11504,7 +12524,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11523,7 +12545,9 @@
         "shotCoords": {
           "x": 290.3876903234999,
           "y": 283.8993906587086
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11539,7 +12563,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11555,7 +12581,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11568,7 +12596,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P036",
-        "playerOutId": "P072"
+        "playerOutId": "P072",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11584,7 +12615,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11600,7 +12633,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11619,7 +12654,9 @@
         "shotCoords": {
           "x": 235.86426678870413,
           "y": 146.49612685235857
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11635,7 +12672,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11654,7 +12693,9 @@
         "shotCoords": {
           "x": 248.99027615819196,
           "y": 160.64058047948282
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11673,7 +12714,9 @@
         "shotCoords": {
           "x": 237.8836528455484,
           "y": 117.19690148188684
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11689,7 +12732,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11723,7 +12768,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11742,7 +12789,9 @@
         "shotCoords": {
           "x": 169.22452691284263,
           "y": 51.52622392738129
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11776,7 +12825,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11788,7 +12839,11 @@
         "playerId": null,
         "team": "away",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11804,7 +12859,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11823,7 +12880,9 @@
         "shotCoords": {
           "x": 256.058127357147,
           "y": 60.61908697338975
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11839,7 +12898,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P042",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11858,7 +12919,9 @@
         "shotCoords": {
           "x": 322.6978672330085,
           "y": 38.39208841648017
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11874,7 +12937,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11893,7 +12958,9 @@
         "shotCoords": {
           "x": 238.89334587397053,
           "y": 63.65004132205924
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11909,7 +12976,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11928,7 +12997,9 @@
         "shotCoords": {
           "x": 213.65102016341694,
           "y": 54.55717827605077
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11944,7 +13015,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11963,7 +13036,9 @@
         "shotCoords": {
           "x": 224.75764347606054,
           "y": 59.60876885716659
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -11976,7 +13051,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P072",
-        "playerOutId": "P036"
+        "playerOutId": "P036",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -11989,7 +13067,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P044",
-        "playerOutId": "P061"
+        "playerOutId": "P061",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12002,7 +13083,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P080",
-        "playerOutId": "P088"
+        "playerOutId": "P088",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12015,7 +13099,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P013",
-        "playerOutId": "P047"
+        "playerOutId": "P047",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12028,7 +13115,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P042",
-        "playerOutId": "P077"
+        "playerOutId": "P077",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12041,7 +13131,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P081",
-        "playerOutId": "P011"
+        "playerOutId": "P011",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12057,7 +13150,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12073,7 +13168,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12089,7 +13186,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12105,7 +13204,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12124,7 +13225,9 @@
         "shotCoords": {
           "x": 228.7964155897491,
           "y": 185.89853338506188
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12140,7 +13243,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12156,7 +13261,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12190,7 +13297,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12206,7 +13315,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12225,7 +13336,9 @@
         "shotCoords": {
           "x": 239.90303890239267,
           "y": 83.8564036465225
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12241,7 +13354,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12257,7 +13372,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12273,7 +13390,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12289,7 +13408,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12308,7 +13429,9 @@
         "shotCoords": {
           "x": 147.01128028755545,
           "y": 112.14531090077104
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12324,7 +13447,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12343,7 +13468,9 @@
         "shotCoords": {
           "x": 277.261680954012,
           "y": 35.36113406781069
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12359,7 +13486,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12375,7 +13504,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12394,7 +13525,9 @@
         "shotCoords": {
           "x": 184.36992233917476,
           "y": 77.7944949491835
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12413,7 +13546,9 @@
         "shotCoords": {
           "x": 259.0872064424134,
           "y": 86.88735799519198
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12429,7 +13564,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12445,7 +13582,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12461,7 +13600,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12480,7 +13621,9 @@
         "shotCoords": {
           "x": 407.51208162046856,
           "y": 125.27944641167215
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12499,7 +13642,9 @@
         "shotCoords": {
           "x": 69.26491709905038,
           "y": 112.14531090077104
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12512,7 +13657,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P077",
-        "playerOutId": "P029"
+        "playerOutId": "P029",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12525,7 +13673,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P013"
+        "playerOutId": "P013",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12538,7 +13689,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P011",
-        "playerOutId": "P080"
+        "playerOutId": "P080",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12551,7 +13705,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P047",
-        "playerOutId": "P011"
+        "playerOutId": "P011",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12564,7 +13721,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P006",
-        "playerOutId": "P042"
+        "playerOutId": "P042",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12577,7 +13737,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P011",
-        "playerOutId": "P081"
+        "playerOutId": "P081",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12590,7 +13753,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P061",
-        "playerOutId": "P052"
+        "playerOutId": "P052",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12603,7 +13769,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P036",
-        "playerOutId": "P072"
+        "playerOutId": "P072",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12616,7 +13785,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P050",
-        "playerOutId": "P044"
+        "playerOutId": "P044",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -12632,7 +13804,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12648,7 +13822,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P081",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12664,7 +13840,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12683,7 +13861,9 @@
         "shotCoords": {
           "x": 298.465234550877,
           "y": 53.54686015982762
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12699,7 +13879,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12715,7 +13897,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12731,7 +13915,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12747,7 +13933,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12766,7 +13954,9 @@
         "shotCoords": {
           "x": 208.60255502130622,
           "y": 62.63972320583608
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12785,7 +13975,9 @@
         "shotCoords": {
           "x": 287.35861123823344,
           "y": 47.48495146248864
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12801,7 +13993,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P072",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12817,7 +14011,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12836,7 +14032,9 @@
         "shotCoords": {
           "x": 227.78672256132697,
           "y": 68.70163190317504
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12852,7 +14050,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12871,7 +14071,9 @@
         "shotCoords": {
           "x": 254.0387413003027,
           "y": 67.6913137869519
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12887,7 +14089,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12906,7 +14110,9 @@
         "shotCoords": {
           "x": 249.99996918661412,
           "y": 59.60876885716659
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12922,7 +14128,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12941,7 +14149,9 @@
         "shotCoords": {
           "x": 468.0936633257972,
           "y": 163.67153482815232
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12957,7 +14167,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12976,7 +14188,9 @@
         "shotCoords": {
           "x": 287.35861123823344,
           "y": 284.9097087749318
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -12992,7 +14206,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13008,7 +14224,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13024,7 +14242,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13040,7 +14260,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13059,7 +14281,9 @@
         "shotCoords": {
           "x": 248.99027615819196,
           "y": 66.68099567072873
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13075,7 +14299,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13094,7 +14320,9 @@
         "shotCoords": {
           "x": 137.92404303175616,
           "y": 56.5778145084971
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13113,7 +14341,9 @@
         "shotCoords": {
           "x": 252.01935524345842,
           "y": 72.7429043680677
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13129,7 +14359,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13148,7 +14380,9 @@
         "shotCoords": {
           "x": 277.261680954012,
           "y": 41.42304276514967
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13164,7 +14398,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13180,7 +14416,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13199,7 +14437,9 @@
         "shotCoords": {
           "x": 235.86426678870413,
           "y": 289.9612993560476
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13212,7 +14452,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P078",
-        "playerOutId": "P036"
+        "playerOutId": "P036",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13225,7 +14468,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P072",
-        "playerOutId": "P050"
+        "playerOutId": "P050",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13238,7 +14484,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P007",
-        "playerOutId": "P061"
+        "playerOutId": "P061",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13251,7 +14500,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P080",
-        "playerOutId": "P011"
+        "playerOutId": "P011",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13264,7 +14516,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P081",
-        "playerOutId": "P088"
+        "playerOutId": "P088",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13277,7 +14532,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P042",
-        "playerOutId": "P077"
+        "playerOutId": "P077",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13290,7 +14548,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P013",
-        "playerOutId": "P047"
+        "playerOutId": "P047",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13303,7 +14564,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P029",
-        "playerOutId": "P006"
+        "playerOutId": "P006",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13319,7 +14583,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13335,7 +14601,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13351,7 +14619,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13367,7 +14637,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13383,7 +14655,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13399,7 +14673,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13415,7 +14691,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13431,7 +14709,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13450,7 +14730,9 @@
         "shotCoords": {
           "x": 325.72694631827494,
           "y": 57.58813262472027
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13466,7 +14748,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P044",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13482,7 +14766,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13501,7 +14787,9 @@
         "shotCoords": {
           "x": 29.88688899058676,
           "y": 191.96044208240087
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13513,7 +14801,11 @@
         "playerId": null,
         "team": "away",
         "type": "TIMEOUT",
-        "pts": 0
+        "pts": 0,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13532,7 +14824,9 @@
         "shotCoords": {
           "x": 225.76733650448267,
           "y": 42.43336088137282
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13548,7 +14842,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13567,7 +14863,9 @@
         "shotCoords": {
           "x": 62.19706590009536,
           "y": 107.09372031965523
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13586,7 +14884,9 @@
         "shotCoords": {
           "x": 257.0678203855691,
           "y": 65.67067755450556
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13605,7 +14905,9 @@
         "shotCoords": {
           "x": 272.21321581190125,
           "y": 52.53654204360445
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13621,7 +14923,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13640,7 +14944,9 @@
         "shotCoords": {
           "x": 255.04843432872482,
           "y": 55.56749639227394
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13659,7 +14965,9 @@
         "shotCoords": {
           "x": 284.32953215296703,
           "y": 42.43336088137282
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13675,7 +14983,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P052",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13694,7 +15004,9 @@
         "shotCoords": {
           "x": 251.0096622150363,
           "y": 52.53654204360445
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13710,7 +15022,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13729,7 +15043,9 @@
         "shotCoords": {
           "x": 60.17767984325107,
           "y": 102.0421297385394
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13745,7 +15061,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13761,7 +15079,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13780,7 +15100,9 @@
         "shotCoords": {
           "x": 328.75602540354134,
           "y": 116.18658336566368
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13796,7 +15118,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13812,7 +15136,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13831,7 +15157,9 @@
         "shotCoords": {
           "x": 57.14860075798464,
           "y": 187.9191696175082
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13844,7 +15172,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P052",
-        "playerOutId": "P072"
+        "playerOutId": "P072",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13857,7 +15188,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P061",
-        "playerOutId": "P007"
+        "playerOutId": "P007",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13870,7 +15204,10 @@
         "team": "home",
         "pts": 0,
         "playerInId": "P036",
-        "playerOutId": "P078"
+        "playerOutId": "P078",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13883,7 +15220,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P077",
-        "playerOutId": "P029"
+        "playerOutId": "P029",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13896,7 +15236,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P088",
-        "playerOutId": "P013"
+        "playerOutId": "P013",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13909,7 +15252,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P047",
-        "playerOutId": "P080"
+        "playerOutId": "P080",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13922,7 +15268,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P011",
-        "playerOutId": "P081"
+        "playerOutId": "P081",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13935,7 +15284,10 @@
         "team": "away",
         "pts": 0,
         "playerInId": "P006",
-        "playerOutId": "P042"
+        "playerOutId": "P042",
+        "playerId": null,
+        "assistPlayerId": null,
+        "turnoverPlayerId": null
       }
     },
     {
@@ -13954,7 +15306,9 @@
         "shotCoords": {
           "x": 244.95150404450342,
           "y": 70.72226813562138
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13970,7 +15324,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -13989,7 +15345,9 @@
         "shotCoords": {
           "x": 217.68979227710554,
           "y": 28.28890725424855
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14005,7 +15363,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14024,7 +15384,9 @@
         "shotCoords": {
           "x": 285.33922518138917,
           "y": 40.4127246489265
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14040,7 +15402,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14059,7 +15423,9 @@
         "shotCoords": {
           "x": 210.6219410781505,
           "y": 34.35081595158752
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14075,7 +15441,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": "P081",
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14091,7 +15459,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14110,7 +15480,9 @@
         "shotCoords": {
           "x": 38.97412624638606,
           "y": 205.09457759330198
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14129,7 +15501,9 @@
         "shotCoords": {
           "x": 302.5040066645656,
           "y": 43.44367899759599
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14145,7 +15519,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14161,7 +15537,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14177,7 +15555,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14193,7 +15573,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14209,7 +15591,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14228,7 +15612,9 @@
         "shotCoords": {
           "x": 476.1712075531743,
           "y": 110.1246746683247
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14247,7 +15633,9 @@
         "shotCoords": {
           "x": 418.61870493311216,
           "y": 222.26998556909575
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14266,7 +15654,9 @@
         "shotCoords": {
           "x": 166.19544782757617,
           "y": 136.39294569012694
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14285,7 +15675,9 @@
         "shotCoords": {
           "x": 247.98058312976983,
           "y": 289.9612993560476
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14304,7 +15696,9 @@
         "shotCoords": {
           "x": 276.25198792558984,
           "y": 51.52622392738129
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14320,7 +15714,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14339,7 +15735,9 @@
         "shotCoords": {
           "x": 112.68171732120256,
           "y": 62.63972320583608
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14358,7 +15756,9 @@
         "shotCoords": {
           "x": 278.27137398243417,
           "y": 32.3301797191412
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14374,7 +15774,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14393,7 +15795,9 @@
         "shotCoords": {
           "x": 35.94504716111962,
           "y": 165.69217106059867
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14412,7 +15816,9 @@
         "shotCoords": {
           "x": 279.2810670108563,
           "y": 35.36113406781069
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14428,7 +15834,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14447,7 +15855,9 @@
         "shotCoords": {
           "x": 223.74795044763837,
           "y": 30.309543486694874
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14463,7 +15873,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14479,7 +15891,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14495,7 +15909,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14514,7 +15930,9 @@
         "shotCoords": {
           "x": 283.3198391245449,
           "y": 41.42304276514967
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14530,7 +15948,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14546,7 +15966,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14562,7 +15984,9 @@
         "assistPlayerId": null,
         "turnoverPlayerId": null,
         "shotLocation": null,
-        "shotCoords": null
+        "shotCoords": null,
+        "playerInId": null,
+        "playerOutId": null
       }
     },
     {
@@ -14581,7 +16005,9 @@
         "shotCoords": {
           "x": 248.99027615819196,
           "y": 56.5778145084971
-        }
+        },
+        "playerInId": null,
+        "playerOutId": null
       }
     }
   ]

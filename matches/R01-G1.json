@@ -2,10 +2,12 @@
   "schemaVersion": 2,
   "title": "Haig Road League Season 3",
   "gameType": "Season League",
-  "date": "2026-10-22T16:05:04.945Z",
+  "date": "2026-10-27T09:47:48.527Z",
   "status": "FINAL",
   "period": "FINAL",
   "timeRemaining": 0,
+  "wentToOvertime": false,
+  "finalLabel": "Final",
   "homeTeam": "BOSS MAYOR",
   "awayTeam": "MERLION HOOPERS",
   "teams": {
@@ -34,8 +36,8 @@
   },
   "matchSettings": {
     "format": "5v5",
-    "quarters": 4,
     "quarterLength": 10,
+    "quarters": 4,
     "otLength": 5,
     "timeoutsPerQuarter": 2,
     "foulLimit": 5,
