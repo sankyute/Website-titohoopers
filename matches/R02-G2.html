@@ -1856,6 +1856,7 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           main.querySelectorAll('[data-top-stat]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topStat===selectedStat)));
           main.querySelectorAll('table[data-box-team]').forEach(t=>{t.dataset.sortColumn='2';t.dataset.sortDirection='desc';});
           applyTeamPresentation(main);
+          orderMatchPanels(main);
           updateThemeButton();
         }
         function addMatchVideo(main) {
@@ -2004,6 +2005,15 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           arrow.setAttribute('aria-label', names[home > away ? 0 : 1].toUpperCase() + ' wins');
           status.classList.add('match-final-status');
           status.replaceChildren(...(home > away ? [arrow,label] : [label,arrow]));
+        }
+        function orderMatchPanels(main) {
+          const column = main.querySelector('.match-video-column');
+          const graph = column?.querySelector('.sm-team-comparison');
+          if (!column || !graph) return;
+          let statistics = graph;
+          while (statistics.parentElement && statistics.parentElement !== column) statistics = statistics.parentElement;
+          const playByPlay = Array.from(column.children).find(panel => panel !== statistics && panel.querySelector('[data-period-filter]'));
+          if (statistics.parentElement === column && playByPlay) column.insertBefore(playByPlay, statistics);
         }
         function updateThemeButton() {
           document.querySelectorAll('[data-export-theme]').forEach(b=>{b.textContent=document.documentElement.dataset.scoreTheme==='dark'?'Light Mode':'Dark Mode';});

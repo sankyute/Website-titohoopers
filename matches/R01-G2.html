@@ -1781,6 +1781,7 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           addMatchVideo(main);
           addMatchDetails(main);
           applyTeamPresentation(main);
+          orderMatchPanels(main);
           updateThemeButton();
         }
         function addMatchVideo(main) {
@@ -1928,6 +1929,15 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           graph.innerHTML=markup+'<p class="sm-comparison-note">Made / attempted. Field goals include 2- and 3-point shots; free throws are separate.</p>';
           old.replaceWith(graph);
           card.querySelectorAll('.fg-comparison').forEach(extra=>extra.remove());
+        }
+        function orderMatchPanels(main) {
+          const column = main.querySelector('.match-video-column');
+          const graph = column?.querySelector('.sm-team-comparison');
+          if (!column || !graph) return;
+          let statistics = graph;
+          while (statistics.parentElement && statistics.parentElement !== column) statistics = statistics.parentElement;
+          const playByPlay = Array.from(column.children).find(panel => panel !== statistics && panel.querySelector('[data-period-filter]'));
+          if (statistics.parentElement === column && playByPlay) column.insertBefore(playByPlay, statistics);
         }
         function updateThemeButton() {
           document.querySelectorAll('[data-export-theme]').forEach(b=>{b.textContent=document.documentElement.dataset.scoreTheme==='dark'?'Light Mode':'Dark Mode';});
