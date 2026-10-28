@@ -2079,7 +2079,7 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
             if(focus)buttons[side].focus();
           }
           ['home','away'].forEach((side,index)=>{
-            const button=document.createElement('button');button.type='button';button.id='mobile-team-tab-'+side;button.setAttribute('role','tab');button.setAttribute('aria-controls','mobile-team-panel-'+side);button.textContent='TEAM '+(index?'B':'A')+' · '+(names[index]||side).toUpperCase();
+            const button=document.createElement('button');button.type='button';button.id='mobile-team-tab-'+side;button.setAttribute('role','tab');button.setAttribute('aria-controls','mobile-team-panel-'+side);button.textContent=(names[index]||side).toUpperCase();
             const panel=document.createElement('div');panel.id='mobile-team-panel-'+side;panel.className='mobile-team-panel';panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',button.id);
             buttons[side]=button;panels[side]=panel;tabs.append(button);teamSection.append(panel);
             button.addEventListener('click',()=>select(side));
