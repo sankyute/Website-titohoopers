@@ -1385,6 +1385,18 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
 #schedule-playoffs[data-round-view="final"] .hrl-final{left:5%!important;width:90%!important}
 #schedule-playoffs[data-round-view="final"] .hrl-bracket-champion{left:5%;width:90%}
 @media(max-width:700px){#schedule-playoffs .hrl-round-tabs button{font-size:11px;padding:7px 10px}#schedule-playoffs[data-round-view="sf"] .hrl-bracket-board{min-width:780px} }
+</style><style id="playoff-round-highlights">
+#schedule-playoffs .hrl-bracket-match{transition:border-color .2s,box-shadow .2s;background:var(--bg-card-sub)}
+#schedule-playoffs .hrl-final{border:1px solid var(--border-color);box-shadow:none}
+#schedule-playoffs[data-active-round="qf"] [data-playoff-round="qf"] .hrl-bracket-match,
+#schedule-playoffs[data-active-round="sf"] [data-playoff-round="sf"] .hrl-bracket-match,
+#schedule-playoffs[data-active-round="final"] .hrl-final{border:2px solid var(--primary);box-shadow:0 0 0 3px #ff660020,0 0 24px #ff660025}
+#schedule-playoffs dialog.hrl-finals-intro{position:fixed;inset:0;margin:auto;padding:16px;width:min(92vw,800px);max-height:90dvh;background:#090909;color:white;border:1px solid var(--primary);border-radius:16px;overflow:auto}
+#schedule-playoffs dialog.hrl-finals-intro:not([open]){display:none!important}
+#schedule-playoffs dialog.hrl-finals-intro::backdrop{background:rgba(0,0,0,.85)}
+#schedule-playoffs dialog.hrl-finals-intro video{width:100%;height:min(65vh,540px);object-fit:contain}
+#schedule-playoffs dialog.hrl-finals-intro button{min-height:44px}
+@media(prefers-reduced-motion:reduce){#schedule-playoffs .hrl-bracket-match{transition:none}}
 </style></head>
 <body class="dark-mode">
 
@@ -1440,8 +1452,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
 <section id="schedule-league-matches" class="container schedule-fixture-lists" aria-label="Completed and upcoming matches"></section>
 <section id="schedule-playoffs" data-round-view="all" data-active-round="qf" aria-labelledby="schedule-playoffs-heading">
 <div class="league-title-bar"><span class="league-sub-tag">HRL SEASON 3 · ROAD TO THE CHAMPIONSHIP</span><h2 id="schedule-playoffs-heading">PLAYOFFS BRACKET</h2></div>
-<div class="container"><p class="hrl-bracket-notice">Tentative schedule · Dates may change depending on earlier games and player availability. Teams will be confirmed after the group stage.</p><p class="hrl-bracket-scroll-hint"><span class="hrl-desktop-bracket-hint">QF shows the full bracket. Choose Semifinals or Championship to expand that stage.</span><span class="hrl-mobile-bracket-hint">Swipe sideways to follow the bracket. Choose a tab to expand the next stage.</span></p>
-<div class="hrl-round-tabs" role="group" aria-label="Filter playoff round"><button type="button" data-playoff-filter="qf" aria-pressed="true" onclick="selectPlayoffRound('qf')">QF</button><button type="button" data-playoff-filter="sf" aria-pressed="false" onclick="selectPlayoffRound('sf')">Semifinals</button><button type="button" data-playoff-filter="final" aria-pressed="false" onclick="selectPlayoffRound('final')">Championship</button></div><div class="hrl-finals-intro" hidden><video src="images/hrl-league-emblem.mp4" muted playsinline preload="none" aria-label="HRL league emblem introduction"></video><button type="button">Skip intro → View finals</button></div><div class="hrl-bracket-scroll" tabindex="0" role="region" aria-label="Playoffs bracket. Scroll horizontally to view both sides.">
+<div class="container"><p class="hrl-bracket-notice">Tentative schedule · Dates may change depending on earlier games and player availability. Teams will be confirmed after the group stage.</p><p class="hrl-bracket-scroll-hint"><span class="hrl-desktop-bracket-hint">Select a round to highlight its games. The full bracket stays visible.</span><span class="hrl-mobile-bracket-hint">Swipe sideways to follow the bracket. Select a round to highlight its games.</span></p>
+<div class="hrl-round-tabs" role="group" aria-label="Filter playoff round"><button type="button" data-playoff-filter="qf" aria-pressed="true" onclick="selectPlayoffRound('qf')">QF</button><button type="button" data-playoff-filter="sf" aria-pressed="false" onclick="selectPlayoffRound('sf')">Semifinals</button><button type="button" data-playoff-filter="final" aria-pressed="false" onclick="selectPlayoffRound('final')">Championship</button></div><dialog class="hrl-finals-intro" aria-label="HRL championship introduction"><video src="images/hrl-league-emblem.mp4" muted playsinline preload="none" aria-label="HRL league emblem introduction"></video><button type="button">Close intro → View finals</button></dialog><div class="hrl-bracket-scroll" tabindex="0" role="region" aria-label="Playoffs bracket. Scroll horizontally to view both sides.">
 <div class="hrl-bracket-board">
 <div class="hrl-round-title hrl-round-qf-left">QUARTERFINALS</div><div class="hrl-round-title hrl-round-sf-left">SEMIFINALS</div><div class="hrl-round-title hrl-round-finals">CHAMPIONSHIP</div><div class="hrl-round-title hrl-round-sf-right">SEMIFINALS</div><div class="hrl-round-title hrl-round-qf-right">QUARTERFINALS</div>
 <svg class="hrl-bracket-lines" viewBox="0 0 1200 540" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M200 150H225V280H250M200 410H225V280"/><path d="M450 280H500"/><path d="M1000 150H975V280H950M1000 410H975V280"/><path d="M750 280H700"/></g></svg>
@@ -1614,17 +1626,18 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100p
         function selectPlayoffRound(round) {
             const root=document.getElementById('schedule-playoffs');if(!root)return;
             const selected=['qf','sf','final'].includes(round)?round:'qf';
-            const intro=root.querySelector('.hrl-finals-intro'),video=intro.querySelector('video');
-            video.pause();intro.hidden=true;root.classList.remove('playing-finals-intro');
-            root.dataset.activeRound=selected;root.dataset.roundView=selected==='qf'?'all':selected;
+            root.dataset.activeRound=selected;root.dataset.roundView='all';
             root.querySelectorAll('[data-playoff-filter]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.playoffFilter===selected)));
-            root.querySelectorAll('[data-playoff-round]').forEach(panel=>{panel.hidden=selected==='sf'?panel.dataset.playoffRound==='qf':selected==='final'?panel.dataset.playoffRound!=='final':false;});
-            const scroll=root.querySelector('.hrl-bracket-scroll');scroll.scrollLeft=0;
+            root.querySelectorAll('[data-playoff-round]').forEach(panel=>{panel.hidden=false;});
+            const dialog=root.querySelector('.hrl-finals-intro'),video=dialog.querySelector('video');
+            if(dialog.open)dialog.close();video.pause();
             if(selected==='final'){
-                intro.hidden=false;root.classList.add('playing-finals-intro');video.currentTime=0;
-                const finish=()=>{video.pause();intro.hidden=true;root.classList.remove('playing-finals-intro');};
-                video.onended=finish;video.onerror=finish;intro.querySelector('button').onclick=finish;
-                const playback=video.play();if(playback)playback.catch(finish);
+                const finish=()=>{video.pause();if(dialog.open)dialog.close();};
+                dialog.onclose=()=>video.pause();dialog.querySelector('button').onclick=finish;
+                dialog.onclick=event=>{if(event.target===dialog)finish();};
+                video.onended=finish;video.onerror=finish;
+                dialog.showModal();video.currentTime=0;
+                const playback=video.play();if(playback)playback.catch(()=>{video.controls=true;});
             }
         }
         function toggleTheme() {
