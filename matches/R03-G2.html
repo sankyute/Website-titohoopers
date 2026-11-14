@@ -1923,7 +1923,7 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           main.querySelectorAll('[data-chart-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.chartMode===selectedChart)));
           main.querySelectorAll('[data-top-stat]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topStat===selectedStat)));
           main.querySelectorAll('table[data-box-team]').forEach(t=>{t.dataset.sortColumn='2';t.dataset.sortDirection='desc';});
-          applyTeamPresentation(main);addTransitionStatNote(main);orderMatchPanels(main);applyMobileMatchLayout(main);
+          applyTeamPresentation(main);addTransitionStatNote(main);applyDerivedSecondChance(main);orderMatchPanels(main);applyMobileMatchLayout(main);
           updateThemeButton();applyLogSearch();
         }
         function addMatchVideo(main) {
@@ -2044,6 +2044,25 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           card.querySelectorAll('.fg-comparison').forEach(extra=>extra.remove());
         }
         
+        const derivedSecondChance={"All":{"totals":{"home":0,"away":2},"players":{"away:P070":2}},"1st":{"totals":{"home":0,"away":0},"players":{}},"2nd":{"totals":{"home":0,"away":0},"players":{}},"3rd":{"totals":{"home":0,"away":0},"players":{}},"4th":{"totals":{"home":0,"away":2},"players":{"away:P070":2}}};
+
+        function applyDerivedSecondChance(main){
+          const data=derivedSecondChance[main.dataset.reportScope]||derivedSecondChance.All;
+          const graph=main.querySelector('.sm-team-comparison');if(!graph)return;
+          let sc=Array.from(graph.querySelectorAll('.sm-comparison-row')).find(r=>r.querySelector('.sm-comparison-label')?.textContent.trim()==='SC PTS');
+          if(!sc){sc=document.createElement('div');sc.className='sm-comparison-row';sc.innerHTML='<span class="sm-comparison-value"><strong></strong></span><span class="sm-comparison-track sm-comparison-track--home"><span class="sm-comparison-fill"></span></span><span class="sm-comparison-label">SC PTS</span><span class="sm-comparison-track"><span class="sm-comparison-fill"></span></span><span class="sm-comparison-value sm-comparison-value--away"><strong></strong></span>';const rows=Array.from(graph.querySelectorAll('.sm-comparison-row'));const after=rows.find(r=>r.querySelector('.sm-comparison-label')?.textContent.trim()==='FB PTS')||rows.find(r=>r.querySelector('.sm-comparison-label')?.textContent.trim()==='FT%');if(after)after.after(sc);else graph.append(sc);}
+          const values=sc.querySelectorAll('.sm-comparison-value'),fills=sc.querySelectorAll('.sm-comparison-fill');const maximum=Math.max(1,data.totals.home,data.totals.away);
+          ['home','away'].forEach((side,i)=>{values[i].replaceChildren();const strong=document.createElement('strong');strong.textContent=data.totals[side];values[i].append(strong);fills[i].style.width=(100*data.totals[side]/maximum)+'%';});
+          sc.setAttribute('aria-label','Calculated second-chance points: home '+data.totals.home+', away '+data.totals.away);
+          sc.querySelector('.sm-comparison-label').title='Second-chance points calculated from recorded possession events';
+          main.querySelectorAll('table[data-box-team]').forEach(table=>{
+            const heads=Array.from(table.querySelectorAll('thead th'));let col=heads.findIndex(h=>h.textContent.trim()==='SC PTS');
+            if(col<0){col=heads.length;const th=document.createElement('th');th.textContent='SC PTS';th.title='Calculated second-chance points';th.dataset.sortColumn=String(col);th.tabIndex=0;th.style.padding='10px';heads[0]?.parentElement.append(th);table.querySelectorAll('tbody tr[data-player-id]').forEach(row=>{const td=document.createElement('td');td.style.padding='10px';row.append(td);});}
+            table.querySelectorAll('tbody tr[data-player-id]').forEach(row=>{const cell=row.cells[col];if(cell)cell.textContent=data.players[table.dataset.boxTeam+':'+row.dataset.playerId]||0;});
+          });
+          const note=graph.querySelector('.transition-stat-note');if(note)note.textContent='SC PTS = calculated second-chance points from recorded possessions, including linked shooting free throws. Estimates depend on complete event order; technical free throws are excluded. Fast-break values are unchanged; unavailable values remain not recorded.';
+        }
+
         function addTransitionStatNote(main){
           const graph=main.querySelector('.sm-team-comparison');if(!graph||graph.querySelector('.transition-stat-note'))return;
           const rows=Array.from(graph.querySelectorAll('.sm-comparison-row'));
