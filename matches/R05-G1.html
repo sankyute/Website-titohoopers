@@ -1927,9 +1927,35 @@ table[data-box-team] th:first-child{z-index:3;background:#f1f5f9}
           updateThemeButton();applyLogSearch();
         }
         function addMatchVideo(main) {
- const comparison=main.querySelector('.sm-team-comparison');if(!comparison)return;
- const column=comparison.parentElement.parentElement.parentElement;
- column.classList.add('match-video-column');column.parentElement.classList.add('match-video-layout');
+          const comparison = main.querySelector('.sm-team-comparison');
+          if (!comparison) return;
+          const panel = document.createElement('section');
+          panel.className = 'match-youtube';
+          panel.setAttribute('aria-label', 'R05-G1 full game video');
+          const url = 'https://www.youtube.com/watch?v=3IWBzHDqOqM';
+          if (location.protocol === 'https:' || location.protocol === 'http:') {
+            const frame = document.createElement('iframe');
+            frame.title = 'Merlion Hoopers vs Haig United — R05-G1 full game';
+            frame.referrerPolicy = 'strict-origin-when-cross-origin';
+            frame.src = 'https://www.youtube-nocookie.com/embed/3IWBzHDqOqM?playsinline=1';
+            frame.loading = 'lazy';
+            frame.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
+            frame.allowFullscreen = true;
+            panel.append(frame);
+          } else {
+            const note = document.createElement('p');
+            note.textContent = 'Watch the full game on YouTube, or open the published website to play it here.';
+            panel.append(note);
+          }
+          const watch = document.createElement('a');
+          watch.href = url; watch.target = '_blank'; watch.rel = 'noopener noreferrer';
+          watch.textContent = '▶ Watch full game on YouTube ↗';
+          panel.append(watch);
+          const comparisonCard = comparison.parentElement.parentElement;
+          const column = comparisonCard.parentElement;
+          column.classList.add('match-video-column');
+          column.parentElement.classList.add('match-video-layout');
+          comparisonCard.before(panel);
         }
         function addMatchDetails(main) {
           const grid = main.querySelector('.match-video-layout');
