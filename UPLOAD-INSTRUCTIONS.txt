@@ -1,0 +1,1 @@
+Replace your website root index.html with this index.html. Upload the included images folder at the website root, keeping images/leagues/hrl3/share/ and all six MP4 filenames unchanged. Keep all existing website images and match files. Do not paste or merge HTML versions together. Video downloads show current regular-season champions and quarterfinal seedings.
